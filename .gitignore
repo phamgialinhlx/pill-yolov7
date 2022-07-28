@@ -1,0 +1,6 @@
+*.pt
+vaipe/images/
+vaipe/labels/
+__pycache__/
+runs/
+wandb/
