@@ -64,7 +64,7 @@ if __name__ == '__main__':
     if half:
         model.half()  # to FP16
 
-    header = ["image_name", "confidence_score", "x_min", "y_min", "x_max", "y_max"]
+    header = ["image_name", "class_id" "confidence_score", "x_min", "y_min", "x_max", "y_max"]
     directory = "./vaipe/public_test/pill/image/"
     img_sources = [posixpath.join(directory, f) for f in os.listdir(directory) if posixpath.isfile(posixpath.join(directory, f)) and f.endswith('.jpg')]
     with open(save_dir / 'results.csv', 'w', encoding='UTF8', newline='') as f:
