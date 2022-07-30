@@ -4,7 +4,7 @@ import numpy as np
 import torch
 
 # root is /data/pill/competition/Yolov7/yolov7
-def load_OCR_res(path = '../../OCR/ocr_train_res.csv'):
+def load_OCR_res(path = './ocr/ocr_train_res.csv'):
     OCR_res = {}
     dict_res = load_dict()
     list_drugname = [key for key in dict_res]
@@ -37,7 +37,7 @@ def take_key(list_key, line):
             return key
     return None
 
-def load_dict(path = '../../OCR/drug_name_dict.csv'):
+def load_dict(path = './ocr/drug_name_dict.csv'):
     dict_res = {}
     with open(path) as file_in:
         next(file_in)
