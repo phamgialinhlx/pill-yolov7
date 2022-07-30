@@ -1,4 +1,5 @@
 *.pt
+*.zip
 vaipe/images/
 vaipe/labels/
 vaipe/public_test
