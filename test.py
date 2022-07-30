@@ -16,7 +16,7 @@ from utils.general import coco80_to_coco91_class, check_dataset, check_file, che
 from utils.metrics import ap_per_class, ConfusionMatrix
 from utils.plots import plot_images, output_to_target, plot_study_txt
 from utils.torch_utils import select_device, time_synchronized, TracedModel
-
+from loadOCR import load_OCR_res, take_id_from_pres
 
 def test(data,
          weights=None,
@@ -40,14 +40,27 @@ def test(data,
          half_precision=True,
          trace=False,
          is_coco=False):
-    # Initialize/load model and set device
+
+    OCR_res = []
+
     training = model is not None
     if training:  # called by train.py
+
         device = next(model.parameters()).device  # get model device
 
+        # Initialize/load model and set device. Init OCR load res
+        OCR_res = load_OCR_res()
+
     else:  # called directly
+        
         set_logging()
         device = select_device(opt.device, batch_size=batch_size)
+        
+        # Initialize/load model and set device. Init OCR load res
+        if opt.task in ('val'):
+            OCR_res = load_OCR_res()
+        else:
+            OCR_res = load_OCR_res('../../OCR/ocr_test_res.csv')
 
         # Directories
         save_dir = Path(increment_path(Path(opt.project) / opt.name, exist_ok=opt.exist_ok))  # increment run
@@ -112,7 +125,7 @@ def test(data,
 
             # Compute loss
             if compute_loss:
-                loss += compute_loss([x.float() for x in train_out], targets)[1][:3]  # box, obj, cls
+                loss += compute_loss([x.float() for x in train_out], targets[targets[:, 1] != 107.0, :])[1][:3]  # box, obj, cls
 
             # Run NMS
             targets[:, 2:] *= torch.Tensor([width, height, width, height]).to(device)  # to pixels
@@ -127,6 +140,21 @@ def test(data,
             nl = len(labels)
             tcls = labels[:, 0].tolist() if nl else []  # target class
             path = Path(paths[si])
+            
+
+            #pres processing
+            name_pres = take_id_from_pres(str(path))
+            
+            if name_pres in OCR_res.keys():
+                id_potential_in_pres = OCR_res[name_pres]
+                id_potential_in_pres = np.array(id_potential_in_pres).astype(int)
+
+                # detect 107
+                for out_si in out[si]:
+                    if(int(out_si[5]) not in id_potential_in_pres):
+                        out_si[5] = 107.0
+
+
             seen += 1
 
             if len(pred) == 0:

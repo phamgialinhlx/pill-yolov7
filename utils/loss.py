@@ -274,7 +274,8 @@ class RankSort(torch.autograd.Function):
 
 class aLRPLoss(torch.autograd.Function):
     @staticmethod
-    def forward(ctx, logits, targets, regression_losses, delta=1., eps=1e-5): 
+    def forward(ctx, logits, targets, regression_losses, delta=1., eps=1e-5):
+        
         classification_grads=torch.zeros(logits.shape).cuda()
         
         #Filter fg logits
@@ -344,7 +345,7 @@ class aLRPLoss(torch.autograd.Function):
     
 class APLoss(torch.autograd.Function):
     @staticmethod
-    def forward(ctx, logits, targets, delta=1.): 
+    def forward(ctx, logits, targets, delta=1.):
         classification_grads=torch.zeros(logits.shape).cuda()
         
         #Filter fg logits
@@ -448,6 +449,7 @@ class ComputeLoss:
             setattr(self, k, getattr(det, k))
 
     def __call__(self, p, targets):  # predictions, targets, model
+
         device = targets.device
         lcls, lbox, lobj = torch.zeros(1, device=device), torch.zeros(1, device=device), torch.zeros(1, device=device)
         tcls, tbox, indices, anchors = self.build_targets(p, targets)  # targets
@@ -579,7 +581,8 @@ class ComputeLossOTA:
         for k in 'na', 'nc', 'nl', 'anchors', 'stride':
             setattr(self, k, getattr(det, k))
 
-    def __call__(self, p, targets, imgs):  # predictions, targets, model   
+    def __call__(self, p, targets, imgs):  # predictions, targets, model
+
         device = targets.device
         lcls, lbox, lobj = torch.zeros(1, device=device), torch.zeros(1, device=device), torch.zeros(1, device=device)
         bs, as_, gjs, gis, targets, anchors = self.build_targets(p, targets, imgs)
@@ -878,7 +881,8 @@ class ComputeLossBinOTA:
         #angle_bin_sigmoid = SigmoidBin(bin_count=31, min=-1.1, max=1.1, use_loss_regression=False).to(device)
         self.wh_bin_sigmoid = wh_bin_sigmoid
 
-    def __call__(self, p, targets, imgs):  # predictions, targets, model   
+    def __call__(self, p, targets, imgs):  # predictions, targets, model
+
         device = targets.device
         lcls, lbox, lobj = torch.zeros(1, device=device), torch.zeros(1, device=device), torch.zeros(1, device=device)
         bs, as_, gjs, gis, targets, anchors = self.build_targets(p, targets, imgs)
@@ -1199,7 +1203,8 @@ class ComputeLossAuxOTA:
         for k in 'na', 'nc', 'nl', 'anchors', 'stride':
             setattr(self, k, getattr(det, k))
 
-    def __call__(self, p, targets, imgs):  # predictions, targets, model   
+    def __call__(self, p, targets, imgs):  # predictions, targets, model
+
         device = targets.device
         lcls, lbox, lobj = torch.zeros(1, device=device), torch.zeros(1, device=device), torch.zeros(1, device=device)
         bs_aux, as_aux_, gjs_aux, gis_aux, targets_aux, anchors_aux = self.build_targets2(p[:self.nl], targets, imgs)
