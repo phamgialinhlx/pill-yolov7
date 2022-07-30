@@ -1,6 +1,8 @@
 *.pt
 vaipe/images/
 vaipe/labels/
+vaipe/public_test
 __pycache__/
 runs/
 wandb/
+coco/
