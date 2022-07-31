@@ -140,7 +140,6 @@ def test(data,
             nl = len(labels)
             tcls = labels[:, 0].tolist() if nl else []  # target class
             path = Path(paths[si])
-            
 
             #pres processing
             name_pres = take_id_from_pres(str(path))
