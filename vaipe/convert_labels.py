@@ -34,23 +34,15 @@ for i, json_file in enumerate(json_files):
         tmp = json.load(f)
         file = open(json_file.replace(directory, './labels/').replace('json', "txt"), "w")
         img = Image.open(json_file.replace('label', "image").replace('json', 'jpg'))
-        w, h = img.size
+        w, h = exif_size(img)
         for i in tmp:
-            x1 = i['x'] / w
-            y1 = i['y'] / h
-            x2 = x1 + (i['w'] - 1) / w
-            y2 = y1 + (i['h'] - 1) / h
-
-            x1 = correct_box(x1)
-            y1 = correct_box(y1)
-            x2 = correct_box(x2)
-            y2 = correct_box(y2)
-
-            p1 = str(x1) + ' ' + str(y1)
-            p2 = str(x2) + ' ' + str(y2)
+            _w = i['w'] / w
+            _h = i['h'] / h
+            _x = i['x'] / w + _w / 2
+            _y = i['y'] / h + _h / 2 
             # p3 = str(i['x'] + i['w'] - 1) + ' ' + str(i['y'] + i['h'] - 1)
             # p4 = str(i['x']) + ' ' + str(i['y'] + i['h'] - 1)
-            s = str(i['label']) + ' ' + p1 + ' ' + p2  # + ' ' + p3 + ' ' + p4
+            s = str(i['label']) + ' ' + str(_x) + ' ' + str(_y) + ' ' + str(_w) + ' ' + str(_h)
             file.write(s + '\n')
         file.close()
 #         print(file)
