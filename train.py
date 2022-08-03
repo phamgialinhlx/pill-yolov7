@@ -68,7 +68,7 @@ def train(hyp, opt, device, tb_writer=None):
     loggers = {'wandb': None}  # loggers dict
     if rank in [-1, 0]:
         opt.hyp = hyp  # add hyperparameters
-        run_id = torch.load(weights).get('wandb_id') if weights.endswith('.pt') and os.path.isfile(weights) else None
+        run_id = torch.load(weights, map_location=device).get('wandb_id') if weights.endswith('.pt') and os.path.isfile(weights) else None
         wandb_logger = WandbLogger(opt, Path(opt.save_dir).stem, run_id, data_dict)
         loggers['wandb'] = wandb_logger.wandb
         data_dict = wandb_logger.data_dict
@@ -638,7 +638,15 @@ if __name__ == '__main__':
                 'flipud': (1, 0.0, 1.0),  # image flip up-down (probability)
                 'fliplr': (0, 0.0, 1.0),  # image flip left-right (probability)
                 'mosaic': (1, 0.0, 1.0),  # image mixup (probability)
-                'mixup': (1, 0.0, 1.0)}  # image mixup (probability)
+                'mixup': (1, 0.0, 1.0),   # image mixup (probability)
+                'copy_paste': (1, 0.0, 1.0),  # segment copy-paste (probability)
+                'paste_in': (1, 0.0, 1.0)}    # segment copy-paste (probability)
+
+        with open(opt.hyp, errors='ignore') as f:
+            hyp = yaml.safe_load(f)  # load hyps dict
+            if 'anchors' not in hyp:  # anchors commented in hyp.yaml
+                hyp['anchors'] = 3
+
 
         assert opt.local_rank == -1, 'DDP mode not implemented for --evolve'
         opt.notest, opt.nosave = True, True  # only test/save final epoch
