@@ -60,7 +60,7 @@ def test(data,
         if opt.task in ('val'):
             OCR_res = load_OCR_res()
         else:
-            OCR_res = load_OCR_res('../../OCR/ocr_test_res.csv')
+            OCR_res = load_OCR_res('./ocr/ocr_test_res.csv')
 
         # Directories
         save_dir = Path(increment_path(Path(opt.project) / opt.name, exist_ok=opt.exist_ok))  # increment run
@@ -170,11 +170,15 @@ def test(data,
             if save_txt:
                 gn = torch.tensor(shapes[si][0])[[1, 0, 1, 0]]  # normalization gain whwh
                 for *xyxy, conf, cls in predn.tolist():
-                    xywh = (xyxy2xywh(torch.tensor(xyxy).view(1, 4)) / gn).view(-1).tolist()  # normalized xywh
-                    line = (cls, *xywh, conf) if save_conf else (cls, *xywh)  # label format
+                    # xywh = (xyxy2xywh(torch.tensor(xyxy).view(1, 4)) / gn).view(-1).tolist()  # normalized xywh
+                    # line = (cls, *xywh, conf) if save_conf else (cls, *xywh)  # label format
+                    # with open(save_dir / 'labels' / (path.stem + '.txt'), 'a') as f:
+                    #     f.write(('%g ' * len(line)).rstrip() % line + '\n')
+                    bbox = torch.tensor(xyxy).view(1, 4).int().tolist()[0]
+                    label = f'{names[int(cls)]}'
+                    conf = f'{conf:.2f}'
                     with open(save_dir / 'labels' / (path.stem + '.txt'), 'a') as f:
-                        f.write(('%g ' * len(line)).rstrip() % line + '\n')
-
+                        f.write(f'{bbox} {label} {conf}\n')
             # W&B logging - Media Panel Plots
             if len(wandb_images) < log_imgs and wandb_logger.current_epoch > 0:  # Check for test operation
                 if wandb_logger.current_epoch % wandb_logger.bbox_interval == 0:
@@ -191,13 +195,15 @@ def test(data,
             if save_json:
                 # [{"image_id": 42, "category_id": 18, "bbox": [258.15, 41.29, 348.26, 243.78], "score": 0.236}, ...
                 image_id = int(path.stem) if path.stem.isnumeric() else path.stem
-                box = xyxy2xywh(predn[:, :4])  # xywh
-                box[:, :2] -= box[:, 2:] / 2  # xy center to top-left corner
+                box = predn[:,:4]
+                # box = xyxy2xywh(predn[:, :4])  # xywh
+                # box[:, :2] -= box[:, 2:] / 2  # xy center to top-left corner
                 for p, b in zip(pred.tolist(), box.tolist()):
-                    jdict.append({'image_id': image_id,
-                                  'category_id': coco91class[int(p[5])] if is_coco else int(p[5]),
-                                  'bbox': [round(x, 3) for x in b],
-                                  'score': round(p[4], 5)})
+                    if p[4]>0.3:
+                        jdict.append({'image_id': image_id,
+                                    'category_id': coco91class[int(p[5])] if is_coco else int(p[5]),
+                                    'bbox': [round(x) for x in b],
+                                    'score': round(p[4], 5)})
 
             # Assign all predictions as incorrect
             correct = torch.zeros(pred.shape[0], niou, dtype=torch.bool, device=device)
@@ -320,7 +326,7 @@ if __name__ == '__main__':
     parser.add_argument('--conf-thres', type=float, default=0.001, help='object confidence threshold')
     parser.add_argument('--iou-thres', type=float, default=0.65, help='IOU threshold for NMS')
     parser.add_argument('--task', default='val', help='train, val, test, speed or study')
-    parser.add_argument('--device', default='', help='cuda device, i.e. 0 or 0,1,2,3 or cpu')
+    parser.add_argument('--device', default='', help='cuda  device, i.e. 0 or 0,1,2,3 or cpu')
     parser.add_argument('--single-cls', action='store_true', help='treat as single-class dataset')
     parser.add_argument('--augment', action='store_true', help='augmented inference')
     parser.add_argument('--verbose', action='store_true', help='report mAP by class')

@@ -2,7 +2,7 @@
 *.zip
 vaipe/images/
 vaipe/labels/
-vaipe/public_test
+vaipe/publicTest
 __pycache__/
 runs/
 wandb/

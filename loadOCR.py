@@ -1,8 +1,5 @@
 import csv
 import json
-import numpy as np
-import torch
-
 # root is /data/pill/competition/Yolov7/yolov7
 def load_OCR_res(path = './ocr/ocr_train_res.csv'):
     OCR_res = {}
@@ -49,10 +46,11 @@ def load_dict(path = './ocr/drug_name_dict.csv'):
             dict_res[key].append(value)
     return dict_res
 
-y = load_OCR_res()
+# y = load_OCR_res()
 #print(y)
 
 def take_id_from_pres(pathImage = "./vaipe/images/VAIPE_P_621_17.jpg", testing=False):
+    # print(pathImage)
     _, __, id_pres, ___ =  pathImage.split('_')
     if testing:
         name_pres = "VAIPE_P_TEST_" + id_pres
@@ -60,11 +58,9 @@ def take_id_from_pres(pathImage = "./vaipe/images/VAIPE_P_621_17.jpg", testing=F
         name_pres = "VAIPE_P_TRAIN_" + id_pres
 
     return name_pres
-
 #print(take_id_from_pres())
 
-target = torch.rand(32, 6)
-target[1:4, 1] = 107.00000000
-target = target[target[:, 1] != 107.0, :]
+# target = torch.rand(32, 6)
+# target[1:4, 1] = 107.00000000
+# target = target[target[:, 1] != 107.0, :]
 #print(target.shape)
-
