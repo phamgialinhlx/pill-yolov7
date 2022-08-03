@@ -199,11 +199,10 @@ def test(data,
                 # box = xyxy2xywh(predn[:, :4])  # xywh
                 # box[:, :2] -= box[:, 2:] / 2  # xy center to top-left corner
                 for p, b in zip(pred.tolist(), box.tolist()):
-                    if p[4]>0.3:
-                        jdict.append({'image_id': image_id,
-                                    'category_id': coco91class[int(p[5])] if is_coco else int(p[5]),
-                                    'bbox': [round(x) for x in b],
-                                    'score': round(p[4], 5)})
+                    jdict.append({'image_id': image_id,
+                                'category_id': coco91class[int(p[5])] if is_coco else int(p[5]),
+                                'bbox': [round(x) for x in b],
+                                'score': round(p[4], 5)})#TODO filter low confidence
 
             # Assign all predictions as incorrect
             correct = torch.zeros(pred.shape[0], niou, dtype=torch.bool, device=device)
