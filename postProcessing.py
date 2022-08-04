@@ -1,5 +1,7 @@
 import pandas as pd
 import os
+import argparse
+import json
 def post_processing(path_to_detect_output, path_to_OCR_res='./ocr/ocr_test_res.csv'):
     df = pd.read_csv(path_to_detect_output)
     df['image_id'] = df['image_name'].apply(lambda x: x.split('_')[2])
@@ -37,9 +39,13 @@ def convert(json_file):
     df.to_csv(result_path ,index=False)
     print(f'Output saved in {result_path}')
     return result_path
-def main():
-    result_path = convert('runs/test/yolov7_5TN_test14/best_predictions.json')
+def main(json_file):
+    result_path = convert(json_file)
     submission_path = post_processing(result_path)
     print(submission_path)
 if __name__ == '__main__':
-    main()
+    #add argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--json_file', type=str, default='', help='path to json file')
+    args = parser.parse_args()
+    main(args.json_file)
