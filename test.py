@@ -116,7 +116,6 @@ def test(data,
         img /= 255.0  # 0 - 255 to 0.0 - 1.0
         targets = targets.to(device)
         nb, _, height, width = img.shape  # batch size, channels, height, width
-
         with torch.no_grad():
             # Run model
             t = time_synchronized()
@@ -184,7 +183,9 @@ def test(data,
                 if wandb_logger.current_epoch % wandb_logger.bbox_interval == 0:
                     box_data = [{"position": {"minX": xyxy[0], "minY": xyxy[1], "maxX": xyxy[2], "maxY": xyxy[3]},
                                  "class_id": int(cls),
-                                 "box_caption": "%s %.3f" % (names[cls], conf),
+                                 # TODO
+                                 #"box_caption": "%s %.3f" % (names[cls], conf),
+                                 "box_caption": "%s %.3f" % (names[int(cls)], conf),
                                  "scores": {"class_score": conf},
                                  "domain": "pixel"} for *xyxy, conf, cls in pred.tolist()]
                     boxes = {"predictions": {"box_data": box_data, "class_labels": names}}  # inference-space
@@ -312,6 +313,9 @@ def test(data,
         print(f"Results saved to {save_dir}{s}")
     maps = np.zeros(nc) + map
     for i, c in enumerate(ap_class):
+        # TODO:
+        if c == 107:
+            continue
         maps[c] = ap[i]
     return (mp, mr, map50, map, *(loss.cpu() / len(dataloader)).tolist()), maps, t
 
