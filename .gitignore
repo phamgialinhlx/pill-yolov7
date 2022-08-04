@@ -1,9 +1,12 @@
 *.pt
 *.zip
+__pycache__/
 vaipe/images/
 vaipe/labels/
 vaipe/publicTest
-__pycache__/
+vaipeFix/images/
+vaipeFix/labels/
+vaipeFix/publicTest
 runs/
 wandb/
 coco/

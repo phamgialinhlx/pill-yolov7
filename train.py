@@ -248,7 +248,8 @@ def train(hyp, opt, device, tb_writer=None):
                                             image_weights=opt.image_weights, quad=opt.quad, prefix=colorstr('train: '))
     mlc = np.concatenate(dataset.labels, 0)[:, 0].max()  # max label class
     nb = len(dataloader)  # number of batches
-    assert mlc < nc, 'Label class %g exceeds nc=%g in %s. Possible class labels are 0-%g' % (mlc, nc, opt.data, nc - 1)
+    # TODO ignore assert
+    # assert mlc < nc, 'Label class %g exceeds nc=%g in %s. Possible class labels are 0-%g' % (mlc, nc, opt.data, nc - 1)
 
     # Process 0
     if rank in [-1, 0]:
