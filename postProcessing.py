@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import json
 def post_processing(path_to_detect_output, path_to_OCR_res='./ocr/ocr_test_res.csv'):
     df = pd.read_csv(path_to_detect_output)
     df['image_id'] = df['image_name'].apply(lambda x: x.split('_')[2])

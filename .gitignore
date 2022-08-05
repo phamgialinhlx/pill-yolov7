@@ -2,7 +2,10 @@
 *.zip
 vaipe/images/
 vaipe/labels/
-vaipe/publicTest
+vaipe/publicTest/
+vaipeFix/images/
+vaipeFix/labels/
+vaipeFix/publicTest/
 __pycache__/
 runs/
 wandb/
