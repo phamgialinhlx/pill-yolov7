@@ -1,5 +1,6 @@
 *.pt
 *.zip
+__pycache__/
 vaipe/images/
 vaipe/labels/
 vaipe/publicTest/
@@ -10,4 +11,4 @@ __pycache__/
 runs/
 wandb/
 coco/
-# *.cache
+*.cache
