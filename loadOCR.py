@@ -1,5 +1,7 @@
+from collections import OrderedDict
 import csv
 import json
+import pandas as pd
 # root is /data/pill/competition/Yolov7/yolov7
 def load_OCR_res(path = './ocr/ocr_train_res.csv'):
     OCR_res = {}
@@ -49,18 +51,37 @@ def load_dict(path = './ocr/drug_name_dict.csv'):
 # y = load_OCR_res()
 #print(y)
 
-def take_id_from_pres(pathImage = "./vaipe/images/VAIPE_P_621_17.jpg", testing=False):
+def take_id_from_pres(pathImage = "./vaipe_fix/images/VAIPE_P_621_17.jpg", testing=False):
     # print(pathImage)
-    _, __, id_pres, ___ =  pathImage.split('_')
+    id_pres =  pathImage.rsplit('_')[-2]
     if testing:
         name_pres = "VAIPE_P_TEST_" + id_pres
     else:
         name_pres = "VAIPE_P_TRAIN_" + id_pres
 
     return name_pres
-#print(take_id_from_pres())
 
-# target = torch.rand(32, 6)
-# target[1:4, 1] = 107.00000000
-# target = target[target[:, 1] != 107.0, :]
-#print(target.shape)
+def load_OCR(path_to_OCR_res = './ocr/ocr_test_res.csv'):
+    # df = pd.read_csv(path_to_detect_output)
+    # df['image_id'] = df['image_name'].apply(lambda x: x.split('_')[2])
+    OCR_res = pd.read_csv(path_to_OCR_res)
+    drug_dict = pd.read_csv('./ocr/drug_name_dict.csv').groupby('drugname').id.apply(list).reset_index().rename(columns={'drugname': 'match'})
+    OCR_res = OCR_res.merge(drug_dict, on='match', how='left')
+    OCR_res = OCR_res.groupby('filename').agg({
+        'id':'sum',
+    }).reset_index()
+    OCR_res['image_id'] = OCR_res['filename'].apply(lambda x: x[:-4].split('_')[-1])
+    return OCR_res
+
+def main():
+    # print(load_OCR_res())
+    # print(take_id_from_pres())
+    # print(load_dict())
+    df = load_OCR().set_index('image_id').sort_index()          
+    #print specific row of df
+    # for i in df.iloc[20]['id']:
+    #     print(i)
+    #get row with index 20
+    print(df.iloc['20'])
+if __name__ == '__main__':
+    main()

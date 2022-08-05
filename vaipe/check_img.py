@@ -38,7 +38,7 @@ def main(argv):
         overwrite = argv[2]
     server = argv[1]
 
-    mapping = {'2080': '/data/pill/competition/Yolov7/yolov7/vaipe_fix/images'} # 'v100': '/home/pill/competition/dataset/public_train/pill/label', 'colab' : './content/drive/Shareddrives/Data/public_train/public_train/pill/label'}
+    mapping = {'2080': '/data/pill/competition/Yolov7/yolov7/vaipe/images'} # 'v100': '/home/pill/competition/dataset/public_train/pill/label', 'colab' : './content/drive/Shareddrives/Data/public_train/public_train/pill/label'}
     directory = mapping[server]
     files = os.listdir(directory)
     img_files = [posixpath.join(directory, f) for f in os.listdir(directory) if posixpath.isfile(posixpath.join(directory, f)) and f.endswith('.jpg')]

@@ -10,4 +10,4 @@ vaipeFix/publicTest
 runs/
 wandb/
 coco/
-# *.cache
+*.cache
