@@ -3,10 +3,11 @@
 __pycache__/
 vaipe/images/
 vaipe/labels/
-vaipe/publicTest
+vaipe/publicTest/
 vaipeFix/images/
 vaipeFix/labels/
-vaipeFix/publicTest
+vaipeFix/publicTest/
+__pycache__/
 runs/
 wandb/
 coco/
