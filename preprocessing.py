@@ -13,13 +13,14 @@ def convert_labels(origin_path, target_path, overwrite=False):
     # read sys.argv
     # argv[1] is the server
     # argv[2] is the overwrite flag
-    origin_path = os.path.join(origin_path, 'label')
-    target_path = os.path.join(target_path, 'label')
+    origin_path = os.path.join(origin_path, 'labels')
+    target_path = os.path.join(target_path, 'labels')
     if not os.path.exists(target_path):
         os.makedirs(target_path)
     if overwrite:
         for file in os.listdir(target_path):
             os.remove(os.path.join(target_path, file))
+        print(f'remove {target_path}')
     org_files = os.listdir(origin_path)
     json_data = []
     pbar = tqdm.tqdm(total=len(org_files))
@@ -27,6 +28,7 @@ def convert_labels(origin_path, target_path, overwrite=False):
     for i, org_file in enumerate(org_files):
         #check if is a json file
         if not org_file.endswith('.json'):
+            print(org_file)
             continue
         org_file_path = os.path.join(origin_path, org_file)
         targ_file_path = os.path.join(target_path, org_file).replace('.json', '.txt')
@@ -56,8 +58,8 @@ def padding(origin_path, target_path, overwrite=False):
     :return: path of target image
 
     """
-    origin_path = os.path.join(origin_path, 'image')
-    target_path = os.path.join(target_path, 'image')
+    origin_path = os.path.join(origin_path, 'images')
+    target_path = os.path.join(target_path, 'images')
     if not os.path.exists(target_path):
         os.makedirs(target_path)
     if overwrite:
@@ -94,6 +96,11 @@ if __name__ == '__main__':
     parser.add_argument('--origin_path', type=str, help='path of origin folder containing images and labels subfolders')
     parser.add_argument('--target_path', type=str, help='path of target folder')
     parser.add_argument('--overwrite', type=bool, default=False, help='if True remove all files in target folder')
+    #choose padding or convert labels
+    parser.add_argument('--padding', type=bool, default=False, help='if True padding images')
+    parser.add_argument('--convert_labels', type=bool, default=False, help='if True convert labels. json to txt')
     args = parser.parse_args()
-    padding(args.origin_path, args.target_path, args.overwrite)
-    convert_labels(args.origin_path, args.target_path, args.overwrite)
+    if args.padding:
+        padding(args.origin_path, args.target_path, args.overwrite)
+    if args.convert_labels:
+        convert_labels(args.origin_path, args.target_path, args.overwrite)
