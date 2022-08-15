@@ -10,3 +10,4 @@ wandb/
 coco/
 *.cache
 classify/
+ensemble/
