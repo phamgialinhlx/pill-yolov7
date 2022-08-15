@@ -150,9 +150,10 @@ def test(data,
                 id_potential_in_pres = np.array(id_potential_in_pres).astype(int)
 
                 # detect 107
-                for out_si in out[si]:
-                    if(int(out_si[5]) not in id_potential_in_pres):
-                        out_si[5] = 107.0
+                # for out_si in out[si]:
+                #     if(int(out_si[5]) not in id_potential_in_pres):
+                #        out_si[5] = 107.0
+                       
 
 
             seen += 1
@@ -184,7 +185,7 @@ def test(data,
                 # if wandb_logger.current_epoch % wandb_logger.bbox_interval == 0: #TODO - check if this is necessary
                 box_data = [{"position": {"minX": xyxy[0], "minY": xyxy[1], "maxX": xyxy[2], "maxY": xyxy[3]},
                                 "class_id": int(cls),
-                                "box_caption": "%s %.3f" % (names[int(cls)], conf),
+                                "box_caption": "%s %.3f" % ('107', conf), #TODO - change 107 to names[int(cls)]
                                 "scores": {"class_score": conf},
                                 "domain": "pixel"} for *xyxy, conf, cls in pred.tolist()]
                 boxes = {"predictions": {"box_data": box_data, "class_labels": names}}  # inference-space
@@ -274,6 +275,8 @@ def test(data,
     # Plots
     if plots:
         confusion_matrix.plot(save_dir=save_dir, names=list(names.values()))
+        print(confusion_matrix.matrix)
+        np.savetxt(save_dir / "confusionMatrix.csv", confusion_matrix.matrix, delimiter=",")
         if wandb_logger and wandb_logger.wandb:
             val_batches = [wandb_logger.wandb.Image(str(f), caption=f.name) for f in sorted(save_dir.glob('test*.jpg'))]
             wandb_logger.log({"Validation": val_batches})
