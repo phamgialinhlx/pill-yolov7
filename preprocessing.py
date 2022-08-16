@@ -7,6 +7,50 @@ from PIL import Image
 import argparse
 from utils.datasets import exif_size
 import tqdm
+from PIL import ExifTags, Image, ImageOps, ImageFile
+
+
+ImageFile.LOAD_TRUNCATED_IMAGES=True
+IMG_FORMATS = ["bmp", "jpg", "jpeg", "png", "tif", "tiff", "dng", "webp", "mpo"]
+# Get orientation exif tag
+for k, v in ExifTags.TAGS.items():
+    if v == "Orientation":
+        ORIENTATION = k
+        break
+
+def rotate_image(origin_path, target_path, overwrite=False):
+    if not os.path.exists(target_path):
+        os.makedirs(target_path)
+    if overwrite:
+        for file in os.listdir(target_path):
+            os.remove(os.path.join(target_path, file))
+        print(f'remove {target_path}')
+    img_files = [os.path.join(origin_path, f) for f in os.listdir(origin_path) if f.split(".")[-1].lower() in IMG_FORMATS]
+    for f in tqdm.tqdm(img_files):
+        try:
+            img = Image.open(f)
+            exif = img._getexif()
+            if exif is not None and ORIENTATION in exif:
+                orientation = exif[ORIENTATION]
+                if orientation == 3:
+                    img = img.rotate(180, expand=True)
+                elif orientation == 6:
+                    img = img.rotate(270, expand=True)
+                elif orientation == 8:
+                    img = img.rotate(90, expand=True)
+                img.save(os.path.join(target_path, f.split("/")[-1]))
+        except Exception as e:
+            print(e)
+            continue                   
+
+def list_all_files(dir):
+    files = []
+    for r, d, f in os.walk(dir):
+        for file in f:
+            if '.jpg' in file:
+                files.append(os.path.join(r, file))
+    return files
+
 def correct_box(x):
     return max(0.0001, min(0.9999, x))
 def convert_labels(origin_path, target_path, overwrite=False):
@@ -94,13 +138,20 @@ def padding(origin_path, target_path, overwrite=False):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--origin_path', type=str, help='path of origin folder containing images and labels subfolders')
-    parser.add_argument('--target_path', type=str, help='path of target folder')
-    parser.add_argument('--overwrite', type=bool, default=False, help='if True remove all files in target folder')
-    #choose padding or convert labels
-    parser.add_argument('--padding', type=bool, default=False, help='if True padding images')
-    parser.add_argument('--convert_labels', type=bool, default=False, help='if True convert labels. json to txt')
+    parser.add_argument('--target_path', type=str,default='vaipe_exif', help='path of target folder')
+    parser.add_argument('--overwrite', action='store_true', help='if True remove all files in target folder')
+    parser.add_argument('--task', type=str, default = 'test', help='test or train')
     args = parser.parse_args()
-    if args.padding:
-        padding(args.origin_path, args.target_path, args.overwrite)
-    if args.convert_labels:
-        convert_labels(args.origin_path, args.target_path, args.overwrite)
+
+
+    if args.task == 'test':
+        target_path = os.path.join(args.target_path, 'test/images')
+    else:
+        target_path = os.path.join(args.target_path, 'train/images')
+    rotate_image(args.origin_path, target_path, args.overwrite)
+    files = list_all_files(args.target_path)
+    #export list of files to .txt file
+    file = open(os.path.join(args.target_path, f'{args.task}.txt'), 'w')
+    for i in files:
+        file.write(i + '\n')
+    file.close()

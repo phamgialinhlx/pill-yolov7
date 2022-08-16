@@ -1,3 +1,4 @@
+from doctest import OutputChecker
 import pandas as pd
 import os
 
@@ -7,7 +8,7 @@ import argparse
 
 from loadOCR import load_OCR
 
-def post_processing(path_to_detect_output, path_to_OCR_res='./ocr/ocr_test_res.csv'):
+def post_processing(path_to_detect_output, output_path, path_to_OCR_res='./ocr/ocr_test_res.csv'):
     df = pd.read_csv(path_to_detect_output)
     df['image_id'] = df['image_name'].apply(lambda x: x.split('_')[2])
     OCR_res = load_OCR(path_to_OCR_res)
@@ -18,11 +19,11 @@ def post_processing(path_to_detect_output, path_to_OCR_res='./ocr/ocr_test_res.c
             df.loc[index, 'class_id'] = 107
     
     df = df.drop(columns=['id', 'filename','image_id'])
-    submission_path = path_to_detect_output.replace('submission.csv', 'results.csv')
+    submission_path = os.path.join( output_path,'results.csv')
     df.to_csv(submission_path, index=False)
     return submission_path
-def convert(json_file):
-    result_path = os.path.join(json_file.rsplit('/', 1)[0], 'submission.csv')
+def convert(json_file, output_path):
+    result_path = os.path.join(output_path, 'submission.csv')
     with open(json_file) as f:
         data =  json.load(f)
         df = pd.DataFrame(data)
@@ -34,12 +35,16 @@ def convert(json_file):
     df.to_csv(result_path ,index=False)
     print(f'Output saved in {result_path}')
     return result_path
-def main(json_file):
-    result_path = convert(json_file)
-    submission_path = post_processing(result_path)
+def main(json_file, output_path):
+    result_path = convert(json_file, output_path)
+    submission_path = post_processing(result_path, output_path)
     print(submission_path)
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--json_file', type=str, default='', help='path to json file')
+    parser.add_argument('--output_path', type=str, default='', help='path to output file')
     args = parser.parse_args()
-    main(args.json_file)
+    output_path = args.output_path
+    if output_path == '':
+        output_path = args.json_file.rsplit('/', 1)[0]
+    main(args.json_file, output_path)
