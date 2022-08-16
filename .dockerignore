@@ -1,0 +1,16 @@
+*.pt
+*.zip
+__pycache__/
+vaipe*
+vaipe*/image*/
+vaipe*/label*/
+vaipe*/publicTest/
+__pycache__/
+runs/detect/*
+runs/train/*
+runs/test/*
+wandb/
+coco/
+*.cache
+classify/
+ensemble/

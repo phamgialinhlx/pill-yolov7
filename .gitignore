@@ -1,9 +1,7 @@
 *.pt
 *.zip
 __pycache__/
-vaipe*/image*/
-vaipe*/label*/
-vaipe*/publicTest/
+vaipe*/
 __pycache__/
 runs/
 wandb/
@@ -11,3 +9,4 @@ coco/
 *.cache
 classify/
 ensemble/
+vaipe_exif/
