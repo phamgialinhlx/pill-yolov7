@@ -12,7 +12,7 @@
     "adv_json_file": "./runs/test/adv/best_predictions.json",
     "device": "0",
     "cfg":"cfg/training/yolov7_45_45.yaml",
-    "hyp": "data/hyp.scratch.custom.yaml",
+    "hyp": "data/hyp.scratch.custom_degree40.yaml",
     "base_name": "base",
     "adv_name": "adv",
     "epochs": 450
