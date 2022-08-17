@@ -1,388 +1,388 @@
 filename,drugname,match,score
-VAIPE_P_TEST_6.png,"hapenxin capsules 0,5g","hapenxin capsules 0,5g",100
-VAIPE_P_TEST_6.png,pariamol tab soomg,partamol tab. 500mg,61
-VAIPE_P_TEST_7.png,ebitac 12.5 iomg +,"enalapril thydrochlorothiazide (ebitac 12.5) 10mg + 12,5mg",73
-VAIPE_P_TEST_7.png,leninarto 10 iomg,leninarto 10 10mg,87
-VAIPE_P_TEST_102.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
-VAIPE_P_TEST_102.png,panactol soomg,panactol 500mg,77
-VAIPE_P_TEST_148.png,metronidazol 250mg,metronidazol 250mg,100
-VAIPE_P_TEST_148.png,dromasm fort 8omg,dromasm fort 80mg,93
-VAIPE_P_TEST_60.png,fabamox 500 soomg,fabamox 500 500mg,80
-VAIPE_P_TEST_60.png,metronidazol 250 250 mg,metronidazol 250 250mg,100
-VAIPE_P_TEST_60.png,dromasmfort 8omg,dromasm fort 80mg,93
-VAIPE_P_TEST_39.png,bloza,bloza 50mg,71
-VAIPE_P_TEST_113.png,"hangitor plus 4omg+12,smg","hangitor plus 40mg+12,5mg",78
-VAIPE_P_TEST_113.png,saviprolol 5 smg  sl:5 viên,savi prolol 5 5mg,74
-VAIPE_P_TEST_113.png,hoathuyét dưỡng não 15omg+2omg,hoạt huyết dưỡng não 150mg+20mg,86
-VAIPE_P_TEST_38.png,fabamox 500 soomg,fabamox 500 500mg,80
-VAIPE_P_TEST_38.png,kagasdine,omeprazol (kagasdine) 20mg,100
-VAIPE_P_TEST_38.png,hoathuyét dưỡng não 15omg+2omg,hoạt huyết dưỡng não 150mg+20mg,86
-VAIPE_P_TEST_47.png,paracetamol (partamol tab.) 5oomg,paracetamol (partamol tab.) 500mg,93
-VAIPE_P_TEST_47.png,"vitamin bl + b6 +bl2 (savi 3b) loomgtloomg+0,1smg","vitamin b1 + b6 + b12 (savi 3b) 100mg+100mg+0,15mg",69
+VAIPE_P_TEST_56.png,"hapenxin capsules 0,5g","hapenxin capsules 0,5g",100
+VAIPE_P_TEST_56.png,tydol pm soomg + 2smg,tydol pm 500mg + 25mg,76
+VAIPE_P_TEST_90.png,"hoạt huyét dưỡng não 15omg, 2omg",hoạt huyết dưỡng não 150mg+20mg,90
+VAIPE_P_TEST_90.png,panactol soomg,panactol 500mg,77
+VAIPE_P_TEST_125.png,"cefacyl 500 0,5g","cefacyl 500 0,5g",100
+VAIPE_P_TEST_125.png,paracetamol soomg soomg,paracetamol 500mg 500mg,71
+VAIPE_P_TEST_4.png,"cefadroxil 0,5g","cefadroxil 0,5g",100
+VAIPE_P_TEST_4.png,vipredni 16mg 16mg,vipredni 16mg 16mg,100
+VAIPE_P_TEST_4.png,mypara 500 soomg,mypara 500 500mg,79
+VAIPE_P_TEST_158.png,"cefadroxil 0,5g","cefadroxil 0,5g",100
+VAIPE_P_TEST_158.png,mypara 500 soomg,mypara 500 500mg,79
+VAIPE_P_TEST_158.png,"statripsine 4,2mg","statripsine 4,2mg",100
+VAIPE_P_TEST_158.png,setblood 1lsmg+loomg+somcg,setblood 115mg+100mg+50mcg,56
+VAIPE_P_TEST_19.png,nifedipin hasan 20 retard 2omg,nifedipin hasan 20 retard 20mg,96
+VAIPE_P_TEST_109.png,fabamox 500 soomg,fabamox 500 500mg,80
+VAIPE_P_TEST_109.png,tydol pm soomg + 2smg,tydol pm 500mg + 25mg,76
+VAIPE_P_TEST_170.png,"xitoran 0,5g","xitoran 0,5g",100
+VAIPE_P_TEST_170.png,setblood 1lsmg+loomg+somcg,setblood 115mg+100mg+50mcg,56
+VAIPE_P_TEST_149.png,pyme diapro mr 3omg,pyme diapro mr 30mg,94
+VAIPE_P_TEST_149.png,"hangitor plus 4omg+12,5mg","hangitor plus 40mg+12,5mg",96
+VAIPE_P_TEST_9.png,fabamox soomg 500 mg,fabamox 500mg 500mg,82
+VAIPE_P_TEST_9.png,panactol soomg,panactol 500mg,77
+VAIPE_P_TEST_9.png,sergurop iomg,sergurop 10mg,83
+VAIPE_P_TEST_43.png,enalapri smg,enalapril 5mg,87
+VAIPE_P_TEST_43.png,hoạt huyét dưỡng não 15omg+2omg,hoạt huyết dưỡng não 150mg+20mg,90
+VAIPE_P_TEST_21.png,fabamox 500 soomg,fabamox 500 500mg,80
+VAIPE_P_TEST_21.png,dromasmfort 8omg,dromasm fort 80mg,93
+VAIPE_P_TEST_130.png,golddicron 30mg,golddicron 30mg,100
+VAIPE_P_TEST_130.png,chorlatcyn 125mg+5omg+5omg+2smg,chorlatcyn 125mg+50mg+50mg+25mg,92
+VAIPE_P_TEST_84.png,diclofenac somg,diclofenac 50mg,86
+VAIPE_P_TEST_84.png,cosyndo b 175mg+l75mg+12smcg,cosyndo b 175mg+175mg+125mcg,92
+VAIPE_P_TEST_8.png,metformin (meglucon 1000) 1000 mg,metformin (meglucon 1000) 1000 mg,100
+VAIPE_P_TEST_8.png,gliclazid (golddicron) 3omg,gliclazid (golddicron) 30mg,96
+VAIPE_P_TEST_8.png,"đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+2omg","đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg",98
+VAIPE_P_TEST_138.png,"xitoran 0,5g","xitoran 0,5g",100
+VAIPE_P_TEST_138.png,mypara 500 soomg,mypara 500 500mg,79
+VAIPE_P_TEST_10.png,glucofast 500 soomg,glucofast 850 850mg,82
+VAIPE_P_TEST_162.png,cardilopin smg,cardilopin 5mg,92
+VAIPE_P_TEST_162.png,"hoat huyét dưong não 15omg, 2omg",hoạt huyết dưỡng não 150mg+20mg,82
+VAIPE_P_TEST_162.png,mezafen,loxoprofen (mezafen) 60mg,100
+VAIPE_P_TEST_162.png,panactol soomg,panactol 500mg,77
+VAIPE_P_TEST_94.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
+VAIPE_P_TEST_94.png,sergurop iomg,sergurop 10mg,83
+VAIPE_P_TEST_100.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
+VAIPE_P_TEST_100.png,panactol soomg,panactol 500mg,77
+VAIPE_P_TEST_79.png,kavasdin 5 5 mg,kavasdin 5 5mg,100
+VAIPE_P_TEST_79.png,hoat huyét dưong não 1somg; 2omg,hoạt huyết dưỡng não 150mg+20mg,78
+VAIPE_P_TEST_54.png,dorocron - mr 30mg,dorocron - mr 30mg,100
+VAIPE_P_TEST_139.png,"cefalexin (firstlexin 500) 0,58","cefalexin (firstlexin 500) 0,5g",96
+VAIPE_P_TEST_139.png,carbocistein (anpemux) 25omg,carbocistein (anpemux) 250mg,96
+VAIPE_P_TEST_139.png,"đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+2omg","đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg",98
+VAIPE_P_TEST_93.png,cardilopin smg,cardilopin 5mg,92
+VAIPE_P_TEST_93.png,hoat huyét duong não bdf 1somg + smg,hoạt huyết dưỡng não bdf 150mg+5mg,65
+VAIPE_P_TEST_145.png,"cefadroxil 0,5g","cefadroxil 0,5g",100
+VAIPE_P_TEST_145.png,mypara 500 soomg,mypara 500 500mg,79
+VAIPE_P_TEST_145.png,"alfachim 4,2mg","alfachim 4,2mg",100
+VAIPE_P_TEST_28.png,amoxicilin soomg soomg,amoxicilin 500mg 500mg,70
+VAIPE_P_TEST_28.png,clorpheniramin 4mg,clorpheniramin 4mg,100
+VAIPE_P_TEST_28.png,panactol soomg,panactol 500mg,77
+VAIPE_P_TEST_17.png,paracetamol soomg soomg,paracetamol 500mg 500mg,71
+VAIPE_P_TEST_17.png,"statripsine 4,2mg","statripsine 4,2mg",100
 VAIPE_P_TEST_155.png,"cefadroxil 0,5g","cefadroxil 0,5g",100
 VAIPE_P_TEST_155.png,mypara 500 soomg,mypara 500 500mg,79
 VAIPE_P_TEST_155.png,bloza,bloza 50mg,71
+VAIPE_P_TEST_71.png,kavasdin5 5 mg,kavasdin 5 5mg,100
+VAIPE_P_TEST_71.png,mypara 500 soomg,mypara 500 500mg,79
+VAIPE_P_TEST_7.png,ebitac 12.5 iomg +,"enalapril thydrochlorothiazide (ebitac 12.5) 10mg + 12,5mg",73
+VAIPE_P_TEST_7.png,leninarto 10 iomg,leninarto 10 10mg,87
+VAIPE_P_TEST_39.png,bloza,bloza 50mg,71
+VAIPE_P_TEST_131.png,amoxicilin (fabamox 500) 5oomg,amoxicilin (fabamox 500) 500mg,93
+VAIPE_P_TEST_131.png,methyl prednisolon (methylprednisolon 4) 4mg,methyl prednisolon (methylprednisolon 4) 4mg,100
+VAIPE_P_TEST_131.png,paracetamol  (partamol tab.) 5oomg,paracetamol (partamol tab.) 500mg,93
+VAIPE_P_TEST_49.png,amoxicilin (fabamox 500) 5oomg,amoxicilin (fabamox 500) 500mg,93
+VAIPE_P_TEST_49.png,paracetamol  (partamol tab.) soomg,paracetamol (partamol tab.) 500mg,90
+VAIPE_P_TEST_49.png,"vitamin bl +b6 +b12 (savi 3b) loomg+loomg+0,15mg","vitamin b1 + b6 + b12 (savi 3b) 100mg+100mg+0,15mg",89
+VAIPE_P_TEST_38.png,fabamox 500 soomg,fabamox 500 500mg,80
+VAIPE_P_TEST_38.png,kagasdine,omeprazol (kagasdine) 20mg,100
+VAIPE_P_TEST_38.png,hoathuyét dưỡng não 15omg+2omg,hoạt huyết dưỡng não 150mg+20mg,86
+VAIPE_P_TEST_110.png,savilosartan 50 somg,savi losartan 50 50mg,89
+VAIPE_P_TEST_110.png,cosyndo b 175mg +175mg+ 125mcg,cosyndo b 175mg+175mg+125mcg,100
+VAIPE_P_TEST_25.png,panactol soomg,panactol 500mg,77
+VAIPE_P_TEST_25.png,"katrypsin 4,2mg","katrypsin 4,2mg",100
+VAIPE_P_TEST_151.png,"novoxim-s00 0,5g","novoxim-500 0,5g",93
+VAIPE_P_TEST_151.png,mypara 500 soomg,mypara 500 500mg,79
+VAIPE_P_TEST_151.png,hoat huyét dưong não isomg; 2omg,hoạt huyết dưỡng não 150mg+20mg,75
+VAIPE_P_TEST_16.png,troysar am smg +somg,troysar am 5mg +50mg,82
+VAIPE_P_TEST_16.png,leninarto 10 iomg,leninarto 10 10mg,87
+VAIPE_P_TEST_16.png,stacetam 8oomg 8oomg,stacetam 800mg 800mg,78
+VAIPE_P_TEST_30.png,"oạt huyét dưỡng não 15omg, 2omg",hoạt huyết dưỡng não 150mg+20mg,88
+VAIPE_P_TEST_30.png,vina-ad 2oooui+ 4ooui,vina-ad 2000ui+ 400ui,74
+VAIPE_P_TEST_116.png,meglucon 1000 1000 mg,meglucon 1000 1000mg,100
+VAIPE_P_TEST_116.png,atoris 2omg 2omg,atoris 20mg 20mg,86
+VAIPE_P_TEST_82.png,glucofast 500 soomg,glucofast 850 850mg,82
+VAIPE_P_TEST_82.png,lazibet mr 60 60mg,lazibet mr 60 60mg,100
+VAIPE_P_TEST_65.png,amoxiclin soomg soomg,amoxicilin 500mg 500mg,67
+VAIPE_P_TEST_65.png,metronidazol 250 250 mg,metronidazol 250 250mg,100
+VAIPE_P_TEST_65.png,partamol tab. soomg,partamol tab. 500mg,82
+VAIPE_P_TEST_65.png,oat huyét dưỡng não 15omg+2omg,hoạt huyết dưỡng não 150mg+20mg,84
+VAIPE_P_TEST_157.png,"cefacyl 500 0,5g","cefacyl 500 0,5g",100
+VAIPE_P_TEST_157.png,vaco loratadine iomg,vaco loratadine 10mg,89
+VAIPE_P_TEST_157.png,medibogan 2oomg + 1somg + 16mg,medibogan 200mg + 150mg + 16mg,84
+VAIPE_P_TEST_103.png,colchcin img,colchicin 1mg,87
+VAIPE_P_TEST_103.png,mypara 500 soomg,mypara 500 500mg,79
+VAIPE_P_TEST_152.png,"amoxicillin soomg 0,5g","amoxicillin 500mg 0,5g",85
+VAIPE_P_TEST_152.png,bromhexin actavis 8mg 8mg,bromhexin actavis 8mg 8mg,100
+VAIPE_P_TEST_135.png,enalapril smg,enalapril 5mg,92
+VAIPE_P_TEST_135.png,panactol soomg,panactol 500mg,77
+VAIPE_P_TEST_75.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
+VAIPE_P_TEST_75.png,"katrypsin 4,2mg","katrypsin 4,2mg",100
+VAIPE_P_TEST_75.png,partamol tab. soomg,partamol tab. 500mg,82
+VAIPE_P_TEST_160.png,"statripsine 4,2mg","statripsine 4,2mg",100
+VAIPE_P_TEST_34.png,fabamox 500 soomg,fabamox 500 500mg,80
+VAIPE_P_TEST_34.png,pariamol tab soomg,partamol tab. 500mg,61
+VAIPE_P_TEST_34.png,metronidazol 250 250 mg,metronidazol 250 250mg,100
+VAIPE_P_TEST_105.png,"droxicef 0,5g","droxicef 0,5g",100
+VAIPE_P_TEST_105.png,dixirein,dixirein 375mg,76
+VAIPE_P_TEST_105.png,menison 4mg amg,menison 4mg 4mg,92
+VAIPE_P_TEST_124.png,"cephalexin pmp 500 0,5g","cephalexin pmp 500 0,5g",100
+VAIPE_P_TEST_124.png,tydol pm soomg + 2smg,tydol pm 500mg + 25mg,76
+VAIPE_P_TEST_126.png,fabamox 500 soomg,fabamox 500 500mg,80
+VAIPE_P_TEST_126.png,clorpheniramin 4mg,clorpheniramin 4mg,100
+VAIPE_P_TEST_167.png,troysar am smg +somg,troysar am 5mg +50mg,82
+VAIPE_P_TEST_167.png,stacetam 8oomg 8oomg,stacetam 800mg 800mg,78
+VAIPE_P_TEST_167.png,leninarto 10 iomg,leninarto 10 10mg,87
+VAIPE_P_TEST_107.png,"hapenxin capsules 0,5g","hapenxin capsules 0,5g",100
+VAIPE_P_TEST_107.png,metronidazol 250 250 mg,metronidazol 250 250mg,100
+VAIPE_P_TEST_107.png,panactol soomg,panactol 500mg,77
+VAIPE_P_TEST_102.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
+VAIPE_P_TEST_102.png,panactol soomg,panactol 500mg,77
+VAIPE_P_TEST_58.png,"telmisartan + hydroclorothiazid (hangitor plus) 40mg+12,5mg","telmisartan % hydroclorothiazid (hangitor plus) 40mg+12,5mg",100
+VAIPE_P_TEST_58.png,"đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg","đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg",100
+VAIPE_P_TEST_132.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
+VAIPE_P_TEST_132.png,partamol tab. soomg,partamol tab. 500mg,82
+VAIPE_P_TEST_132.png,clorpheniramin amg,clorpheniramin 4mg,94
+VAIPE_P_TEST_63.png,chorlatcyn 125mg+somg+somg+25mg,chorlatcyn 125mg+50mg+50mg+25mg,92
+VAIPE_P_TEST_77.png,enalapril smg,enalapril 5mg,92
+VAIPE_P_TEST_77.png,saviprolol 5 smg,savi prolol 5 5mg,93
+VAIPE_P_TEST_77.png,inbacd 10,inbacid 10 10mg,76
+VAIPE_P_TEST_22.png,ingaron 200 dst 200 mg,ingaron 200 dst 200mg,100
+VAIPE_P_TEST_22.png,dixirein,dixirein 375mg,76
+VAIPE_P_TEST_22.png,vipredni 16 mg 16mg,vipredni 16mg 16mg,100
+VAIPE_P_TEST_22.png,panactol soomg,panactol 500mg,77
+VAIPE_P_TEST_64.png,meglucon 1000 1000mg,meglucon 1000 1000mg,100
+VAIPE_P_TEST_64.png,pyme diapro mr 3omg,pyme diapro mr 30mg,94
+VAIPE_P_TEST_64.png,enalapril smg,enalapril 5mg,92
+VAIPE_P_TEST_141.png,metformin (metformin 500) 5oomg,metformin (metformin 500) 500mg,93
+VAIPE_P_TEST_141.png,atorvastatin (atoris,atorvastatin (atoris 20mg) 20mg,81
+VAIPE_P_TEST_133.png,metronidazol 250 250 mg,metronidazol 250 250mg,100
+VAIPE_P_TEST_133.png,partamol tab. soomg,partamol tab. 500mg,82
+VAIPE_P_TEST_3.png,carudxan 2mg,carudxan 2mg,100
+VAIPE_P_TEST_3.png,metronidazol 250 250 mg,metronidazol 250 250mg,100
+VAIPE_P_TEST_146.png,"cefalexin (firstlexin 500) 0,58","cefalexin (firstlexin 500) 0,5g",96
+VAIPE_P_TEST_146.png,methyl prednisolon (methylprednisolon 4) 4mg,methyl prednisolon (methylprednisolon 4) 4mg,100
+VAIPE_P_TEST_146.png,carbocistein (anpemux) 25omg,carbocistein (anpemux) 250mg,96
+VAIPE_P_TEST_26.png,"telmisartan + hydroclorothiazid (hangitor plus) 40mg+12,5mg","telmisartan % hydroclorothiazid (hangitor plus) 40mg+12,5mg",100
+VAIPE_P_TEST_26.png,atorvastatin (atoris 2omg) 2omg,atorvastatin (atoris 20mg) 20mg,93
+VAIPE_P_TEST_42.png,amoxicilin (fabamox 500) 5oomg,amoxicilin (fabamox 500) 500mg,93
+VAIPE_P_TEST_42.png,paracetamol  (partamol tab.) 5oomg,paracetamol (partamol tab.) 500mg,93
+VAIPE_P_TEST_42.png,metronidazol  (metronidazol 250) 250 mg,metronidazol (metronidazol 250) 250 mg,100
+VAIPE_P_TEST_42.png,"đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg","đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg",100
+VAIPE_P_TEST_156.png,"cefacyl 500 0,5g","cefacyl 500 0,5g",100
+VAIPE_P_TEST_156.png,paracetamol soomg soomg,paracetamol 500mg 500mg,71
+VAIPE_P_TEST_156.png,diclofenac somg,diclofenac 50mg,86
+VAIPE_P_TEST_14.png,glucofast 850 850mg,glucofast 850 850mg,100
+VAIPE_P_TEST_33.png,thanhnhiệt tiêu độc livergood,thanh nhiệt tiêu độc livergood,100
+VAIPE_P_TEST_89.png,"hoạt huyét dưỡng não 15omg, 2omg",hoạt huyết dưỡng não 150mg+20mg,90
+VAIPE_P_TEST_89.png,setblood 1lsmg+loomg+somcg,setblood 115mg+100mg+50mcg,56
+VAIPE_P_TEST_27.png,"telmisartan + hydroclorothiazid (hangitor plus) 40mg+12,5mg","telmisartan % hydroclorothiazid (hangitor plus) 40mg+12,5mg",100
+VAIPE_P_TEST_27.png,atorvastatin (atoris,atorvastatin (atoris 20mg) 20mg,81
+VAIPE_P_TEST_73.png,glucofast 850 850mg,glucofast 850 850mg,100
+VAIPE_P_TEST_73.png,bloza,bloza 50mg,71
+VAIPE_P_TEST_171.png,venrutine,venrutine 100mg +500mg,62
+VAIPE_P_TEST_98.png,fudcime 2oomg 2oomg,fudcime 200mg 200mg,76
+VAIPE_P_TEST_114.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
+VAIPE_P_TEST_114.png,vipredni 16 mg 16mg,vipredni 16mg 16mg,100
+VAIPE_P_TEST_62.png,chorlatcyn 125mg+somg+somg+2smg,chorlatcyn 125mg+50mg+50mg+25mg,88
+VAIPE_P_TEST_97.png,amoxicilin soomg soomg,amoxicilin 500mg 500mg,70
+VAIPE_P_TEST_97.png,metronidazol 250 250 mg,metronidazol 250 250mg,100
+VAIPE_P_TEST_97.png,kagasdine 2omg,kagasdine 20mg,92
+VAIPE_P_TEST_127.png,panactol soomg,panactol 500mg,77
+VAIPE_P_TEST_164.png,"cefadroxil 0,5g","cefadroxil 0,5g",100
+VAIPE_P_TEST_164.png,mypara 500 soomg,mypara 500 500mg,79
+VAIPE_P_TEST_164.png,menison 16mg 16mg,menison 16mg 16mg,100
+VAIPE_P_TEST_164.png,setblood 1lsmg+loomg+somcg,setblood 115mg+100mg+50mcg,56
+VAIPE_P_TEST_50.png,"cefalexin (firstlexin 500) 0,58","cefalexin (firstlexin 500) 0,5g",96
+VAIPE_P_TEST_50.png,paracetamol  (partamol tab.) soomg,paracetamol (partamol tab.) 500mg,90
+VAIPE_P_TEST_50.png,"đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+2omg","đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg",98
+VAIPE_P_TEST_166.png,cardilopin smg,cardilopin 5mg,92
+VAIPE_P_TEST_166.png,"hoat huyét dưong não 15omg, 2omg",hoạt huyết dưỡng não 150mg+20mg,82
+VAIPE_P_TEST_53.png,glucofast 850 850mg,glucofast 850 850mg,100
+VAIPE_P_TEST_53.png,diamicronmr tab 3omg 60's 30mg,diamicron mr tab 30mg 60's 30mg,96
+VAIPE_P_TEST_15.png,glucofast 500 soomg,glucofast 850 850mg,82
+VAIPE_P_TEST_15.png,diamicronmr tab 3omg 60's 30mg,diamicron mr tab 30mg 60's 30mg,96
+VAIPE_P_TEST_140.png,mypara 500,mypara 500 500mg,78
+VAIPE_P_TEST_150.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
+VAIPE_P_TEST_150.png,dixirein,dixirein 375mg,76
+VAIPE_P_TEST_150.png,vipredni 16 mg 16mg,vipredni 16mg 16mg,100
+VAIPE_P_TEST_169.png,troysar am smg +somg,troysar am 5mg +50mg,82
+VAIPE_P_TEST_169.png,leninarto 10 iomg,leninarto 10 10mg,87
+VAIPE_P_TEST_169.png,stacetam 8oomg 8oomg,stacetam 800mg 800mg,78
+VAIPE_P_TEST_18.png,oạt huyét dưỡng não 15omg+2omg,hoạt huyết dưỡng não 150mg+20mg,88
+VAIPE_P_TEST_18.png,mezafen,loxoprofen (mezafen) 60mg,100
+VAIPE_P_TEST_87.png,paracetamol  (partamol tab.) 5oomg,paracetamol (partamol tab.) 500mg,93
+VAIPE_P_TEST_87.png,"đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg","đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg",100
+VAIPE_P_TEST_115.png,"droxicef 0,5g","droxicef 0,5g",100
+VAIPE_P_TEST_115.png,partamol tab. soomg,partamol tab. 500mg,82
+VAIPE_P_TEST_29.png,metformin (metformin 500) 5oomg,metformin (metformin 500) 500mg,93
+VAIPE_P_TEST_29.png,"đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg","đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg",100
+VAIPE_P_TEST_36.png,becosemd 4omg,becosemid 40mg,88
+VAIPE_P_TEST_88.png,"hoạt huyét dưỡng não 15omg, 2omg",hoạt huyết dưỡng não 150mg+20mg,90
+VAIPE_P_TEST_88.png,cosyndo b 175mg +175mg+ 125mcg,cosyndo b 175mg+175mg+125mcg,100
+VAIPE_P_TEST_47.png,paracetamol (partamol tab.) 5oomg,paracetamol (partamol tab.) 500mg,93
+VAIPE_P_TEST_47.png,"vitamin bl + b6 +bl2 (savi 3b) loomgtloomg+0,1smg","vitamin b1 + b6 + b12 (savi 3b) 100mg+100mg+0,15mg",69
+VAIPE_P_TEST_68.png,enalapril smg,enalapril 5mg,92
+VAIPE_P_TEST_67.png,"cefalexin (firstlexin 500) 0,5g","cefalexin (firstlexin 500) 0,5g",100
+VAIPE_P_TEST_67.png,paracetamol  (partamol tab.) 5oomg,paracetamol (partamol tab.) 500mg,93
+VAIPE_P_TEST_67.png,loratadin (sergurop),loratadin (sergurop) 10mg,100
+VAIPE_P_TEST_120.png,hoạt huyét dưỡng não 15omg+20mg,hoạt huyết dưỡng não 150mg+20mg,94
+VAIPE_P_TEST_120.png,atoris 2omg 2omg sl:5 viên,atoris 20mg 20mg,69
+VAIPE_P_TEST_154.png,"cefadroxil 0,5g","cefadroxil 0,5g",100
+VAIPE_P_TEST_154.png,mypara 500 soomg,mypara 500 500mg,79
+VAIPE_P_TEST_154.png,metronidazol 2somg,metronidazol 250mg,88
+VAIPE_P_TEST_134.png,menison 4mg 4mg,menison 4mg 4mg,100
+VAIPE_P_TEST_81.png,kavasdin 5 5 mg,kavasdin 5 5mg,100
+VAIPE_P_TEST_81.png,hoat huyét duong não bdf 1somg + smg,hoạt huyết dưỡng não bdf 150mg+5mg,65
+VAIPE_P_TEST_101.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
+VAIPE_P_TEST_101.png,panactol soomg,panactol 500mg,77
+VAIPE_P_TEST_104.png,"hangitor plus 4omg+12,smg","hangitor plus 40mg+12,5mg",78
+VAIPE_P_TEST_104.png,ốhuyết íchnão bdf 4omg+3oomg,bố huyết ích não bdf 40mg+300mg,85
+VAIPE_P_TEST_122.png,stacetam 8oomg 8o0mg,stacetam 800mg 800mg,83
+VAIPE_P_TEST_106.png,panactol,panactol 500mg,76
+VAIPE_P_TEST_106.png,vina-ad 2oooui+ 4ooui,vina-ad 2000ui+ 400ui,74
+VAIPE_P_TEST_78.png,kavasdin5 5 mg,kavasdin 5 5mg,100
+VAIPE_P_TEST_78.png,hoat huyét dưong não 1somg; 2omg,hoạt huyết dưỡng não 150mg+20mg,78
+VAIPE_P_TEST_0.png,"novoxim-s00 0,5g","novoxim-500 0,5g",93
+VAIPE_P_TEST_0.png,mypara 500 soomg,mypara 500 500mg,79
+VAIPE_P_TEST_0.png,kavasdin55 mg,kavasdin 5 5mg,100
+VAIPE_P_TEST_148.png,metronidazol 250mg,metronidazol 250mg,100
+VAIPE_P_TEST_148.png,dromasm fort 8omg,dromasm fort 80mg,93
+VAIPE_P_TEST_85.png,cardilopin smg,cardilopin 5mg,92
+VAIPE_P_TEST_85.png,medibogan 2oomg + 1somg + 16mg,medibogan 200mg + 150mg + 16mg,84
+VAIPE_P_TEST_161.png,"cefacyl 500 0,5g","cefacyl 500 0,5g",100
+VAIPE_P_TEST_161.png,paracetamol soomg soomg,paracetamol 500mg 500mg,71
+VAIPE_P_TEST_161.png,vitaminc stada ig 1g sl:5 viên,vitamin c stada 1g 1g,78
 VAIPE_P_TEST_112.png,"cefadroxil 0,5g","cefadroxil 0,5g",100
 VAIPE_P_TEST_112.png,bromhexin actavis 8mg 8mg,bromhexin actavis 8mg 8mg,100
 VAIPE_P_TEST_112.png,mypara 500 soomg,mypara 500 500mg,79
 VAIPE_P_TEST_112.png,menison 16mg 16mg,menison 16mg 16mg,100
 VAIPE_P_TEST_112.png,setblood 1lsmg+loomg+somcg,setblood 115mg+100mg+50mcg,56
-VAIPE_P_TEST_149.png,pyme diapro mr 3omg,pyme diapro mr 30mg,94
-VAIPE_P_TEST_149.png,"hangitor plus 4omg+12,5mg","hangitor plus 40mg+12,5mg",96
-VAIPE_P_TEST_152.png,"amoxicillin soomg 0,5g","amoxicillin 500mg 0,5g",85
-VAIPE_P_TEST_152.png,bromhexin actavis 8mg 8mg,bromhexin actavis 8mg 8mg,100
-VAIPE_P_TEST_159.png,nifedipin hasan 20 retard 2omg,nifedipin hasan 20 retard 20mg,96
-VAIPE_P_TEST_159.png,"cefacyl 500 0,5g","cefacyl 500 0,5g",100
-VAIPE_P_TEST_159.png,panactol soomg,panactol 500mg,77
-VAIPE_P_TEST_159.png,clorpheniramin 4mg,clorpheniramin 4mg,100
-VAIPE_P_TEST_163.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
-VAIPE_P_TEST_163.png,panactol soomg,panactol 500mg,77
-VAIPE_P_TEST_163.png,dixirein,dixirein 375mg,76
-VAIPE_P_TEST_163.png,vipredni 16 mg 16mg,vipredni 16mg 16mg,100
-VAIPE_P_TEST_104.png,"hangitor plus 4omg+12,smg","hangitor plus 40mg+12,5mg",78
-VAIPE_P_TEST_104.png,ốhuyết íchnão bdf 4omg+3oomg,bố huyết ích não bdf 40mg+300mg,85
-VAIPE_P_TEST_37.png,kavasdin 5 5 mg,kavasdin 5 5mg,100
-VAIPE_P_TEST_37.png,setblood 1lsmg+loomg+somcg,setblood 115mg+100mg+50mcg,56
-VAIPE_P_TEST_94.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
-VAIPE_P_TEST_94.png,sergurop iomg,sergurop 10mg,83
-VAIPE_P_TEST_50.png,"cefalexin (firstlexin 500) 0,58","cefalexin (firstlexin 500) 0,5g",96
-VAIPE_P_TEST_50.png,paracetamol  (partamol tab.) soomg,paracetamol (partamol tab.) 500mg,90
-VAIPE_P_TEST_50.png,"đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+2omg","đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg",98
-VAIPE_P_TEST_12.png,"cefadroxil 0,5g","cefadroxil 0,5g",100
-VAIPE_P_TEST_12.png,vipredni 16mg 16mg,vipredni 16mg 16mg,100
-VAIPE_P_TEST_12.png,bromhexin actavis 8mg 8mg,bromhexin actavis 8mg 8mg,100
-VAIPE_P_TEST_108.png,kavasdin5 5 mg,kavasdin 5 5mg,100
-VAIPE_P_TEST_71.png,kavasdin5 5 mg,kavasdin 5 5mg,100
-VAIPE_P_TEST_71.png,mypara 500 soomg,mypara 500 500mg,79
-VAIPE_P_TEST_96.png,ổhuyét íchnão bdf 4omg+3oomg,bố huyết ích não bdf 40mg+300mg,78
-VAIPE_P_TEST_96.png,metronidazol 250 250 mg,metronidazol 250 250mg,100
-VAIPE_P_TEST_144.png,cefadroxil soomg 5oomg,cefadroxil 500mg 500mg,75
-VAIPE_P_TEST_144.png,panactol soomg,panactol 500mg,77
-VAIPE_P_TEST_144.png,cosyndo b 175mg +175mg+ 125mcg,cosyndo b 175mg+175mg+125mcg,100
-VAIPE_P_TEST_74.png,"cefadroxil 0,5g","cefadroxil 0,5g",100
-VAIPE_P_TEST_74.png,partamol tab. soomg,partamol tab. 500mg,82
-VAIPE_P_TEST_74.png,vipredni 16mg 16mg,vipredni 16mg 16mg,100
-VAIPE_P_TEST_115.png,"droxicef 0,5g","droxicef 0,5g",100
-VAIPE_P_TEST_115.png,partamol tab. soomg,partamol tab. 500mg,82
-VAIPE_P_TEST_70.png,kavasdin5 5 mg,kavasdin 5 5mg,100
-VAIPE_P_TEST_70.png,mypara 500 soomg,mypara 500 500mg,79
-VAIPE_P_TEST_34.png,fabamox 500 soomg,fabamox 500 500mg,80
-VAIPE_P_TEST_34.png,pariamol tab soomg,partamol tab. 500mg,61
-VAIPE_P_TEST_34.png,metronidazol 250 250 mg,metronidazol 250 250mg,100
-VAIPE_P_TEST_170.png,"xitoran 0,5g","xitoran 0,5g",100
-VAIPE_P_TEST_170.png,setblood 1lsmg+loomg+somcg,setblood 115mg+100mg+50mcg,56
-VAIPE_P_TEST_169.png,troysar am smg +somg,troysar am 5mg +50mg,82
-VAIPE_P_TEST_169.png,leninarto 10 iomg,leninarto 10 10mg,87
-VAIPE_P_TEST_169.png,stacetam 8oomg 8oomg,stacetam 800mg 800mg,78
-VAIPE_P_TEST_66.png,amcardia-5 smg,amcardia-5 5mg,92
-VAIPE_P_TEST_66.png,panactol soomg,panactol 500mg,77
-VAIPE_P_TEST_140.png,mypara 500,mypara 500 500mg,78
-VAIPE_P_TEST_119.png,glucofast 500 soomg,glucofast 850 850mg,82
-VAIPE_P_TEST_119.png,bloza,bloza 50mg,71
-VAIPE_P_TEST_143.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
-VAIPE_P_TEST_143.png,dixirein,dixirein 375mg,76
-VAIPE_P_TEST_143.png,panactol soomg,panactol 500mg,77
-VAIPE_P_TEST_18.png,oạt huyét dưỡng não 15omg+2omg,hoạt huyết dưỡng não 150mg+20mg,88
-VAIPE_P_TEST_18.png,mezafen,loxoprofen (mezafen) 60mg,100
-VAIPE_P_TEST_10.png,glucofast 500 soomg,glucofast 850 850mg,82
-VAIPE_P_TEST_59.png,colchcin img,colchicin 1mg,87
-VAIPE_P_TEST_59.png,sadapron 300 3oomg,sadapron 300 300mg,88
-VAIPE_P_TEST_30.png,"oạt huyét dưỡng não 15omg, 2omg",hoạt huyết dưỡng não 150mg+20mg,88
-VAIPE_P_TEST_30.png,vina-ad 2oooui+ 4ooui,vina-ad 2000ui+ 400ui,74
-VAIPE_P_TEST_171.png,venrutine,venrutine 100mg +500mg,62
-VAIPE_P_TEST_120.png,hoạt huyét dưỡng não 15omg+20mg,hoạt huyết dưỡng não 150mg+20mg,94
-VAIPE_P_TEST_120.png,atoris 2omg 2omg sl:5 viên,atoris 20mg 20mg,69
-VAIPE_P_TEST_44.png,enalapri smg,enalapril 5mg,87
-VAIPE_P_TEST_44.png,hoạt huyét dưỡng não 15omg+2omg,hoạt huyết dưỡng não 150mg+20mg,90
-VAIPE_P_TEST_24.png,panactol soomg,panactol 500mg,77
-VAIPE_P_TEST_24.png,"katrypsin 4,2mg","katrypsin 4,2mg",100
-VAIPE_P_TEST_101.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
-VAIPE_P_TEST_101.png,panactol soomg,panactol 500mg,77
-VAIPE_P_TEST_107.png,"hapenxin capsules 0,5g","hapenxin capsules 0,5g",100
-VAIPE_P_TEST_107.png,metronidazol 250 250 mg,metronidazol 250 250mg,100
-VAIPE_P_TEST_107.png,panactol soomg,panactol 500mg,77
-VAIPE_P_TEST_61.png,glucofast 500 soomg,glucofast 850 850mg,82
-VAIPE_P_TEST_61.png,renapril smg smg,renapril 5mg 5mg,86
-VAIPE_P_TEST_128.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
-VAIPE_P_TEST_128.png,dixirein,dixirein 375mg,76
-VAIPE_P_TEST_158.png,"cefadroxil 0,5g","cefadroxil 0,5g",100
-VAIPE_P_TEST_158.png,mypara 500 soomg,mypara 500 500mg,79
-VAIPE_P_TEST_158.png,"statripsine 4,2mg","statripsine 4,2mg",100
-VAIPE_P_TEST_158.png,setblood 1lsmg+loomg+somcg,setblood 115mg+100mg+50mcg,56
-VAIPE_P_TEST_28.png,amoxicilin soomg soomg,amoxicilin 500mg 500mg,70
-VAIPE_P_TEST_28.png,clorpheniramin 4mg,clorpheniramin 4mg,100
-VAIPE_P_TEST_28.png,panactol soomg,panactol 500mg,77
-VAIPE_P_TEST_43.png,enalapri smg,enalapril 5mg,87
-VAIPE_P_TEST_43.png,hoạt huyét dưỡng não 15omg+2omg,hoạt huyết dưỡng não 150mg+20mg,90
-VAIPE_P_TEST_168.png,carudxan 2mg,carudxan 2mg,100
-VAIPE_P_TEST_168.png,metronidazol 250 250 mg,metronidazol 250 250mg,100
-VAIPE_P_TEST_11.png,glucofast 500 soomg,glucofast 850 850mg,82
-VAIPE_P_TEST_160.png,"statripsine 4,2mg","statripsine 4,2mg",100
-VAIPE_P_TEST_20.png,mezafen 6omg,mezafen 60mg,91
-VAIPE_P_TEST_20.png,hoạt huyét dưỡng não 15omg+2omg,hoạt huyết dưỡng não 150mg+20mg,90
-VAIPE_P_TEST_46.png,"cefalexin (firstlexin 500) 0,5g","cefalexin (firstlexin 500) 0,5g",100
-VAIPE_P_TEST_46.png,paracetamol  (partamol tab) 5oomg,paracetamol (partamol tab.) 500mg,93
-VAIPE_P_TEST_121.png,"xitoran 0,5g","xitoran 0,5g",100
-VAIPE_P_TEST_65.png,amoxiclin soomg soomg,amoxicilin 500mg 500mg,67
-VAIPE_P_TEST_65.png,metronidazol 250 250 mg,metronidazol 250 250mg,100
-VAIPE_P_TEST_65.png,partamol tab. soomg,partamol tab. 500mg,82
-VAIPE_P_TEST_65.png,oat huyét dưỡng não 15omg+2omg,hoạt huyết dưỡng não 150mg+20mg,84
-VAIPE_P_TEST_4.png,"cefadroxil 0,5g","cefadroxil 0,5g",100
-VAIPE_P_TEST_4.png,vipredni 16mg 16mg,vipredni 16mg 16mg,100
-VAIPE_P_TEST_4.png,mypara 500 soomg,mypara 500 500mg,79
-VAIPE_P_TEST_75.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
-VAIPE_P_TEST_75.png,"katrypsin 4,2mg","katrypsin 4,2mg",100
-VAIPE_P_TEST_75.png,partamol tab. soomg,partamol tab. 500mg,82
-VAIPE_P_TEST_97.png,amoxicilin soomg soomg,amoxicilin 500mg 500mg,70
-VAIPE_P_TEST_97.png,metronidazol 250 250 mg,metronidazol 250 250mg,100
-VAIPE_P_TEST_97.png,kagasdine 2omg,kagasdine 20mg,92
-VAIPE_P_TEST_99.png,"novoxim-s00 0,5g","novoxim-500 0,5g",93
-VAIPE_P_TEST_99.png,panactol soomg,panactol 500mg,77
-VAIPE_P_TEST_106.png,panactol,panactol 500mg,76
-VAIPE_P_TEST_106.png,vina-ad 2oooui+ 4ooui,vina-ad 2000ui+ 400ui,74
-VAIPE_P_TEST_147.png,"amoxicillin soomg 0,5g","amoxicillin 500mg 0,5g",85
-VAIPE_P_TEST_147.png,metronidazol 250mg,metronidazol 250mg,100
-VAIPE_P_TEST_2.png,meglucon 1000 1000 mg,meglucon 1000 1000mg,100
-VAIPE_P_TEST_109.png,fabamox 500 soomg,fabamox 500 500mg,80
-VAIPE_P_TEST_109.png,tydol pm soomg + 2smg,tydol pm 500mg + 25mg,76
-VAIPE_P_TEST_130.png,golddicron 30mg,golddicron 30mg,100
-VAIPE_P_TEST_130.png,chorlatcyn 125mg+5omg+5omg+2smg,chorlatcyn 125mg+50mg+50mg+25mg,92
-VAIPE_P_TEST_31.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
-VAIPE_P_TEST_31.png,panactol soomg,panactol 500mg,77
-VAIPE_P_TEST_31.png,dixirein,dixirein 375mg,76
-VAIPE_P_TEST_31.png,vipredni 16 mg 16mg,vipredni 16mg 16mg,100
-VAIPE_P_TEST_154.png,"cefadroxil 0,5g","cefadroxil 0,5g",100
-VAIPE_P_TEST_154.png,mypara 500 soomg,mypara 500 500mg,79
-VAIPE_P_TEST_154.png,metronidazol 2somg,metronidazol 250mg,88
-VAIPE_P_TEST_19.png,nifedipin hasan 20 retard 2omg,nifedipin hasan 20 retard 20mg,96
-VAIPE_P_TEST_118.png,enalapri smg,enalapril 5mg,87
-VAIPE_P_TEST_118.png,kavasdin5 5 mg,kavasdin 5 5mg,100
-VAIPE_P_TEST_92.png,diamicron mr tab 6omg 30's 6omg,diamicron mr tab 60mg 30's 60mg,92
-VAIPE_P_TEST_1.png,meglucon 1000 1000 mg,meglucon 1000 1000mg,100
-VAIPE_P_TEST_134.png,menison 4mg 4mg,menison 4mg 4mg,100
-VAIPE_P_TEST_53.png,glucofast 850 850mg,glucofast 850 850mg,100
-VAIPE_P_TEST_53.png,diamicronmr tab 3omg 60's 30mg,diamicron mr tab 30mg 60's 30mg,96
-VAIPE_P_TEST_91.png,panactol soomg,panactol 500mg,77
-VAIPE_P_TEST_91.png,hoat huyét dưong não qn 15omg+2omg,hoạt huyết dưỡng não qn 150mg+20mg,84
-VAIPE_P_TEST_133.png,metronidazol 250 250 mg,metronidazol 250 250mg,100
-VAIPE_P_TEST_133.png,partamol tab. soomg,partamol tab. 500mg,82
-VAIPE_P_TEST_72.png,renapril smg smg,renapril 5mg 5mg,86
-VAIPE_P_TEST_72.png,hoat huyét dưong não 1somg; 2omg,hoạt huyết dưỡng não 150mg+20mg,78
-VAIPE_P_TEST_32.png,"cephalexin 2somg 0,25g","cephalexin 250mg 0,25g",90
-VAIPE_P_TEST_141.png,metformin (metformin 500) 5oomg,metformin (metformin 500) 500mg,93
-VAIPE_P_TEST_141.png,atorvastatin (atoris,atorvastatin (atoris 20mg) 20mg,81
-VAIPE_P_TEST_21.png,fabamox 500 soomg,fabamox 500 500mg,80
-VAIPE_P_TEST_21.png,dromasmfort 8omg,dromasm fort 80mg,93
-VAIPE_P_TEST_165.png,stacetam 8oomg 8o0mg,stacetam 800mg 800mg,83
-VAIPE_P_TEST_165.png,"ebitac 12.5 iomg + 12,smg","ebitac 12.5 10mg + 12,5mg",86
-VAIPE_P_TEST_82.png,glucofast 500 soomg,glucofast 850 850mg,82
-VAIPE_P_TEST_82.png,lazibet mr 60 60mg,lazibet mr 60 60mg,100
-VAIPE_P_TEST_49.png,amoxicilin (fabamox 500) 5oomg,amoxicilin (fabamox 500) 500mg,93
-VAIPE_P_TEST_49.png,paracetamol  (partamol tab.) soomg,paracetamol (partamol tab.) 500mg,90
-VAIPE_P_TEST_49.png,"vitamin bl +b6 +b12 (savi 3b) loomg+loomg+0,15mg","vitamin b1 + b6 + b12 (savi 3b) 100mg+100mg+0,15mg",89
-VAIPE_P_TEST_145.png,"cefadroxil 0,5g","cefadroxil 0,5g",100
-VAIPE_P_TEST_145.png,mypara 500 soomg,mypara 500 500mg,79
-VAIPE_P_TEST_145.png,"alfachim 4,2mg","alfachim 4,2mg",100
-VAIPE_P_TEST_67.png,"cefalexin (firstlexin 500) 0,5g","cefalexin (firstlexin 500) 0,5g",100
-VAIPE_P_TEST_67.png,paracetamol  (partamol tab.) 5oomg,paracetamol (partamol tab.) 500mg,93
-VAIPE_P_TEST_67.png,loratadin (sergurop),loratadin (sergurop) 10mg,100
-VAIPE_P_TEST_89.png,"hoạt huyét dưỡng não 15omg, 2omg",hoạt huyết dưỡng não 150mg+20mg,90
-VAIPE_P_TEST_89.png,setblood 1lsmg+loomg+somcg,setblood 115mg+100mg+50mcg,56
-VAIPE_P_TEST_95.png,"ebitac 12.5 1omg + 12,5mg","ebitac 12.5 10mg + 12,5mg",95
-VAIPE_P_TEST_95.png,stacetam 8oomg 8oomg,stacetam 800mg 800mg,78
-VAIPE_P_TEST_124.png,"cephalexin pmp 500 0,5g","cephalexin pmp 500 0,5g",100
-VAIPE_P_TEST_124.png,tydol pm soomg + 2smg,tydol pm 500mg + 25mg,76
-VAIPE_P_TEST_55.png,meglucon 1000 1000 mg,meglucon 1000 1000mg,100
-VAIPE_P_TEST_55.png,diamicron mr tab 6omg 30's 6omg,diamicron mr tab 60mg 30's 60mg,92
-VAIPE_P_TEST_17.png,paracetamol soomg soomg,paracetamol 500mg 500mg,71
-VAIPE_P_TEST_17.png,"statripsine 4,2mg","statripsine 4,2mg",100
-VAIPE_P_TEST_156.png,"cefacyl 500 0,5g","cefacyl 500 0,5g",100
-VAIPE_P_TEST_156.png,paracetamol soomg soomg,paracetamol 500mg 500mg,71
-VAIPE_P_TEST_156.png,diclofenac somg,diclofenac 50mg,86
-VAIPE_P_TEST_68.png,enalapril smg,enalapril 5mg,92
-VAIPE_P_TEST_116.png,meglucon 1000 1000 mg,meglucon 1000 1000mg,100
-VAIPE_P_TEST_116.png,atoris 2omg 2omg,atoris 20mg 20mg,86
-VAIPE_P_TEST_45.png,"cefalexin (firstlexin 500) 0,5g","cefalexin (firstlexin 500) 0,5g",100
-VAIPE_P_TEST_45.png,paracetamol  (partamol tab.) soomg,paracetamol (partamol tab.) 500mg,90
 VAIPE_P_TEST_41.png,enalapri smg,enalapril 5mg,87
 VAIPE_P_TEST_41.png,pamlonor,pamlonor 5mg,84
 VAIPE_P_TEST_41.png,hoathuyét dưỡng não 15omg+2omg,hoạt huyết dưỡng não 150mg+20mg,86
-VAIPE_P_TEST_88.png,"hoạt huyét dưỡng não 15omg, 2omg",hoạt huyết dưỡng não 150mg+20mg,90
-VAIPE_P_TEST_88.png,cosyndo b 175mg +175mg+ 125mcg,cosyndo b 175mg+175mg+125mcg,100
-VAIPE_P_TEST_110.png,savilosartan 50 somg,savi losartan 50 50mg,89
-VAIPE_P_TEST_110.png,cosyndo b 175mg +175mg+ 125mcg,cosyndo b 175mg+175mg+125mcg,100
-VAIPE_P_TEST_13.png,glucofast 850 850mg,glucofast 850 850mg,100
-VAIPE_P_TEST_13.png,lazibet mr 60 60mg,lazibet mr 60 60mg,100
-VAIPE_P_TEST_167.png,troysar am smg +somg,troysar am 5mg +50mg,82
-VAIPE_P_TEST_167.png,stacetam 8oomg 8oomg,stacetam 800mg 800mg,78
-VAIPE_P_TEST_167.png,leninarto 10 iomg,leninarto 10 10mg,87
-VAIPE_P_TEST_125.png,"cefacyl 500 0,5g","cefacyl 500 0,5g",100
-VAIPE_P_TEST_125.png,paracetamol soomg soomg,paracetamol 500mg 500mg,71
-VAIPE_P_TEST_122.png,stacetam 8oomg 8o0mg,stacetam 800mg 800mg,83
-VAIPE_P_TEST_153.png,enalapril smg,enalapril 5mg,92
-VAIPE_P_TEST_153.png,"amoxicillin soomg 0,5g","amoxicillin 500mg 0,5g",85
-VAIPE_P_TEST_90.png,"hoạt huyét dưỡng não 15omg, 2omg",hoạt huyết dưỡng não 150mg+20mg,90
-VAIPE_P_TEST_90.png,panactol soomg,panactol 500mg,77
-VAIPE_P_TEST_58.png,"telmisartan + hydroclorothiazid (hangitor plus) 40mg+12,5mg","telmisartan % hydroclorothiazid (hangitor plus) 40mg+12,5mg",100
-VAIPE_P_TEST_58.png,"đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg","đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg",100
+VAIPE_P_TEST_118.png,enalapri smg,enalapril 5mg,87
+VAIPE_P_TEST_118.png,kavasdin5 5 mg,kavasdin 5 5mg,100
 VAIPE_P_TEST_40.png,ingaron 200 dst 200 mg,ingaron 200 dst 200mg,100
 VAIPE_P_TEST_40.png,dixirein,dixirein 375mg,76
 VAIPE_P_TEST_40.png,panactol soomg,panactol 500mg,77
-VAIPE_P_TEST_26.png,"telmisartan + hydroclorothiazid (hangitor plus) 40mg+12,5mg","telmisartan % hydroclorothiazid (hangitor plus) 40mg+12,5mg",100
-VAIPE_P_TEST_26.png,atorvastatin (atoris 2omg) 2omg,atorvastatin (atoris 20mg) 20mg,93
-VAIPE_P_TEST_98.png,fudcime 2oomg 2oomg,fudcime 200mg 200mg,76
-VAIPE_P_TEST_139.png,"cefalexin (firstlexin 500) 0,58","cefalexin (firstlexin 500) 0,5g",96
-VAIPE_P_TEST_139.png,carbocistein (anpemux) 25omg,carbocistein (anpemux) 250mg,96
-VAIPE_P_TEST_139.png,"đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+2omg","đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg",98
-VAIPE_P_TEST_78.png,kavasdin5 5 mg,kavasdin 5 5mg,100
-VAIPE_P_TEST_78.png,hoat huyét dưong não 1somg; 2omg,hoạt huyết dưỡng não 150mg+20mg,78
-VAIPE_P_TEST_129.png,sergurop iomg,sergurop 10mg,83
-VAIPE_P_TEST_129.png,chorlatcyn 125mg+somg+somg+2smg,chorlatcyn 125mg+50mg+50mg+25mg,88
-VAIPE_P_TEST_9.png,fabamox soomg 500 mg,fabamox 500mg 500mg,82
-VAIPE_P_TEST_9.png,panactol soomg,panactol 500mg,77
-VAIPE_P_TEST_9.png,sergurop iomg,sergurop 10mg,83
-VAIPE_P_TEST_135.png,enalapril smg,enalapril 5mg,92
-VAIPE_P_TEST_135.png,panactol soomg,panactol 500mg,77
-VAIPE_P_TEST_114.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
-VAIPE_P_TEST_114.png,vipredni 16 mg 16mg,vipredni 16mg 16mg,100
-VAIPE_P_TEST_8.png,metformin (meglucon 1000) 1000 mg,metformin (meglucon 1000) 1000 mg,100
-VAIPE_P_TEST_8.png,gliclazid (golddicron) 3omg,gliclazid (golddicron) 30mg,96
-VAIPE_P_TEST_8.png,"đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+2omg","đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg",98
-VAIPE_P_TEST_56.png,"hapenxin capsules 0,5g","hapenxin capsules 0,5g",100
-VAIPE_P_TEST_56.png,tydol pm soomg + 2smg,tydol pm 500mg + 25mg,76
-VAIPE_P_TEST_76.png,metronidazol 250 250 mg,metronidazol 250 250mg,100
-VAIPE_P_TEST_76.png,kagasdine 2omg,kagasdine 20mg,92
-VAIPE_P_TEST_76.png,dromasmfort 8omg,dromasm fort 80mg,93
-VAIPE_P_TEST_137.png,lazibet mr 60 6omg,lazibet mr 60 60mg,93
-VAIPE_P_TEST_77.png,enalapril smg,enalapril 5mg,92
-VAIPE_P_TEST_77.png,saviprolol 5 smg,savi prolol 5 5mg,93
-VAIPE_P_TEST_77.png,inbacd 10,inbacid 10 10mg,76
-VAIPE_P_TEST_117.png,glucofast 500 soomg,glucofast 850 850mg,82
-VAIPE_P_TEST_117.png,lazibet mr 60 6omg,lazibet mr 60 60mg,93
-VAIPE_P_TEST_117.png,enalapril smg,enalapril 5mg,92
-VAIPE_P_TEST_73.png,glucofast 850 850mg,glucofast 850 850mg,100
-VAIPE_P_TEST_73.png,bloza,bloza 50mg,71
-VAIPE_P_TEST_64.png,meglucon 1000 1000mg,meglucon 1000 1000mg,100
-VAIPE_P_TEST_64.png,pyme diapro mr 3omg,pyme diapro mr 30mg,94
-VAIPE_P_TEST_64.png,enalapril smg,enalapril 5mg,92
-VAIPE_P_TEST_126.png,fabamox 500 soomg,fabamox 500 500mg,80
-VAIPE_P_TEST_126.png,clorpheniramin 4mg,clorpheniramin 4mg,100
-VAIPE_P_TEST_81.png,kavasdin 5 5 mg,kavasdin 5 5mg,100
-VAIPE_P_TEST_81.png,hoat huyét duong não bdf 1somg + smg,hoạt huyết dưỡng não bdf 150mg+5mg,65
-VAIPE_P_TEST_164.png,"cefadroxil 0,5g","cefadroxil 0,5g",100
-VAIPE_P_TEST_164.png,mypara 500 soomg,mypara 500 500mg,79
-VAIPE_P_TEST_164.png,menison 16mg 16mg,menison 16mg 16mg,100
-VAIPE_P_TEST_164.png,setblood 1lsmg+loomg+somcg,setblood 115mg+100mg+50mcg,56
-VAIPE_P_TEST_150.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
-VAIPE_P_TEST_150.png,dixirein,dixirein 375mg,76
-VAIPE_P_TEST_150.png,vipredni 16 mg 16mg,vipredni 16mg 16mg,100
-VAIPE_P_TEST_127.png,panactol soomg,panactol 500mg,77
-VAIPE_P_TEST_3.png,carudxan 2mg,carudxan 2mg,100
-VAIPE_P_TEST_3.png,metronidazol 250 250 mg,metronidazol 250 250mg,100
-VAIPE_P_TEST_132.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
-VAIPE_P_TEST_132.png,partamol tab. soomg,partamol tab. 500mg,82
-VAIPE_P_TEST_132.png,clorpheniramin amg,clorpheniramin 4mg,94
-VAIPE_P_TEST_15.png,glucofast 500 soomg,glucofast 850 850mg,82
-VAIPE_P_TEST_15.png,diamicronmr tab 3omg 60's 30mg,diamicron mr tab 30mg 60's 30mg,96
-VAIPE_P_TEST_48.png,"hapenxin capsules 0,5g","hapenxin capsules 0,5g",100
-VAIPE_P_TEST_48.png,panactol soomg,panactol 500mg,77
-VAIPE_P_TEST_111.png,mezafen,loxoprofen (mezafen) 60mg,100
-VAIPE_P_TEST_42.png,amoxicilin (fabamox 500) 5oomg,amoxicilin (fabamox 500) 500mg,93
-VAIPE_P_TEST_42.png,paracetamol  (partamol tab.) 5oomg,paracetamol (partamol tab.) 500mg,93
-VAIPE_P_TEST_42.png,metronidazol  (metronidazol 250) 250 mg,metronidazol (metronidazol 250) 250 mg,100
-VAIPE_P_TEST_42.png,"đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg","đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg",100
+VAIPE_P_TEST_153.png,enalapril smg,enalapril 5mg,92
+VAIPE_P_TEST_153.png,"amoxicillin soomg 0,5g","amoxicillin 500mg 0,5g",85
+VAIPE_P_TEST_2.png,meglucon 1000 1000 mg,meglucon 1000 1000mg,100
+VAIPE_P_TEST_92.png,diamicron mr tab 6omg 30's 6omg,diamicron mr tab 60mg 30's 60mg,92
+VAIPE_P_TEST_144.png,cefadroxil soomg 5oomg,cefadroxil 500mg 500mg,75
+VAIPE_P_TEST_144.png,panactol soomg,panactol 500mg,77
+VAIPE_P_TEST_144.png,cosyndo b 175mg +175mg+ 125mcg,cosyndo b 175mg+175mg+125mcg,100
+VAIPE_P_TEST_95.png,"ebitac 12.5 1omg + 12,5mg","ebitac 12.5 10mg + 12,5mg",95
+VAIPE_P_TEST_95.png,stacetam 8oomg 8oomg,stacetam 800mg 800mg,78
+VAIPE_P_TEST_72.png,renapril smg smg,renapril 5mg 5mg,86
+VAIPE_P_TEST_72.png,hoat huyét dưong não 1somg; 2omg,hoạt huyết dưỡng não 150mg+20mg,78
+VAIPE_P_TEST_51.png,"alfachim 4,2mg","alfachim 4,2mg",100
+VAIPE_P_TEST_51.png,mypara 500 soomg,mypara 500 500mg,79
+VAIPE_P_TEST_24.png,panactol soomg,panactol 500mg,77
+VAIPE_P_TEST_24.png,"katrypsin 4,2mg","katrypsin 4,2mg",100
 VAIPE_P_TEST_86.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
 VAIPE_P_TEST_86.png,panactol soomg,panactol 500mg,77
 VAIPE_P_TEST_86.png,dixirein,dixirein 375mg,76
 VAIPE_P_TEST_86.png,sergurop iomg,sergurop 10mg,83
+VAIPE_P_TEST_123.png,livonic,livonic 2500mg+400mg+500mg+85mg,38
+VAIPE_P_TEST_108.png,kavasdin5 5 mg,kavasdin 5 5mg,100
+VAIPE_P_TEST_96.png,ổhuyét íchnão bdf 4omg+3oomg,bố huyết ích não bdf 40mg+300mg,78
+VAIPE_P_TEST_96.png,metronidazol 250 250 mg,metronidazol 250 250mg,100
+VAIPE_P_TEST_6.png,"hapenxin capsules 0,5g","hapenxin capsules 0,5g",100
+VAIPE_P_TEST_6.png,pariamol tab soomg,partamol tab. 500mg,61
+VAIPE_P_TEST_165.png,stacetam 8oomg 8o0mg,stacetam 800mg 800mg,83
+VAIPE_P_TEST_165.png,"ebitac 12.5 iomg + 12,smg","ebitac 12.5 10mg + 12,5mg",86
+VAIPE_P_TEST_147.png,"amoxicillin soomg 0,5g","amoxicillin 500mg 0,5g",85
+VAIPE_P_TEST_147.png,metronidazol 250mg,metronidazol 250mg,100
+VAIPE_P_TEST_168.png,carudxan 2mg,carudxan 2mg,100
+VAIPE_P_TEST_168.png,metronidazol 250 250 mg,metronidazol 250 250mg,100
+VAIPE_P_TEST_60.png,fabamox 500 soomg,fabamox 500 500mg,80
+VAIPE_P_TEST_60.png,metronidazol 250 250 mg,metronidazol 250 250mg,100
+VAIPE_P_TEST_60.png,dromasmfort 8omg,dromasm fort 80mg,93
+VAIPE_P_TEST_129.png,sergurop iomg,sergurop 10mg,83
+VAIPE_P_TEST_129.png,chorlatcyn 125mg+somg+somg+2smg,chorlatcyn 125mg+50mg+50mg+25mg,88
+VAIPE_P_TEST_83.png,glucofast 500 soomg,glucofast 850 850mg,82
+VAIPE_P_TEST_83.png,lazibet mr 60 60mg,lazibet mr 60 60mg,100
+VAIPE_P_TEST_136.png,enalapri smg,enalapril 5mg,87
+VAIPE_P_TEST_136.png,pamlonor,pamlonor 5mg,84
+VAIPE_P_TEST_136.png,inbacd 10,inbacid 10 10mg,76
+VAIPE_P_TEST_99.png,"novoxim-s00 0,5g","novoxim-500 0,5g",93
+VAIPE_P_TEST_99.png,panactol soomg,panactol 500mg,77
+VAIPE_P_TEST_13.png,glucofast 850 850mg,glucofast 850 850mg,100
+VAIPE_P_TEST_13.png,lazibet mr 60 60mg,lazibet mr 60 60mg,100
+VAIPE_P_TEST_128.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
+VAIPE_P_TEST_128.png,dixirein,dixirein 375mg,76
+VAIPE_P_TEST_66.png,amcardia-5 smg,amcardia-5 5mg,92
+VAIPE_P_TEST_66.png,panactol soomg,panactol 500mg,77
+VAIPE_P_TEST_31.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
+VAIPE_P_TEST_31.png,panactol soomg,panactol 500mg,77
+VAIPE_P_TEST_31.png,dixirein,dixirein 375mg,76
+VAIPE_P_TEST_31.png,vipredni 16 mg 16mg,vipredni 16mg 16mg,100
+VAIPE_P_TEST_52.png,"cefadroxil 0,5g","cefadroxil 0,5g",100
+VAIPE_P_TEST_52.png,mypara 500 soomg,mypara 500 500mg,79
+VAIPE_P_TEST_52.png,setblood,setblood 115mg+100mg+50mcg,48
+VAIPE_P_TEST_121.png,"xitoran 0,5g","xitoran 0,5g",100
+VAIPE_P_TEST_143.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
+VAIPE_P_TEST_143.png,dixirein,dixirein 375mg,76
+VAIPE_P_TEST_143.png,panactol soomg,panactol 500mg,77
+VAIPE_P_TEST_5.png,fibrofin-145,fibrofin-145 145mg,83
+VAIPE_P_TEST_117.png,glucofast 500 soomg,glucofast 850 850mg,82
+VAIPE_P_TEST_117.png,lazibet mr 60 6omg,lazibet mr 60 60mg,93
+VAIPE_P_TEST_117.png,enalapril smg,enalapril 5mg,92
+VAIPE_P_TEST_76.png,metronidazol 250 250 mg,metronidazol 250 250mg,100
+VAIPE_P_TEST_76.png,kagasdine 2omg,kagasdine 20mg,92
+VAIPE_P_TEST_76.png,dromasmfort 8omg,dromasm fort 80mg,93
+VAIPE_P_TEST_119.png,glucofast 500 soomg,glucofast 850 850mg,82
+VAIPE_P_TEST_119.png,bloza,bloza 50mg,71
 VAIPE_P_TEST_57.png,enalapri smg,enalapril 5mg,87
 VAIPE_P_TEST_57.png,asprrin 8img 8img,aspirin 81mg 81mg,80
 VAIPE_P_TEST_57.png,"saviprolol 2,5 2,5mg","saviprolol 2,5 2,5mg",100
 VAIPE_P_TEST_57.png,inbacd 10 iomg,inbacid 10 10mg,80
-VAIPE_P_TEST_63.png,chorlatcyn 125mg+somg+somg+25mg,chorlatcyn 125mg+50mg+50mg+25mg,92
-VAIPE_P_TEST_79.png,kavasdin 5 5 mg,kavasdin 5 5mg,100
-VAIPE_P_TEST_79.png,hoat huyét dưong não 1somg; 2omg,hoạt huyết dưỡng não 150mg+20mg,78
-VAIPE_P_TEST_136.png,enalapri smg,enalapril 5mg,87
-VAIPE_P_TEST_136.png,pamlonor,pamlonor 5mg,84
-VAIPE_P_TEST_136.png,inbacd 10,inbacid 10 10mg,76
-VAIPE_P_TEST_87.png,paracetamol  (partamol tab.) 5oomg,paracetamol (partamol tab.) 500mg,93
-VAIPE_P_TEST_87.png,"đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg","đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg",100
-VAIPE_P_TEST_16.png,troysar am smg +somg,troysar am 5mg +50mg,82
-VAIPE_P_TEST_16.png,leninarto 10 iomg,leninarto 10 10mg,87
-VAIPE_P_TEST_16.png,stacetam 8oomg 8oomg,stacetam 800mg 800mg,78
-VAIPE_P_TEST_166.png,cardilopin smg,cardilopin 5mg,92
-VAIPE_P_TEST_166.png,"hoat huyét dưong não 15omg, 2omg",hoạt huyết dưỡng não 150mg+20mg,82
-VAIPE_P_TEST_161.png,"cefacyl 500 0,5g","cefacyl 500 0,5g",100
-VAIPE_P_TEST_161.png,paracetamol soomg soomg,paracetamol 500mg 500mg,71
-VAIPE_P_TEST_161.png,vitaminc stada ig 1g sl:5 viên,vitamin c stada 1g 1g,78
-VAIPE_P_TEST_33.png,thanhnhiệt tiêu độc livergood,thanh nhiệt tiêu độc livergood,100
-VAIPE_P_TEST_25.png,panactol soomg,panactol 500mg,77
-VAIPE_P_TEST_25.png,"katrypsin 4,2mg","katrypsin 4,2mg",100
-VAIPE_P_TEST_123.png,livonic,diclofenac 50mg,38
+VAIPE_P_TEST_59.png,colchcin img,colchicin 1mg,87
+VAIPE_P_TEST_59.png,sadapron 300 3oomg,sadapron 300 300mg,88
+VAIPE_P_TEST_12.png,"cefadroxil 0,5g","cefadroxil 0,5g",100
+VAIPE_P_TEST_12.png,vipredni 16mg 16mg,vipredni 16mg 16mg,100
+VAIPE_P_TEST_12.png,bromhexin actavis 8mg 8mg,bromhexin actavis 8mg 8mg,100
+VAIPE_P_TEST_20.png,mezafen 6omg,mezafen 60mg,91
+VAIPE_P_TEST_20.png,hoạt huyét dưỡng não 15omg+2omg,hoạt huyết dưỡng não 150mg+20mg,90
+VAIPE_P_TEST_61.png,glucofast 500 soomg,glucofast 850 850mg,82
+VAIPE_P_TEST_61.png,renapril smg smg,renapril 5mg 5mg,86
+VAIPE_P_TEST_159.png,nifedipin hasan 20 retard 2omg,nifedipin hasan 20 retard 20mg,96
+VAIPE_P_TEST_159.png,"cefacyl 500 0,5g","cefacyl 500 0,5g",100
+VAIPE_P_TEST_159.png,panactol soomg,panactol 500mg,77
+VAIPE_P_TEST_159.png,clorpheniramin 4mg,clorpheniramin 4mg,100
+VAIPE_P_TEST_69.png,amoxicilin soomg soomg,amoxicilin 500mg 500mg,70
+VAIPE_P_TEST_69.png,dromasmfort 8omg,dromasm fort 80mg,93
+VAIPE_P_TEST_91.png,panactol soomg,panactol 500mg,77
+VAIPE_P_TEST_91.png,hoat huyét dưong não qn 15omg+2omg,hoạt huyết dưỡng não qn 150mg+20mg,84
 VAIPE_P_TEST_142.png,"novoxim-s00 0,5g","novoxim-500 0,5g",93
 VAIPE_P_TEST_142.png,panactol soomg,panactol 500mg,77
 VAIPE_P_TEST_142.png,hoat huyét dưong não bdf 1somg + smg,hoạt huyết dưỡng não bdf 150mg+5mg,69
-VAIPE_P_TEST_105.png,"droxicef 0,5g","droxicef 0,5g",100
-VAIPE_P_TEST_105.png,dixirein,dixirein 375mg,76
-VAIPE_P_TEST_105.png,menison 4mg amg,menison 4mg 4mg,92
-VAIPE_P_TEST_85.png,cardilopin smg,cardilopin 5mg,92
-VAIPE_P_TEST_85.png,medibogan 2oomg + 1somg + 16mg,medibogan 200mg + 150mg + 16mg,84
-VAIPE_P_TEST_100.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
-VAIPE_P_TEST_100.png,panactol soomg,panactol 500mg,77
-VAIPE_P_TEST_162.png,cardilopin smg,cardilopin 5mg,92
-VAIPE_P_TEST_162.png,"hoat huyét dưong não 15omg, 2omg",hoạt huyết dưỡng não 150mg+20mg,82
-VAIPE_P_TEST_162.png,mezafen,loxoprofen (mezafen) 60mg,100
-VAIPE_P_TEST_162.png,panactol soomg,panactol 500mg,77
-VAIPE_P_TEST_22.png,ingaron 200 dst 200 mg,ingaron 200 dst 200mg,100
-VAIPE_P_TEST_22.png,dixirein,dixirein 375mg,76
-VAIPE_P_TEST_22.png,vipredni 16 mg 16mg,vipredni 16mg 16mg,100
-VAIPE_P_TEST_22.png,panactol soomg,panactol 500mg,77
-VAIPE_P_TEST_62.png,chorlatcyn 125mg+somg+somg+2smg,chorlatcyn 125mg+50mg+50mg+25mg,88
+VAIPE_P_TEST_137.png,lazibet mr 60 6omg,lazibet mr 60 60mg,93
+VAIPE_P_TEST_80.png,kavasdin5 5 mg,kavasdin 5 5mg,100
+VAIPE_P_TEST_80.png,hoat huyét dưong não 1somg; 2omg,hoạt huyết dưỡng não 150mg+20mg,78
+VAIPE_P_TEST_32.png,"cephalexin 2somg 0,25g","cephalexin 250mg 0,25g",90
+VAIPE_P_TEST_37.png,kavasdin 5 5 mg,kavasdin 5 5mg,100
+VAIPE_P_TEST_37.png,setblood 1lsmg+loomg+somcg,setblood 115mg+100mg+50mcg,56
+VAIPE_P_TEST_48.png,"hapenxin capsules 0,5g","hapenxin capsules 0,5g",100
+VAIPE_P_TEST_48.png,panactol soomg,panactol 500mg,77
+VAIPE_P_TEST_1.png,meglucon 1000 1000 mg,meglucon 1000 1000mg,100
+VAIPE_P_TEST_45.png,"cefalexin (firstlexin 500) 0,5g","cefalexin (firstlexin 500) 0,5g",100
+VAIPE_P_TEST_45.png,paracetamol  (partamol tab.) soomg,paracetamol (partamol tab.) 500mg,90
+VAIPE_P_TEST_113.png,"hangitor plus 4omg+12,smg","hangitor plus 40mg+12,5mg",78
+VAIPE_P_TEST_113.png,saviprolol 5 smg  sl:5 viên,savi prolol 5 5mg,74
+VAIPE_P_TEST_113.png,hoathuyét dưỡng não 15omg+2omg,hoạt huyết dưỡng não 150mg+20mg,86
+VAIPE_P_TEST_44.png,enalapri smg,enalapril 5mg,87
+VAIPE_P_TEST_44.png,hoạt huyét dưỡng não 15omg+2omg,hoạt huyết dưỡng não 150mg+20mg,90
+VAIPE_P_TEST_35.png,avilosartan 50 somg,savi losartan 50 50mg,86
+VAIPE_P_TEST_35.png,hoat huyét dưong não 1somg; 2omg,hoạt huyết dưỡng não 150mg+20mg,78
 VAIPE_P_TEST_23.png,"telmisartan + bydroclorothiazid (hangitor plus) 4omg+12,5mg","telmisartan % hydroclorothiazid (hangitor plus) 40mg+12,5mg",96
 VAIPE_P_TEST_23.png,,,0
 VAIPE_P_TEST_23.png,atorvastatin (atoris 2omg),atorvastatin (atoris 20mg) 20mg,86
 VAIPE_P_TEST_23.png,"đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg","đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg",100
-VAIPE_P_TEST_80.png,kavasdin5 5 mg,kavasdin 5 5mg,100
-VAIPE_P_TEST_80.png,hoat huyét dưong não 1somg; 2omg,hoạt huyết dưỡng não 150mg+20mg,78
-VAIPE_P_TEST_29.png,metformin (metformin 500) 5oomg,metformin (metformin 500) 500mg,93
-VAIPE_P_TEST_29.png,"đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg","đinh lăng, bạch quả (hoạt huyết dưỡng não) 150mg+20mg",100
-VAIPE_P_TEST_0.png,"novoxim-s00 0,5g","novoxim-500 0,5g",93
-VAIPE_P_TEST_0.png,mypara 500 soomg,mypara 500 500mg,79
-VAIPE_P_TEST_0.png,kavasdin55 mg,kavasdin 5 5mg,100
-VAIPE_P_TEST_93.png,cardilopin smg,cardilopin 5mg,92
-VAIPE_P_TEST_93.png,hoat huyét duong não bdf 1somg + smg,hoạt huyết dưỡng não bdf 150mg+5mg,65
-VAIPE_P_TEST_51.png,"alfachim 4,2mg","alfachim 4,2mg",100
-VAIPE_P_TEST_51.png,mypara 500 soomg,mypara 500 500mg,79
-VAIPE_P_TEST_151.png,"novoxim-s00 0,5g","novoxim-500 0,5g",93
-VAIPE_P_TEST_151.png,mypara 500 soomg,mypara 500 500mg,79
-VAIPE_P_TEST_151.png,hoat huyét dưong não isomg; 2omg,hoạt huyết dưỡng não 150mg+20mg,75
-VAIPE_P_TEST_157.png,"cefacyl 500 0,5g","cefacyl 500 0,5g",100
-VAIPE_P_TEST_157.png,vaco loratadine iomg,vaco loratadine 10mg,89
-VAIPE_P_TEST_157.png,medibogan 2oomg + 1somg + 16mg,medibogan 200mg + 150mg + 16mg,84
-VAIPE_P_TEST_138.png,"xitoran 0,5g","xitoran 0,5g",100
-VAIPE_P_TEST_138.png,mypara 500 soomg,mypara 500 500mg,79
-VAIPE_P_TEST_84.png,diclofenac somg,diclofenac 50mg,86
-VAIPE_P_TEST_84.png,cosyndo b 175mg+l75mg+12smcg,cosyndo b 175mg+175mg+125mcg,92
-VAIPE_P_TEST_69.png,amoxicilin soomg soomg,amoxicilin 500mg 500mg,70
-VAIPE_P_TEST_69.png,dromasmfort 8omg,dromasm fort 80mg,93
-VAIPE_P_TEST_14.png,glucofast 850 850mg,glucofast 850 850mg,100
-VAIPE_P_TEST_36.png,becosemd 4omg,becosemid 40mg,88
-VAIPE_P_TEST_103.png,colchcin img,colchicin 1mg,87
-VAIPE_P_TEST_103.png,mypara 500 soomg,mypara 500 500mg,79
-VAIPE_P_TEST_5.png,fibrofin-145,fibrofin-145 145mg,83
-VAIPE_P_TEST_54.png,dorocron - mr 30mg,dorocron - mr 30mg,100
-VAIPE_P_TEST_83.png,glucofast 500 soomg,glucofast 850 850mg,82
-VAIPE_P_TEST_83.png,lazibet mr 60 60mg,lazibet mr 60 60mg,100
-VAIPE_P_TEST_131.png,amoxicilin (fabamox 500) 5oomg,amoxicilin (fabamox 500) 500mg,93
-VAIPE_P_TEST_131.png,methyl prednisolon (methylprednisolon 4) 4mg,methyl prednisolon (methylprednisolon 4) 4mg,100
-VAIPE_P_TEST_131.png,paracetamol  (partamol tab.) 5oomg,paracetamol (partamol tab.) 500mg,93
-VAIPE_P_TEST_52.png,"cefadroxil 0,5g","cefadroxil 0,5g",100
-VAIPE_P_TEST_52.png,mypara 500 soomg,mypara 500 500mg,79
-VAIPE_P_TEST_52.png,setblood,setblood 115mg+100mg+50mcg,48
-VAIPE_P_TEST_35.png,avilosartan 50 somg,savi losartan 50 50mg,86
-VAIPE_P_TEST_35.png,hoat huyét dưong não 1somg; 2omg,hoạt huyết dưỡng não 150mg+20mg,78
-VAIPE_P_TEST_27.png,"telmisartan + hydroclorothiazid (hangitor plus) 40mg+12,5mg","telmisartan % hydroclorothiazid (hangitor plus) 40mg+12,5mg",100
-VAIPE_P_TEST_27.png,atorvastatin (atoris,atorvastatin (atoris 20mg) 20mg,81
-VAIPE_P_TEST_146.png,"cefalexin (firstlexin 500) 0,58","cefalexin (firstlexin 500) 0,5g",96
-VAIPE_P_TEST_146.png,methyl prednisolon (methylprednisolon 4) 4mg,methyl prednisolon (methylprednisolon 4) 4mg,100
-VAIPE_P_TEST_146.png,carbocistein (anpemux) 25omg,carbocistein (anpemux) 250mg,96
+VAIPE_P_TEST_11.png,glucofast 500 soomg,glucofast 850 850mg,82
+VAIPE_P_TEST_70.png,kavasdin5 5 mg,kavasdin 5 5mg,100
+VAIPE_P_TEST_70.png,mypara 500 soomg,mypara 500 500mg,79
+VAIPE_P_TEST_74.png,"cefadroxil 0,5g","cefadroxil 0,5g",100
+VAIPE_P_TEST_74.png,partamol tab. soomg,partamol tab. 500mg,82
+VAIPE_P_TEST_74.png,vipredni 16mg 16mg,vipredni 16mg 16mg,100
+VAIPE_P_TEST_163.png,"cefadroxil soomg 0,5g","cefadroxil 0,5g",85
+VAIPE_P_TEST_163.png,panactol soomg,panactol 500mg,77
+VAIPE_P_TEST_163.png,dixirein,dixirein 375mg,76
+VAIPE_P_TEST_163.png,vipredni 16 mg 16mg,vipredni 16mg 16mg,100
+VAIPE_P_TEST_46.png,"cefalexin (firstlexin 500) 0,5g","cefalexin (firstlexin 500) 0,5g",100
+VAIPE_P_TEST_46.png,paracetamol  (partamol tab) 5oomg,paracetamol (partamol tab.) 500mg,93
+VAIPE_P_TEST_55.png,meglucon 1000 1000 mg,meglucon 1000 1000mg,100
+VAIPE_P_TEST_55.png,diamicron mr tab 6omg 30's 6omg,diamicron mr tab 60mg 30's 60mg,92
+VAIPE_P_TEST_111.png,mezafen,loxoprofen (mezafen) 60mg,100
