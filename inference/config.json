@@ -1,7 +1,7 @@
 {
     "data": "data/vaipe_exif.yaml",
-    "base_weights": "./runs/train/yolov7-exif-gen3/weights/best.pt",
-    "adv_weights": "./runs/train/yolov7-exif-detection3/weights/best.pt",
+    "base_weights": "./runs/train/base/weights/best.pt",
+    "adv_weights": "./runs/train/adv/weights/best.pt",
     "batch_size": 16,
     "img_size": 960,
     "save_json": "True",
@@ -11,6 +11,9 @@
     "base_json_file": "./runs/test/base/best_predictions.json",
     "adv_json_file": "./runs/test/adv/best_predictions.json",
     "device": "0",
-    "cfg":"cfg/training/yolov7x.yaml",
-    "hyp": "data/hyp.scratch.custom.yaml"
+    "cfg":"cfg/training/yolov7_45_45.yaml",
+    "hyp": "data/hyp.scratch.custom.yaml",
+    "base_name": "base",
+    "adv_name": "adv",
+    "epochs": 450
 }
