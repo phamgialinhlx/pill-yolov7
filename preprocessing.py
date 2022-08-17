@@ -57,8 +57,6 @@ def convert_labels(origin_path, target_path, overwrite=False):
     # read sys.argv
     # argv[1] is the server
     # argv[2] is the overwrite flag
-    origin_path = os.path.join(origin_path, 'labels')
-    target_path = os.path.join(target_path, 'labels')
     if not os.path.exists(target_path):
         os.makedirs(target_path)
     if overwrite:
@@ -141,17 +139,24 @@ if __name__ == '__main__':
     parser.add_argument('--target_path', type=str,default='vaipe_exif', help='path of target folder')
     parser.add_argument('--overwrite', action='store_true', help='if True remove all files in target folder')
     parser.add_argument('--task', type=str, default = 'test', help='test or train')
+    parser.add_argument('--convert_labels', action='store_true', help='if True convert labels from json to txt')
     args = parser.parse_args()
 
 
-    if args.task == 'test':
-        target_path = os.path.join(args.target_path, 'test/images')
+    
+    if args.convert_labels:
+        if args.task == 'train':
+            target_path = os.path.join(args.target_path, 'train/labels')
+            convert_labels(args.origin_path, target_path, args.overwrite)
     else:
-        target_path = os.path.join(args.target_path, 'train/images')
-    rotate_image(args.origin_path, target_path, args.overwrite)
-    files = list_all_files(args.target_path)
-    #export list of files to .txt file
-    file = open(os.path.join(args.target_path, f'{args.task}.txt'), 'w')
-    for i in files:
-        file.write(i + '\n')
-    file.close()
+        if args.task == 'test':
+            target_path = os.path.join(args.target_path, 'test/images')
+        else:
+            target_path = os.path.join(args.target_path, 'train/images')
+        rotate_image(args.origin_path, target_path, args.overwrite)
+        files = list_all_files(args.target_path)
+        #export list of files to .txt file
+        file = open(os.path.join(args.target_path, f'{args.task}.txt'), 'w')
+        for i in files:
+            file.write(i + '\n')
+        file.close()
