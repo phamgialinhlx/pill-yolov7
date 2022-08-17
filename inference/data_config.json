@@ -1,7 +1,7 @@
 {
-    "prescription_train_label_dir": "/data/pill/competition/dataset/public_train/prescription/label",
-    "prescription_infer_image_dir": "/data/pill/competition/dataset/public_test/prescription/image",
-    "pill_infer_image_dir": "/data/pill/competition/dataset/public_test/pill/images",
-    "pill_train_label_dir": "/data/pill/competition/dataset/public_train/pill/labels",
-    "pill_train_image_dir": "/data/pill/competition/dataset/public_train/pill/images"
+    "prescription_train_label_dir": "/home/pill/competition/dataset/public_train/prescription/label",
+    "prescription_infer_image_dir": "/home/pill/competition/dataset/public_test/prescription/image",
+    "pill_infer_image_dir": "/home/pill/competition/dataset/public_test/pill/images",
+    "pill_train_label_dir": "/home/pill/competition/dataset/public_train/pill/labels",
+    "pill_train_image_dir": "/home/pill/competition/dataset/public_train/pill/images"
 }
