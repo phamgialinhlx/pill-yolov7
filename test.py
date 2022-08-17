@@ -71,8 +71,8 @@ def test(data,
         gs = max(int(model.stride.max()), 32)  # grid size (max stride)
         imgsz = check_img_size(imgsz, s=gs)  # check img_size
         
-        if trace:
-            model = TracedModel(model, device, opt.img_size)
+        # if trace:
+        #     model = TracedModel(model, device, opt.img_size)
 
     # Half
     half = device.type != 'cpu' and half_precision  # half precision only supported on CUDA
@@ -123,6 +123,8 @@ def test(data,
             out, train_out = model(img, augment=augment)  # inference and training outputs
             t0 += time_synchronized() - t
 
+            # # TODO
+            # out[:, :, 112] = 0
             # Compute loss
             if compute_loss:
                 loss += compute_loss([x.float() for x in train_out], targets[targets[:, 1] != 107.0, :])[1][:3]  # box, obj, cls
@@ -150,9 +152,9 @@ def test(data,
                 id_potential_in_pres = np.array(id_potential_in_pres).astype(int)
 
                 # detect 107
-                # for out_si in out[si]:
-                #     if(int(out_si[5]) not in id_potential_in_pres):
-                #        out_si[5] = 107.0
+                for out_si in out[si]:
+                    if(int(out_si[5]) not in id_potential_in_pres):
+                       out_si[5] = 107.0
                        
 
 

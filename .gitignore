@@ -9,3 +9,4 @@ runs/
 wandb/
 coco/
 *.cache
+ensemble/
