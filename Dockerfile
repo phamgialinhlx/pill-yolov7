@@ -1,12 +1,23 @@
-FROM python:3.8
+FROM nvidia/cuda:11.4.2-devel-ubuntu18.04
 
 WORKDIR /app
 
-RUN apt-get update -y
+RUN apt-get update -y 
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata 
+
+RUN apt-get install -y software-properties-common && \
+    add-apt-repository -y ppa:deadsnakes/ppa && \
+    apt-get install -y python3.8 python3.8-dev && \
+    update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 2 && \
+    apt-get install -y python3-pip && \
+    pip3 install --upgrade pip
 
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
+RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 10
+
 COPY . .
 
-ENTRYPOINT ["python", "inference/infer.py"]
+ENTRYPOINT ["python3", "inference/infer.py"]

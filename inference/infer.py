@@ -11,8 +11,8 @@ def main(config = './inference/config.json', data_config = './inference/data_con
     post_processing_adv = f"python postProcessing.py --json_file ./runs/test/adv/best_predictions.json"
     ensemble = f"python ensemble.py --base_model ./runs/test/base/results.csv --adv_model ./runs/test/adv/results.csv --data_path {data_cfg['pill_infer_image_dir']}"
 
-    # subprocess.run(base, shell=True)
-    # subprocess.run(adv, shell=True)
+    subprocess.run(base, shell=True)
+    subprocess.run(adv, shell=True)
     subprocess.run(post_processing_base, shell=True)
     subprocess.run(post_processing_adv, shell=True)
     subprocess.run(ensemble, shell=True)
