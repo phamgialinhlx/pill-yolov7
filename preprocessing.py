@@ -25,23 +25,19 @@ def rotate_image(origin_path, target_path, overwrite=False):
         for file in os.listdir(target_path):
             os.remove(os.path.join(target_path, file))
         print(f'remove {target_path}')
-    img_files = [os.path.join(origin_path, f) for f in os.listdir(origin_path) if f.split(".")[-1].lower() in IMG_FORMATS]
-    for f in tqdm.tqdm(img_files):
-        try:
-            img = Image.open(f)
-            exif = img._getexif()
-            if exif is not None and ORIENTATION in exif:
-                orientation = exif[ORIENTATION]
-                if orientation == 3:
-                    img = img.rotate(180, expand=True)
-                elif orientation == 6:
-                    img = img.rotate(270, expand=True)
-                elif orientation == 8:
-                    img = img.rotate(90, expand=True)
-                img.save(os.path.join(target_path, f.split("/")[-1]))
-        except Exception as e:
-            print(e)
-            continue                   
+    img_files = [os.path.join(origin_path, f) for f in os.listdir(origin_path) if f.endswith('.jpg')]
+    for img_file in tqdm.tqdm(img_files):
+        with open(img_file, "rb") as f:
+            targ = os.path.join(target_path, img_file.split("/")[-1])
+            f.seek(-2, 2)
+            if f.read() != b"\xff\xd9":  # corrupt JPEG
+                # print(targ)
+                ImageOps.exif_transpose(Image.open(img_file)).save(
+                    targ, "JPEG", subsampling=0, quality=100
+                )
+            else:
+                Image.open(img_file).save(targ, "JPEG", subsampling=0, quality=100)
+            
 
 def list_all_files(dir):
     files = []
@@ -79,12 +75,11 @@ def convert_labels(origin_path, target_path, overwrite=False):
             file = open(targ_file_path, "w")
             img = Image.open(org_file_path.replace('label', 'image').replace('json', 'jpg'))
             w, h = exif_size(img)
-            sz = max(w, h)
             for i in tmp:
-                _w = i['w'] / sz
-                _h = i['h'] / sz
-                _x = i['x'] / sz + _w / 2
-                _y = i['y'] / sz + _h / 2
+                _w = i['w'] / w
+                _h = i['h'] / h
+                _x = i['x'] / w + _w / 2
+                _y = i['y'] / h + _h / 2 
                 s = str(i['label']) + ' ' + str(_x) + ' ' + str(_y) + ' ' + str(_w) + ' ' + str(_h)
                 file.write(s + '\n')
             # print(file)
