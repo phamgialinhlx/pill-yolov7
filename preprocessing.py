@@ -70,10 +70,12 @@ def convert_labels(origin_path, target_path, overwrite=False):
             continue
         org_file_path = os.path.join(origin_path, org_file)
         targ_file_path = os.path.join(target_path, org_file).replace('.json', '.txt')
+        img_path = targ_file_path.replace('label','image').replace('.txt','.jpg')
         with open(org_file_path) as f:
             tmp = json.load(f)
             file = open(targ_file_path, "w")
-            img = Image.open(org_file_path.replace('label', 'image').replace('json', 'jpg'))
+            img = Image.open(img_path)
+            # print(img_path)
             w, h = exif_size(img)
             for i in tmp:
                 _w = i['w'] / w
@@ -130,7 +132,7 @@ def padding(origin_path, target_path, overwrite=False):
     return target_path
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--origin_path', type=str, help='path of origin folder containing images and labels subfolders')
+    parser.add_argument('--origin_path', type=str, help='path of origin folder containing labels subfolders')
     parser.add_argument('--target_path', type=str,default='vaipe_exif', help='path of target folder')
     parser.add_argument('--overwrite', action='store_true', help='if True remove all files in target folder')
     parser.add_argument('--task', type=str, default = 'test', help='test or train')
@@ -138,7 +140,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
 
-    
     if args.convert_labels:
         if args.task == 'train':
             target_path = os.path.join(args.target_path, 'train/labels')
@@ -149,7 +150,7 @@ if __name__ == '__main__':
         else:
             target_path = os.path.join(args.target_path, 'train/images')
         rotate_image(args.origin_path, target_path, args.overwrite)
-        files = list_all_files(args.target_path)
+        files = list_all_files(target_path)
         #export list of files to .txt file
         file = open(os.path.join(args.target_path, f'{args.task}.txt'), 'w')
         for i in files:

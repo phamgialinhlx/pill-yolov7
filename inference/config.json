@@ -4,7 +4,7 @@
     "adv_weights": "./runs/train/adv/weights/best.pt",
     "batch_size": 16,
     "img_size": 960,
-    "save_json": "True",
+    "save_json": true,
     "task": "test",
     "conf_thres": 0.001,
     "iou_thres": 0.65,
@@ -15,5 +15,6 @@
     "hyp": "data/hyp.scratch.custom_degree40.yaml",
     "base_name": "base",
     "adv_name": "adv",
-    "epochs": 450
+    "epochs": 450,
+    "overwrite_preprocess": true
 }
