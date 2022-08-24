@@ -8,7 +8,7 @@ import argparse
 from utils.datasets import exif_size
 import tqdm
 from PIL import ExifTags, Image, ImageOps, ImageFile
-
+from PIL.ExifTags import TAGS
 
 ImageFile.LOAD_TRUNCATED_IMAGES=True
 IMG_FORMATS = ["bmp", "jpg", "jpeg", "png", "tif", "tiff", "dng", "webp", "mpo"]
@@ -30,13 +30,15 @@ def rotate_image(origin_path, target_path, overwrite=False):
         with open(img_file, "rb") as f:
             targ = os.path.join(target_path, img_file.split("/")[-1])
             f.seek(-2, 2)
-            if f.read() != b"\xff\xd9":  # corrupt JPEG
-                # print(targ)
-                ImageOps.exif_transpose(Image.open(img_file)).save(
-                    targ, "JPEG", subsampling=0, quality=100
-                )
-            else:
-                Image.open(img_file).save(targ, "JPEG", subsampling=0, quality=100)
+            img = Image.open(img_file)
+            exifdata = img.getexif()
+            for tag_id in exifdata:
+                # get the tag name, instead of human unreadable tag id
+                tag = TAGS.get(tag_id, tag_id)
+                data = exifdata.get(tag_id) 
+                if (tag == 'Orientation'):
+                    img = ImageOps.exif_transpose(img)
+            img.save(targ, "JPEG", subsampling=0, quality=100)
             
 
 def list_all_files(dir):
