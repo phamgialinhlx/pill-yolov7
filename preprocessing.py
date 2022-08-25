@@ -3,8 +3,6 @@ import cv2
 import numpy as np
 import json
 import argparse
-from PIL import Image
-import argparse
 from utils.datasets import exif_size
 import tqdm
 from PIL import ExifTags, Image, ImageOps, ImageFile
