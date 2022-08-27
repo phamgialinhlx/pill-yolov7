@@ -103,7 +103,10 @@ def test(data,
                                        prefix=colorstr(f'{task}: '))[0]
 
     seen = 0
-    confusion_matrix = ConfusionMatrix(nc=nc)
+    # confusion_matrix = ConfusionMatrix(nc=nc)
+    # TODO
+    confusion_matrix = ConfusionMatrix(nc = 108)
+
     names = {k: v for k, v in enumerate(model.names if hasattr(model, 'names') else model.module.names)}
     coco91class = coco80_to_coco91_class()
     s = ('%20s' + '%12s' * 6) % ('Class', 'Images', 'Labels', 'P', 'R', 'mAP@.5', 'mAP@.5:.95')
@@ -125,9 +128,14 @@ def test(data,
 
             # # TODO
             # out[:, :, 112] = 0
+
             # Compute loss
             if compute_loss:
-                loss += compute_loss([x.float() for x in train_out], targets[targets[:, 1] != 107.0, :])[1][:3]  # box, obj, cls
+                # TODO
+                if single_cls:
+                    loss += compute_loss([x.float() for x in train_out], targets)[1][:3]  # box, obj, cls
+                else:
+                    loss += compute_loss([x.float() for x in train_out], targets[targets[:, 1] != 107.0, :])[1][:3]  # box, obj, cls
 
             # Run NMS
             targets[:, 2:] *= torch.Tensor([width, height, width, height]).to(device)  # to pixels
@@ -143,18 +151,19 @@ def test(data,
             tcls = labels[:, 0].tolist() if nl else []  # target class
             path = Path(paths[si])
             
+            ## TODO
+            if single_cls == False:
+                #pos processing
+                name_pres = take_id_from_pres(str(path))
+                
+                if name_pres in OCR_res.keys():
+                    id_potential_in_pres = OCR_res[name_pres]
+                    id_potential_in_pres = np.array(id_potential_in_pres).astype(int)
 
-            #pres processing
-            name_pres = take_id_from_pres(str(path))
-            
-            if name_pres in OCR_res.keys():
-                id_potential_in_pres = OCR_res[name_pres]
-                id_potential_in_pres = np.array(id_potential_in_pres).astype(int)
-
-                # detect 107
-                for out_si in out[si]:
-                    if(int(out_si[5]) not in id_potential_in_pres):
-                       out_si[5] = 107.0
+                    # detect 107
+                    for out_si in out[si]:
+                        if(int(out_si[5]) not in id_potential_in_pres):
+                            out_si[5] = 107.0
                        
 
 
@@ -187,7 +196,7 @@ def test(data,
                 # if wandb_logger.current_epoch % wandb_logger.bbox_interval == 0: #TODO - check if this is necessary
                 box_data = [{"position": {"minX": xyxy[0], "minY": xyxy[1], "maxX": xyxy[2], "maxY": xyxy[3]},
                                 "class_id": int(cls),
-                                "box_caption": "%s %.3f" % ('107', conf), #TODO - change 107 to names[int(cls)]
+                                "box_caption": "%s %.3f" % (int(cls), conf), #TODO - change int(cls) to names[int(cls)]
                                 "scores": {"class_score": conf},
                                 "domain": "pixel"} for *xyxy, conf, cls in pred.tolist()]
                 boxes = {"predictions": {"box_data": box_data, "class_labels": names}}  # inference-space
@@ -254,6 +263,13 @@ def test(data,
     stats = [np.concatenate(x, 0) for x in zip(*stats)]  # to numpy
     if len(stats) and stats[0].any():
         p, r, ap, f1, ap_class = ap_per_class(*stats, plot=plots, save_dir=save_dir, names=names)
+
+        #TODO: print map from 50 to 95
+        st = 50
+        for i in range(10):
+            print(st, ap[:, i].mean())
+            st = st + 5
+        
         ap50, ap = ap[:, 0], ap.mean(1)  # AP@0.5, AP@0.5:0.95
         mp, mr, map50, map = p.mean(), r.mean(), ap50.mean(), ap.mean()
         nt = np.bincount(stats[3].astype(np.int64), minlength=nc)  # number of targets per class
