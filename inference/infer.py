@@ -4,7 +4,7 @@ import subprocess
 def main(config = './inference/config.json', data_config = './inference/data_config.json'):
     cfg = json.load(open(config))
     data_cfg = json.load(open(data_config))
-    base = f"python test.py --weight {cfg['base_weights']} --exist-ok --device {cfg['device']} --name base --data {cfg['data']} --img-size {cfg['img_size']} --save-json --task test"
+    base = f"python test.py --weight {cfg['base_weights']} --exist-ok --device {cfg['device']} --name base --data {cfg['data']} --img-size {cfg['img_size']} --save-json --task test --no-trace"
     
     adv = f"python test.py --weight {cfg['adv_weights']} --exist-ok --device {cfg['device']} --name adv --data {cfg['data']} --img-size {cfg['img_size']} --save-json --task test"
     post_processing_base = f"python postProcessing.py --json_file ./runs/test/base/best_predictions.json"

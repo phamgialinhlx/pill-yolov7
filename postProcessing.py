@@ -4,6 +4,8 @@ import os
 
 import json
 
+import math
+
 import argparse
 
 from loadOCR import load_OCR
@@ -17,7 +19,6 @@ def post_processing(path_to_detect_output, output_path, path_to_ocr_res):
     for index, row in df.iterrows():
         if row['class_id'] not in row['id']:
             df.loc[index, 'class_id'] = 107
-    
     df = df.drop(columns=['id', 'filename','image_id'])
     submission_path = os.path.join( output_path,'results.csv')
     df.to_csv(submission_path, index=False)

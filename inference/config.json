@@ -1,6 +1,6 @@
 {
     "data": "data/vaipe_exif.yaml",
-    "base_weights": "./runs/train/base/weights/best.pt",
+    "base_weights": "./runs/train/yolov7-tiny_115_deg_40_gen/weights/best.pt ./runs/train/yolov73/weights/best.pt ./runs/train/yolov74/weights/best.pt ./runs/train/yolov7_45_deg_40_gen/weights/best.pt",
     "adv_weights": "./runs/train/adv/weights/best.pt",
     "batch_size": 16,
     "img_size": 960,
