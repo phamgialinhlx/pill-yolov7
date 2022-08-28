@@ -9,4 +9,4 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-ENTRYPOINT ["python", "test.py"]
+ENTRYPOINT ["python", "inference/infer.py"]
