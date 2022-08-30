@@ -69,7 +69,7 @@ if __name__ == '__main__':
     parser.add_argument('--conf_thres', type=float, default=0.005, help='confidence threshold')
     parser.add_argument('--data_path', type=str, default='', help='path to pill image data. eg public_test/pill')
     parser.add_argument('--save_dir', type=str, default='runs', help='path to save ensemble.csv file')
-    parser.add_argument('--save_name', type=str, default='ensemble.csv', help='name of ensemble.csv file')
+    parser.add_argument('--save_name', type=str, default='results.csv', help='name of ensemble.csv file')
     parser.add_argument('--exist_ok', action='store_true', help='overwrite existing ensemble.csv file')
 
 

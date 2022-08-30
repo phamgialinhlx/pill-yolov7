@@ -3,12 +3,10 @@ import cv2
 import numpy as np
 import json
 import argparse
-from PIL import Image
-import argparse
 from utils.datasets import exif_size
 import tqdm
 from PIL import ExifTags, Image, ImageOps, ImageFile
-
+from PIL.ExifTags import TAGS
 
 ImageFile.LOAD_TRUNCATED_IMAGES=True
 IMG_FORMATS = ["bmp", "jpg", "jpeg", "png", "tif", "tiff", "dng", "webp", "mpo"]
@@ -30,13 +28,15 @@ def rotate_image(origin_path, target_path, overwrite=False):
         with open(img_file, "rb") as f:
             targ = os.path.join(target_path, img_file.split("/")[-1])
             f.seek(-2, 2)
-            if f.read() != b"\xff\xd9":  # corrupt JPEG
-                # print(targ)
-                ImageOps.exif_transpose(Image.open(img_file)).save(
-                    targ, "JPEG", subsampling=0, quality=100
-                )
-            else:
-                Image.open(img_file).save(targ, "JPEG", subsampling=0, quality=100)
+            img = Image.open(img_file)
+            exifdata = img.getexif()
+            for tag_id in exifdata:
+                # get the tag name, instead of human unreadable tag id
+                tag = TAGS.get(tag_id, tag_id)
+                data = exifdata.get(tag_id) 
+                if (tag == 'Orientation'):
+                    img = ImageOps.exif_transpose(img)
+            img.save(targ, "JPEG", subsampling=0, quality=100)
             
 
 def list_all_files(dir):
@@ -70,10 +70,12 @@ def convert_labels(origin_path, target_path, overwrite=False):
             continue
         org_file_path = os.path.join(origin_path, org_file)
         targ_file_path = os.path.join(target_path, org_file).replace('.json', '.txt')
+        img_path = targ_file_path.replace('label','image').replace('.txt','.jpg')
         with open(org_file_path) as f:
             tmp = json.load(f)
             file = open(targ_file_path, "w")
-            img = Image.open(org_file_path.replace('label', 'image').replace('json', 'jpg'))
+            img = Image.open(img_path)
+            # print(img_path)
             w, h = exif_size(img)
             for i in tmp:
                 _w = i['w'] / w
@@ -130,7 +132,7 @@ def padding(origin_path, target_path, overwrite=False):
     return target_path
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--origin_path', type=str, help='path of origin folder containing images and labels subfolders')
+    parser.add_argument('--origin_path', type=str, help='path of origin folder containing labels subfolders')
     parser.add_argument('--target_path', type=str,default='vaipe_exif', help='path of target folder')
     parser.add_argument('--overwrite', action='store_true', help='if True remove all files in target folder')
     parser.add_argument('--task', type=str, default = 'test', help='test or train')
@@ -138,7 +140,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
 
-    
     if args.convert_labels:
         if args.task == 'train':
             target_path = os.path.join(args.target_path, 'train/labels')
@@ -149,7 +150,7 @@ if __name__ == '__main__':
         else:
             target_path = os.path.join(args.target_path, 'train/images')
         rotate_image(args.origin_path, target_path, args.overwrite)
-        files = list_all_files(args.target_path)
+        files = list_all_files(target_path)
         #export list of files to .txt file
         file = open(os.path.join(args.target_path, f'{args.task}.txt'), 'w')
         for i in files:
