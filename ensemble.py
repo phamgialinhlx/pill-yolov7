@@ -1,4 +1,3 @@
-from tkinter import image_names
 import pandas as pd
 import argparse
 import os
@@ -69,8 +68,8 @@ if __name__ == '__main__':
     parser.add_argument('--iou_thres', type=float, default=0.65, help='iou threshold')
     parser.add_argument('--conf_thres', type=float, default=0.005, help='confidence threshold')
     parser.add_argument('--data_path', type=str, default='', help='path to pill image data. eg public_test/pill')
-    parser.add_argument('--save_dir', type=str, default='ensemble', help='path to save ensemble.csv file')
-    parser.add_argument('--save_name', type=str, default='ensemble', help='name of ensemble.csv file')
+    parser.add_argument('--save_dir', type=str, default='runs', help='path to save ensemble.csv file')
+    parser.add_argument('--save_name', type=str, default='results.csv', help='name of ensemble.csv file')
     parser.add_argument('--exist_ok', action='store_true', help='overwrite existing ensemble.csv file')
 
 
@@ -82,7 +81,7 @@ if __name__ == '__main__':
     # ensemble
     save_dir = Path(increment_path(Path(args.save_dir) / args.save_name, exist_ok=args.exist_ok))
     save_dir.mkdir(parents=True, exist_ok=True)
-    save_path = str(save_dir / "results.csv")
+    save_path = str(save_dir / args.save_name)
     ensemble_result = ensemble(base_model_result, adv_model_result, args.iou_thres, args.conf_thres, args.data_path, save_path)
     # print(ensemble_result)
     

@@ -3,7 +3,7 @@
 __pycache__/
 vaipe*/
 __pycache__/
-runs/
+runs
 wandb/
 coco/
 *.cache
@@ -13,3 +13,4 @@ vaipe_exif/
 dataset/
 inference/config.json
 inference/data_config.json
+.Dockerfile.swp
