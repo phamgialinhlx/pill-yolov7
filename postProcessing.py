@@ -40,6 +40,7 @@ def main(json_file,output_path, path_to_ocr_res):
     result_path = convert(json_file, output_path)
     submission_path = post_processing(result_path,  output_path, path_to_ocr_res)
     print(submission_path)
+    
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--json_file', type=str, default='', help='path to json file')
