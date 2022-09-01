@@ -9,5 +9,5 @@
     "overwrite_preprocess": true
     "workers": 8
     "weights": ""
-    "name": yolov7_45_deg_40_gen
+    "name": "yolov7_45_deg_40_gen"
 }
