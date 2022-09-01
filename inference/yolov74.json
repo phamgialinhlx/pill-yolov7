@@ -1,5 +1,5 @@
 {
-    "data": "data/vaipe_fix.yaml",
+    "data": "data/vaipe_exif.yaml",
     "batch_size": 32,
     "img_size": 960,
     "device": "0",
