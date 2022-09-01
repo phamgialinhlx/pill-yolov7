@@ -154,5 +154,5 @@ if __name__ == '__main__':
         #export list of files to .txt file
         file = open(os.path.join(args.target_path, f'{args.task}.txt'), 'w')
         for i in files:
-            file.write(i + '\n')
+            file.write(i.replace(f'{args.target_path}/', './') + '\n')
         file.close()
