@@ -6,8 +6,6 @@
     "cfg":"cfg/training/yolov7_45_45.yaml",
     "hyp": "data/hyp.scratch.custom_degree40.yaml",
     "epochs": 450,
-    "overwrite_preprocess": true
-    "workers": 8
-    "weights": ""
+    "workers": 8,
     "name": "yolov7_45_deg_40_gen"
 }
