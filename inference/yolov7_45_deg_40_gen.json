@@ -1,0 +1,13 @@
+{
+    "data": "data/vaipe_fix_gen.yaml",
+    "batch_size": 16,
+    "img_size": 960,
+    "device": "0",
+    "cfg":"cfg/training/yolov7_45_45.yaml",
+    "hyp": "data/hyp.scratch.custom_degree40.yaml",
+    "epochs": 450,
+    "overwrite_preprocess": true
+    "workers": 8
+    "weights": ""
+    "name": yolov7_45_deg_40_gen
+}
