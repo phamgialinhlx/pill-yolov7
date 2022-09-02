@@ -159,10 +159,14 @@ def test(data,
                 if name_pres in OCR_res.keys():
                     id_potential_in_pres = OCR_res[name_pres]
                     id_potential_in_pres = np.array(id_potential_in_pres).astype(int)
-
-                    # detect 107
+                    
+                    #TODO detect 107
                     for out_si in out[si]:
-                        if(int(out_si[5]) not in id_potential_in_pres):
+                        if int(out_si[5]) == 25 and 26 in id_potential_in_pres:
+                            out_si[5] = 26.0
+                        if int(out_si[5]) == 26 and 25 in id_potential_in_pres:
+                            out_si[5] = 25.0
+                        if(int(out_si[5]) not in id_potential_in_pres): 
                             out_si[5] = 107.0
                        
 
@@ -265,6 +269,7 @@ def test(data,
         p, r, ap, f1, ap_class = ap_per_class(*stats, plot=plots, save_dir=save_dir, names=names)
 
         #TODO: print map from 50 to 95
+        print("map from 0.50 to 0.95")
         st = 50
         for i in range(10):
             print(st, ap[:, i].mean())
@@ -293,8 +298,10 @@ def test(data,
     # Plots
     if plots:
         confusion_matrix.plot(save_dir=save_dir, names=list(names.values()))
-        print(confusion_matrix.matrix)
+        #TODO
+        print("save confusion matrix to confusionMatrix.csv")
         np.savetxt(save_dir / "confusionMatrix.csv", confusion_matrix.matrix, delimiter=",")
+
         if wandb_logger and wandb_logger.wandb:
             val_batches = [wandb_logger.wandb.Image(str(f), caption=f.name) for f in sorted(save_dir.glob('test*.jpg'))]
             wandb_logger.log({"Validation": val_batches})
