@@ -22,11 +22,8 @@ def is_overlap(box, gtboxes, iou_thres, conf_thres):
 def ensemble(base, adv, iou_thres, conf_thres, data_path, save_path):
     base_pred_imgs = base['image_name'].unique()
     df = pd.read_csv(data_path, header=None)
-    #split dataframe by delimiter '/'
-    df[0] = df[0].str.split('/', expand=True)[-1]
-    print(df.head())
-    image_names = []
-    print(image_names)
+    df = df[0].str.rsplit('/', expand=True)
+    image_names = df[df.columns[-1]].tolist()
     name_loss = []
     for name in image_names:
         if name not in base_pred_imgs:
