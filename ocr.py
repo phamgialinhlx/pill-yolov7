@@ -1,10 +1,10 @@
-import json
 import os
 import tqdm
 import pandas as pd
 import easyocr
 import fuzzywuzzy.fuzz as fuzz
 import argparse
+import difflib
 
 def get_drug_name_dict(path):
   df = pd.read_json(path)
@@ -38,11 +38,13 @@ def OCR_drugname(img_path, reader):
 def match_text(drug_name, drug_name_dict):
     score_max = 0
     targ = drug_name
-    for drugname in drug_name_dict['drugname']:  
-      score = fuzz.token_set_ratio(drug_name.replace(" ",''), drugname.replace(" ",''))
+    for drugname in drug_name_dict['drugname']:
+      score = difflib.SequenceMatcher(None, drug_name, drugname).ratio()
+      # score = fuzz.token_set_ratio(drug_name.replace(" ",''), drugname.replace(" ",''))
       if score > score_max:
         score_max = score
         targ = drugname
+    # print(drug_name, score_max)
     return (targ,score_max)
 
 def extract_all(directory):
