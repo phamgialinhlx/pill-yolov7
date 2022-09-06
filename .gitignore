@@ -11,6 +11,4 @@ classify/
 ensemble/
 vaipe_exif/
 dataset/
-inference/config.json
-inference/data_config.json
 .Dockerfile.swp
