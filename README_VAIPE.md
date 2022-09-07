@@ -9,11 +9,23 @@ There are several configs for trainning. The models trained on these configs are
 
 ## Pipeline
 
-1. [preprocess.py](inference/preprocess.py) preprocess data (Run once)
-2. [infer_ocr.py](inference/infer_ocr.py) process OCR (Run once)
+1. Preprocess data [preprocess.py](inference/preprocess.py) (Run once)
+```
+python inference/preprocess.py 
+```
+2. Process OCR [infer_ocr.py](inference/infer_ocr.py) (Run once)
+```
+python inference/infer_ocr.py 
+```
 3. Train and Inference (Test):
     - Train model with each config: Change config and run [train_vaipe.py](inference/train_vaipe.py)
+    ```
+    python inference/train_vaipe.py
+    ```
     - Inference:  run [infer.py](inference/infer.py) 
+    ```
+    python inference/infer.py
+    ```
 
 ## Docker
 
@@ -21,3 +33,27 @@ There are several configs for trainning. The models trained on these configs are
 ```
 docker build . -t ai4vn:latest
 ```
+### Run 
+1. Preprocess
+``` 
+bash scripts/preprocess.sh 
+```
+2.  Process OCR
+```
+bash scripts/infer_ocr.sh
+```
+3. Train and Inference
+    - Train
+        - Change config
+        - Then run 
+        ```
+        bash scripts/train.sh
+        ```
+    - Inference
+        ```
+        bash scripts/infer.sh
+        ```
+## Results
+- Model weight stored in [runs/train](runs/train)
+- File [results.csv](runs/ensemble/results.csv)
+
