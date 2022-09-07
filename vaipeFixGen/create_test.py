@@ -9,10 +9,9 @@ def list_all_files(dir):
                 files.append(os.path.join(r, file))
     return files
 def main():
-    files = list_all_files('../../gen_data')
-    # print(files)
+    files = list_all_files('./publicTest/pill/image')
     #export list of files to .txt file
-    file = open('../vaipe_pad_all/train_gen.txt', 'w')
+    file = open('./test.txt', 'w')
     for i in files:
         file.write(i + '\n')
     file.close()
