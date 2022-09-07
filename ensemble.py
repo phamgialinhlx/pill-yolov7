@@ -1,4 +1,3 @@
-from tkinter import image_names
 import pandas as pd
 import argparse
 import os
@@ -22,7 +21,9 @@ def is_overlap(box, gtboxes, iou_thres, conf_thres):
     return False
 def ensemble(base, adv, iou_thres, conf_thres, data_path, save_path):
     base_pred_imgs = base['image_name'].unique()
-    image_names = os.listdir(data_path)
+    df = pd.read_csv(data_path, header=None)
+    df = df[0].str.rsplit('/', expand=True)
+    image_names = df[df.columns[-1]].tolist()
     name_loss = []
     for name in image_names:
         if name not in base_pred_imgs:
@@ -68,8 +69,8 @@ if __name__ == '__main__':
     parser.add_argument('--adv_model', type=str, default='', help='path to result.csv file of adv model')
     parser.add_argument('--iou_thres', type=float, default=0.65, help='iou threshold')
     parser.add_argument('--conf_thres', type=float, default=0.005, help='confidence threshold')
-    parser.add_argument('--data_path', type=str, default='', help='path to pill image data. eg public_test/pill')
-    parser.add_argument('--save_dir', type=str, default='ensemble', help='path to save ensemble.csv file')
+    parser.add_argument('--data_path', type=str, default='./vaipe_exif/test.txt', help='path to pill image data. eg public_test/pill')
+    parser.add_argument('--save_dir', type=str, default='./runs', help='path to save ensemble.csv file')
     parser.add_argument('--save_name', type=str, default='ensemble', help='name of ensemble.csv file')
     parser.add_argument('--exist_ok', action='store_true', help='overwrite existing ensemble.csv file')
 
