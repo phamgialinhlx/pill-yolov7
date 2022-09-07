@@ -1,0 +1,11 @@
+{
+    "data": "data/vaipe_exif.yaml",
+    "batch_size": 32,
+    "img_size": 640,
+    "device": "0",
+    "cfg":"cfg/training/yolov7-tiny-vaipe.yaml",
+    "hyp": "data/hyp.scratch.tiny.yaml",
+    "epochs": 450,
+    "workers": 8,
+    "name": "yolov73"
+}
