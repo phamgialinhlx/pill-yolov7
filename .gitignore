@@ -2,7 +2,6 @@
 *.zip
 __pycache__/
 vaipe*/
-__pycache__/
 runs
 wandb/
 coco/
@@ -12,3 +11,5 @@ ensemble/
 vaipe_exif/
 dataset/
 .Dockerfile.swp
+label/
+gen/fg

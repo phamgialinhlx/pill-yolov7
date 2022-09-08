@@ -10,55 +10,70 @@ There are several configs for trainning. The models trained on these configs are
 ## Pipeline
 
 1. Preprocess data [preprocess.py](inference/preprocess.py) (Run once)
-```
-python inference/preprocess.py 
-```
+    ```
+    python inference/preprocess.py 
+    ```
 2. Process OCR [infer_ocr.py](inference/infer_ocr.py) (Run once)
-```
-python inference/infer_ocr.py 
-```
+    ```
+    python inference/infer_ocr.py 
+    ```
 3. Train and Inference (Test):
     - Train model with each config: Change config and run [train_vaipe.py](inference/train_vaipe.py)
-    ```
-    python inference/train_vaipe.py
-    ```
+        ```
+        python inference/train_vaipe.py
+        ```
     - Inference:  run [infer.py](inference/infer.py) 
-    ```
-    python inference/infer.py
-    ```
+        ```
+        python inference/infer.py
+        ```
 
 ## Docker
-### Add wandb api key
-In [Dockerfile](Dockerfile), provide your wandb API key in line 20
 ### Build docker image
-```
-docker build . -t ai4vn:latest
-```
+- Change [WANDB_TOKEN] to your wandb token
+    ```
+    docker build . -t ai4vn:latest --build-arg WANDB_TOKEN=[WANDB_TOKEN]
+    ```
 ### Run 
 1. Preprocess
     - Change volume dataset (line 3) to your local directory train and test (infer) dataset.
     - Then run
-    ``` 
-    bash scripts/preprocess.sh 
-    ```
+        ``` 
+        bash scripts/preprocess.sh 
+        ```
 2.  Process OCR
     - Change volume dataset (line 3) to your local directory inference test image.
     - Then run
-    ```
-    bash scripts/infer_ocr.sh
-    ```
+        ```
+        bash scripts/infer_ocr.sh
+        ```
 3. Train and Inference
     - Train
         - Change file [config.json](inference/config.json) content with each config in folder [cfg/docker](cfg/docker)
         - Then run 
-        ```
-        bash scripts/train.sh
-        ```
+            ```
+            bash scripts/train.sh
+            ```
     - Inference
-    ```
-    bash scripts/infer.sh
-    ```
+        - Download model weight in [release](https://github.com/phamgialinhlx/pill-yolov7/releases/tag/model_weight) and place in [runs/train](runs/train/) folder
+        ```bash
+        runs
+        ├── yolo73
+        │   └── weights
+        │       └── best.pt
+        ├── yolov7_50_deg_40_gen_singlecls_400epochs
+        │   └── weights
+        │       └── best.pt
+        ├── yolo74
+        ├── yolov7-tiny_115_deg_40_gen
+        └── yolov7_50_deg_40_gen_singlecls_400epochs
+
+        
+        ```
+        - Then run
+        ```
+        bash scripts/infer.sh
+        ```
 ## Results
 - Model weight stored in [runs/train](runs/train)
-- File [results.csv](runs/ensemble/results.csv)
+- File [results.csv](runs/ensemble/results.csv) is the inference (test) results.
 

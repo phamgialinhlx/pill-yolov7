@@ -24,7 +24,7 @@ def rotate_image(origin_path, target_path, overwrite=False):
             os.remove(os.path.join(target_path, file))
         print(f'remove {target_path}')
     img_files = [os.path.join(origin_path, f) for f in os.listdir(origin_path) if f.endswith('.jpg')]
-    for img_file in tqdm.tqdm(img_files):
+    for img_file in tqdm.tqdm(img_files, desc=target_path):
         with open(img_file, "rb") as f:
             targ = os.path.join(target_path, img_file.split("/")[-1])
             f.seek(-2, 2)
@@ -61,7 +61,7 @@ def convert_labels(origin_path, target_path, overwrite=False):
         print(f'remove {target_path}')
     org_files = os.listdir(origin_path)
     json_data = []
-    pbar = tqdm.tqdm(total=len(org_files))
+    pbar = tqdm.tqdm(total=len(org_files), desc=target_path)
 
     for i, org_file in enumerate(org_files):
         #check if is a json file
@@ -145,14 +145,13 @@ if __name__ == '__main__':
             target_path = os.path.join(args.target_path, 'train/labels')
             convert_labels(args.origin_path, target_path, args.overwrite)
     else:
-        if args.task == 'test':
-            target_path = os.path.join(args.target_path, 'test/images')
-        else:
-            target_path = os.path.join(args.target_path, 'train/images')
-        rotate_image(args.origin_path, target_path, args.overwrite)
+        target_path = os.path.join(args.target_path, args.task,'images')
+        if args.task == 'train' or args.task == 'test':
+            rotate_image(args.origin_path, target_path, args.overwrite)
         files = list_all_files(target_path)
         #export list of files to .txt file
         file = open(os.path.join(args.target_path, f'{args.task}.txt'), 'w')
         for i in files:
-            file.write(i.replace(f'{args.target_path}/', './') + '\n')
+            line = i.replace(f'{args.target_path}/', './') + '\n'
+            file.write(line)
         file.close()
