@@ -17,8 +17,7 @@ ARG WANDB_TOKEN
 
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt && \
-    pip3 install wandb && \
-    wandb login $WANDB_TOKEN
+    pip3 install wandb
 
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 10
 
@@ -26,4 +25,5 @@ COPY . .
 RUN mkdir /.EasyOCR && chmod -R 777 /.EasyOCR
 RUN mkdir /.config && chmod -R 777 /.config
 
+RUN wandb login ${WANDB_TOKEN}
 ENTRYPOINT ["python3"]
