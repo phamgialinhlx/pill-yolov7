@@ -1,13 +1,13 @@
-import os
-import cv2
-import csv
 import pandas as pd
 import numpy as np
 import json
 import argparse
 import tqdm
+import os
 
 def convert(file, target_path):
+    if not os.path.exists(target_path):
+        os.makedirs(target_path)
     df = pd.read_csv(file, index_col=False)
     files = df['file_name'].unique()
     pbar = tqdm.tqdm(total=len(files))
@@ -17,7 +17,7 @@ def convert(file, target_path):
         result = a.to_json(orient="records")
         parsed = json.loads(result)
         x = json.dumps(parsed, indent=4)  
-        json_file = open(target_path + f, "w")
+        json_file = open(os.path.join(target_path, f), "w")
         json_file.write(x)
         json_file.close()
         pbar.update(1)
@@ -37,10 +37,10 @@ def update_imgpath(img_path_file, file):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--file', type=str, default='./gen/label.csv', help='path to csv labels file')
-    parser.add_argument('--target_path', type=str, default='./label/', help='path of target folder')
+    parser.add_argument('--target_path', type=str, default='./vaipe_exif/gen/labels', help='path of target folder')
     parser.add_argument('--img_path_file', type=str, default='./vaipe_exif/train.txt', help='path of the file that contains path to the images')
     args = parser.parse_args()
 
     convert(args.file, args.target_path)
-    update_imgpath(args.img_path_file, args.file)
+    # update_imgpath(args.img_path_file, args.file)
 

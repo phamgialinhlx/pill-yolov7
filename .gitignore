@@ -12,3 +12,4 @@ vaipe_exif/
 dataset/
 .Dockerfile.swp
 label/
+gen/fg
