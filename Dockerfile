@@ -6,7 +6,7 @@ RUN apt-get update -y
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata 
 
-RUN apt-get install software-properties-common && \
+RUN apt-get install -y software-properties-common && \
     add-apt-repository -y ppa:deadsnakes/ppa && \
     apt-get install -y python3.8 python3.8-dev && \
     update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 2 && \
@@ -23,5 +23,8 @@ RUN pip3 install -r requirements.txt && \
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 10
 
 COPY . .
+RUN mkdir /.EasyOCR && chmod -R 777 /.EasyOCR
+RUN mkdir /.config && chmod -R 777 /.config
+RUN mkdir /app/wandb && chmod -R 777 /app/wandb
 
-ENTRYPOINT ["python3"]
+ENTRYPOINT ["wandb login", "&&", "python3"]

@@ -13,3 +13,5 @@ dataset/
 .Dockerfile.swp
 label/
 gen/fg
+!runs/ocr/drug_name_dict.csv
+!runs/ocr/drug_name_dict.json
