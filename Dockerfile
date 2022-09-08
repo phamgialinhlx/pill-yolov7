@@ -25,6 +25,5 @@ RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 10
 COPY . .
 RUN mkdir /.EasyOCR && chmod -R 777 /.EasyOCR
 RUN mkdir /.config && chmod -R 777 /.config
-RUN mkdir /app/wandb && chmod -R 777 /app/wandb
 
-ENTRYPOINT ["wandb login", "&&", "python3"]
+ENTRYPOINT ["python3"]
