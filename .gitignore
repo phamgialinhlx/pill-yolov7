@@ -2,7 +2,11 @@
 *.zip
 __pycache__/
 vaipe*/
-runs
+runs/*
+!runs/ocr
+runs/ocr/*
+!runs/ocr/drug_name_dict.csv
+!runs/ocr/drug_name_dict.json
 wandb/
 coco/
 *.cache
