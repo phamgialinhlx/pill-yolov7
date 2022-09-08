@@ -6,7 +6,7 @@
     "cfg":"cfg/training/yolov7-tiny-vaipe.yaml",
     "hyp": "data/hyp.scratch.tiny.yaml",
     "epochs": 450,
-    "base_name": "yolov74",
+    "base_name": "yolov741",
     "weights": "", 
     "save_json": true,
     "conf_thres": 0.001,

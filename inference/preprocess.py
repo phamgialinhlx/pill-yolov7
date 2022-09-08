@@ -52,7 +52,7 @@ def main(config = './inference/config.json', data_config = './inference/data_con
     
     if os.listdir(gen_img_path) == []:
         if not os.path.exists(os.path.join(targ_folder, 'gen.zip')):
-            id = '1-0qyIFhFg1IDxQcnGNVk6k-9NWyWWZ1H'
+            id = '1DsVhn_PGXx_973Fq7WkOpPtoHR2dpgU9'
             subprocess.run(f"gdown {id} --output {os.path.join(targ_folder, 'gen.zip')}", shell=True)
         subprocess.run(['unzip', os.path.join(targ_folder, 'gen.zip'), '-d', os.path.join(targ_folder, 'gen')])
     process_gen_label = f"python tools/csv2json.py --target_path {gen_label_path} --img_path_file {os.path.join(targ_folder, 'train.txt')}"
