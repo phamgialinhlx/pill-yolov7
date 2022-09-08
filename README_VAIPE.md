@@ -28,31 +28,36 @@ python inference/infer_ocr.py
     ```
 
 ## Docker
-
+### Add wandb api key
+In [Dockerfile](Dockerfile), provide your wandb API key in line 20
 ### Build docker image
 ```
 docker build . -t ai4vn:latest
 ```
 ### Run 
 1. Preprocess
-``` 
-bash scripts/preprocess.sh 
-```
+    - Change volume dataset (line 3) to your local directory train and test (infer) dataset.
+    - Then run
+    ``` 
+    bash scripts/preprocess.sh 
+    ```
 2.  Process OCR
-```
-bash scripts/infer_ocr.sh
-```
+    - Change volume dataset (line 3) to your local directory inference test image.
+    - Then run
+    ```
+    bash scripts/infer_ocr.sh
+    ```
 3. Train and Inference
     - Train
-        - Change config
+        - Change file [config.json](inference/config.json) content with each config in folder [cfg/docker](cfg/docker)
         - Then run 
         ```
         bash scripts/train.sh
         ```
     - Inference
-        ```
-        bash scripts/infer.sh
-        ```
+    ```
+    bash scripts/infer.sh
+    ```
 ## Results
 - Model weight stored in [runs/train](runs/train)
 - File [results.csv](runs/ensemble/results.csv)

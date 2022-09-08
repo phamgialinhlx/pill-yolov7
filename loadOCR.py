@@ -3,7 +3,7 @@ import csv
 import json
 import pandas as pd
 # root is /data/pill/competition/Yolov7/yolov7
-def load_OCR_res(path = './ocr/ocr_train_res.csv'):
+def load_OCR_res(path = './runs/ocr/ocr_train_res.csv'):
     OCR_res = {}
     dict_res = load_dict()
     list_drugname = [key for key in dict_res]
@@ -36,7 +36,7 @@ def take_key(list_key, line):
             return key
     return None
 
-def load_dict(path = './ocr/drug_name_dict.csv'):
+def load_dict(path = './runs/ocr/drug_name_dict.csv'):
     dict_res = {}
     with open(path) as file_in:
         next(file_in)
@@ -61,11 +61,11 @@ def take_id_from_pres(pathImage = "./vaipe_fix/images/VAIPE_P_621_17.jpg", testi
 
     return name_pres
 
-def load_OCR(path_to_OCR_res = './ocr/ocr_test_res.csv'):
+def load_OCR(path_to_OCR_res = './runs/ocr/ocr_test_res.csv'):
     # df = pd.read_csv(path_to_detect_output)
     # df['image_id'] = df['image_name'].apply(lambda x: x.split('_')[2])
     OCR_res = pd.read_csv(path_to_OCR_res)
-    drug_dict = pd.read_csv('./ocr/drug_name_dict.csv').groupby('drugname').id.apply(list).reset_index().rename(columns={'drugname': 'match'})
+    drug_dict = pd.read_csv('./runs/ocr/drug_name_dict.csv').groupby('drugname').id.apply(list).reset_index().rename(columns={'drugname': 'match'})
     OCR_res = OCR_res.merge(drug_dict, on='match', how='left')
     OCR_res = OCR_res.groupby('filename').agg({
         'id':'sum',

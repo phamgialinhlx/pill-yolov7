@@ -2,7 +2,6 @@ import os
 import tqdm
 import pandas as pd
 import easyocr
-import fuzzywuzzy.fuzz as fuzz
 import argparse
 import difflib
 
@@ -77,10 +76,10 @@ def match_all_labels(path, drug_name_dict):
 if __name__ == '__main__':
 
   parser = argparse.ArgumentParser()
-  parser.add_argument('--save_dir', type=str, default='ocr', help='path to save result')
+  parser.add_argument('--save_dir', type=str, default='runs/ocr', help='path to save result')
   parser.add_argument('--save_name', type=str, default='ocr_test_res', help='name of the file to save')
   parser.add_argument('--data_dir', type=str, help='path to data directory. Eg: public_test/prescription/image')
-  parser.add_argument('--drug_name_dict', type=str, default='./ocr/drug_name_dict.json', help='path to drug name dictionary')
+  parser.add_argument('--drug_name_dict', type=str, default='./runs/ocr/drug_name_dict.json', help='path to drug name dictionary')
   parser.add_argument('--extract_ocr', action='store_true', help='extract ocr from images. If not specified, only match labels. Should only be used for first time')
   args = parser.parse_args()
   save_dir = args.save_dir

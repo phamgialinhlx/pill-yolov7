@@ -60,7 +60,7 @@ def test(data,
         if opt.task in ('val'):
             OCR_res = load_OCR_res()
         else:
-            OCR_res = load_OCR_res('./ocr/ocr_test_res.csv')
+            OCR_res = load_OCR_res('./runs/ocr/ocr_test_res.csv')
 
         # Directories
         save_dir = Path(increment_path(Path(opt.project) / opt.name, exist_ok=opt.exist_ok))  # increment run
@@ -162,10 +162,10 @@ def test(data,
                     
                     #TODO detect 107
                     for out_si in out[si]:
-                        if int(out_si[5]) == 25 and 26 in id_potential_in_pres:
-                            out_si[5] = 26.0
-                        if int(out_si[5]) == 26 and 25 in id_potential_in_pres:
-                            out_si[5] = 25.0
+                        # if int(out_si[5]) == 25 and 26 in id_potential_in_pres:
+                        #     out_si[5] = 26.0
+                        # if int(out_si[5]) == 26 and 25 in id_potential_in_pres:
+                        #     out_si[5] = 25.0
                         if(int(out_si[5]) not in id_potential_in_pres): 
                             out_si[5] = 107.0
                        
