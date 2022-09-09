@@ -1,7 +1,9 @@
 *.pt
 *.zip
 __pycache__/
-vaipe*/
+vaipeFixGen/
+vaipe/
+vaipeFix/
 runs/*
 !runs/ocr
 runs/ocr/*
@@ -12,7 +14,8 @@ coco/
 *.cache
 classify/
 ensemble/
-vaipe_exif/
+vaipe_exif/*
+!vaipe_exif/val.txt
 dataset/
 .Dockerfile.swp
 label/
