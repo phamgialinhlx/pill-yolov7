@@ -1,0 +1,34 @@
+main_sub: '/home/pill/competition/yolov7/res_publicval/submission_newbest.csv'
+label: '/home/pill/competition/yolov7/res_publicval/pubval_groundtruth.csv' # or False
+
+adv:
+  is_ens: True
+  main: '/home/pill/competition/yolov7/res_publicval/results_det960.csv'
+  support: '/home/pill/competition/yolov7/res_publicval/results_det960_50_val.csv'
+  iou_threshold: 0.65
+
+ens_main_support_class:
+  mi_scale: 0.0
+  mx_scale: 0.001
+  support_107: False
+  reverse: False
+
+ocr:
+  ocr_res: '/home/pill/competition/yolov7/res_publicval/ocr_test_res.csv'
+  drugname_dict: '/home/pill/competition/yolov7/runs/ocr/drug_name_dict.csv'
+  prefix: 'VAIPE_P_TEST_'
+
+ens_main_adv:
+  conf_adv: False # normal is number
+  iou_thres: 0.65
+  conf_main: 0.01
+
+nms:
+  is_nms: False
+  iou_thres: 0.45
+  min_bbox: False
+
+
+# map 0.7424840927124023
+# map50 0.9762659072875977
+# map75 0.8763942718505859
