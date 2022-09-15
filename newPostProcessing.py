@@ -6,55 +6,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import argparse
 import yaml
-
-########## IOU METRIC
-
-#iou between box and gtbox is ...
-def iou(box, gtbox):
-  if isinstance(box, list):
-    area_box = (box[5] - box[3] + 1) * (box[6] - box[4] + 1)
-    area_gtbox = (gtbox[5] - gtbox[3] + 1) * (gtbox[6] - gtbox[4] + 1)
-    x1 = max(box[3], gtbox[3])
-    y1 = max(box[4], gtbox[4])
-    x2 = min(box[5], gtbox[5])
-    y2 = min(box[6], gtbox[6])
-    w = max(0, x2 - x1 + 1)
-    h = max(0, y2 - y1 + 1)
-    if area_box + area_gtbox - w * h == 0.0:
-      return None
-    inter = (w * h) / (area_box + area_gtbox - w * h)
-    return inter
-  else:
-    area_box = (box['x_max'] - box['x_min'] + 1) * (box['y_max'] - box['y_min'] + 1)
-    area_gtbox = (gtbox['x_max'] - gtbox['x_min'] + 1) * (gtbox['y_max'] - gtbox['y_min'] + 1)
-    x1 = max(box['x_min'], gtbox['x_min'])
-    y1 = max(box['y_min'], gtbox['y_min'])
-    x2 = min(box['x_max'], gtbox['x_max'])
-    y2 = min(box['y_max'], gtbox['y_max'])
-    w = max(0, x2 - x1 + 1)
-    h = max(0, y2 - y1 + 1)
-    if area_box + area_gtbox - w * h == 0.0:
-      return None
-    inter = (w * h) / (area_box + area_gtbox - w * h)
-    return inter
-
-# is have a box in 'gtboxes' overlap >= iou_thres with 'box'
-def is_overlap(box, gtboxes, iou_thres, conf_thres):
-    area_box = (box[5] - box[3] + 1) * (box[6] - box[4] + 1)
-    for gtbox in gtboxes:
-        if gtbox[2] < conf_thres:
-            continue
-        area_gtbox = (gtbox[5] - gtbox[3] + 1) * (gtbox[6] - gtbox[4] + 1)
-        x1 = max(box[3], gtbox[3])
-        y1 = max(box[4], gtbox[4])
-        x2 = min(box[5], gtbox[5])
-        y2 = min(box[6], gtbox[6])
-        w = max(0, x2 - x1 + 1)
-        h = max(0, y2 - y1 + 1)
-        inter = (w * h) / (area_box + area_gtbox - w * h)
-        if inter >= iou_thres:
-            return True
-    return False
+from tqdm import tqdm
+from ensemble import iou, is_overlap
 
 ####### OCR PROCESS
 
@@ -65,7 +18,7 @@ def take_id_from_pres(pathImage = "VAIPE_P_621_17.jpg", prefix="VAIPE_P_TEST_"):
     return name_pres
 
 # load dict ocr
-def load_dict(path = 'ocr/drug_name_dict.csv'):
+def load_dict(path = './runs/ocr/drug_name_dict.csv'):
     dict_res = {}
     df = pd.read_csv(path)
     for i, row in df.iterrows():
@@ -76,7 +29,7 @@ def load_dict(path = 'ocr/drug_name_dict.csv'):
     return dict_res
 
 # load OCR result of train/val/test set
-def load_OCR_res(path = 'ocr/ocr_test_res.csv', pathDict = 'ocr/drug_name_dict.csv'):
+def load_OCR_res(path = './runs/ocr/ocr_test_res.csv', pathDict = './runs/ocr/drug_name_dict.csv'):
     OCR_res = {}
     dict_res = load_dict(pathDict)
     list_drugname = [key for key in dict_res]
@@ -115,6 +68,7 @@ def process_ocr(main, OCR_res, prefix = 'VAIPE_P_TEST_'):
     if x[1] not in id_potential:
       x[1] = 107
   main = pd.DataFrame(main, columns = col)
+  # print(main)
   return main
 
 ##### ENS INTER
@@ -313,8 +267,8 @@ def ens_main_support_class(main, support_class_dict, OCR_res, mi=0.5, mx=1.0, su
     if x[0] not in main_dict.keys():
       main_dict[x[0]] = []
     main_dict[x[0]].append(x)
-
-  for file in files:
+  # print(main_dict)
+  for file in tqdm(files, desc='ens_main_support_class', total = len(files)):
     # ocr
     id_potential = take_id_OCR(OCR_res, file, prefix=prefix)
     cur = main_dict[file]
@@ -345,7 +299,9 @@ def ens_main_support_class(main, support_class_dict, OCR_res, mi=0.5, mx=1.0, su
         main.append(new_x)
       
   main = pd.DataFrame(main, columns = col)
-  return main.sort_values(by=['image_name', 'confidence_score'], ascending = [True, False])
+  main = main.sort_values(by=['image_name', 'confidence_score'], ascending = [True, False])
+  # print(main)
+  return main
 
 
 ###### NMS
@@ -453,8 +409,8 @@ def pipeline(cfg):
 
     print("Load OCR...")
     OCR_res = load_OCR_res(ocr_test_res_csv, drug_name_dict_csv)
-
     print("Ensemble main with support class...")
+    import IPython; IPython.embed()
     res = ens_main_support_class(pred_preOCR, support_class_dict, OCR_res, 
                                 mi=cfg['ens_main_support_class']['mi_scale'], 
                                 mx=cfg['ens_main_support_class']['mx_scale'],

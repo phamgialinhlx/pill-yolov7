@@ -1,0 +1,27 @@
+# main
+yolov7_45: 'runs/train/yolov7_45_deg_40_gen/weights/best.pt'
+yolov7_45_newgen: 'runs/train/yolov7_45_with_newgen/weights/best.pt'
+yolov7_45_publicval: 'runs/train/yolov7_45_with_publicval5/weights/best.pt'
+yolov7_50: 'runs/train/yolov7_50_deg_40_gen_400epochs4/weights/best.pt'
+yolov7_tiny_115: 'runs/train/yolov7-tiny_115_deg_40_gen/weights/best.pt'
+yolor: 'runs/train/yolor-csp-vaipe/weights/best.pt'
+yolov73: 'runs/train/yolov73/weights/best.pt'
+yolov74: 'runs/train/yolov74/weights/best.pt'
+yolov741: 'runs/train/yolov741/weights/best.pt'
+
+# adv
+yolov7_50_adv: '/home/pill/competition/yolov7/runs/train/yolov7_50_deg_40_gen_singlecls_400epochs/weights/best.pt'
+yolov7_45_adv: '/home/pill/competition/yolov7/runs/train/yolov7_45_deg_40_gen_singlecls4/weights/best.pt'
+
+### test.py
+# python test.py --data data/vaipe_fix_gen.yaml --batch-size 16 --img-size 960 --task test --device 0 --name detection_ens --weights runs/train/yolov7_50_deg_40_gen_singlecls_400epochs/weights/best.pt --verbose --save-json
+
+### submission public valid
+# yolov74 + yolov73 + yolov7_45: runs/test/ens 0.67
+# yolov74 + yolov73 + yolov7_45 + yolov7_50: runs/test/ens3 0.67.6
+# yolov74 + yolov7_45 + yolov7_50: runs/test/ens4 
+# yolov74 + yolov73 + yolov7_45 + yolov7_45_publicval: runs/test/ens2 0.82 (overfit)
+
+
+
+### submission gen

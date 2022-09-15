@@ -20,3 +20,6 @@ dataset/
 .Dockerfile.swp
 label/
 gen/fg
+tmp/
+ocr/
+res_publicval/
