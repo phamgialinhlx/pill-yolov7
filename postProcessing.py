@@ -1,4 +1,5 @@
 
+from array import array
 import pandas as pd
 import os
 
@@ -151,7 +152,7 @@ def convert(json_file, output_path, mapping):
     df.to_csv(submission_path ,index=False)
     print(f'Output saved in {submission_path}')
     return backup, submission_path
-def post_processing(path_to_detect_output, output_path, path_to_ocr_res, df = None):
+def post_processing(path_to_detect_output,path_to_ocr_res, output_path = None, df = None):
     '''
     input csv file submission.csv
     output (dataframe, results.csv_path)
@@ -171,14 +172,17 @@ def post_processing(path_to_detect_output, output_path, path_to_ocr_res, df = No
     # df = df.drop(columns=['id', 'filename','image_id'])
 
     backup = df[['image_name','class_id','confidence_score','x_min','y_min','x_max','y_max','id']]
-    df = df[['image_name','class_id','confidence_score','x_min','y_min','x_max','y_max']]
-    result_path = os.path.join( output_path,'results.csv')
-    df.to_csv(result_path, index=False)
-    print(f'Output saved in {result_path}')
+    df = df[['image_name','class_id','confidence_score','x_min','y_min','x_max','y_max','id']]
+    df['id'].astype(list)
+    result_path = None
+    if output_path is not None:
+        result_path = os.path.join( output_path,'submission_OCR.csv')
+        df.to_csv(result_path, index=False)
+        print(f'Output saved in {result_path}')
     return backup, result_path
 def main(json_file,output_path, path_to_ocr_res, pill_pres_map):
     df,submission_path= convert(json_file, output_path, pres_pill_map(pill_pres_map))
-    df2, _ =post_processing(submission_path,output_path, path_to_ocr_res, df)
+    # df2, _ =post_processing(submission_path,output_path, path_to_ocr_res, df)
     
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

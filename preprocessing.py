@@ -43,8 +43,7 @@ def list_all_files(dir):
     files = []
     for r, d, f in os.walk(dir):
         for file in f:
-            if '.jpg' in file:
-                files.append(os.path.join(r, file))
+            files.append(os.path.join(r, file))
     return files
 
 def correct_box(x):
