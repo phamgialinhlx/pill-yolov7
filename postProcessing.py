@@ -9,6 +9,11 @@ import argparse
 from loadOCR import load_OCR
 
 def post_processing(path_to_detect_output, output_path, path_to_ocr_res):
+    '''
+    input csv file submission.csv
+    output csv file results.csv
+    '''
+
     df = pd.read_csv(path_to_detect_output)
     df['image_id'] = df['image_name'].apply(lambda x: x.split('_')[2])
     OCR_res = load_OCR(path_to_ocr_res)
@@ -26,6 +31,10 @@ def post_processing(path_to_detect_output, output_path, path_to_ocr_res):
     df.to_csv(submission_path, index=False)
     return submission_path
 def convert(json_file, output_path):
+    '''
+    input json file best_predictions.json
+    output csv file submission.csv
+    '''
     result_path = os.path.join(output_path, 'submission.csv')
     with open(json_file) as f:
         data =  json.load(f)
