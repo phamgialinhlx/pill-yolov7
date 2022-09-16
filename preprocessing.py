@@ -9,7 +9,7 @@ from PIL import ExifTags, Image, ImageOps, ImageFile
 from PIL.ExifTags import TAGS
 
 ImageFile.LOAD_TRUNCATED_IMAGES=True
-IMG_FORMATS = ["bmp", "jpg", "jpeg", "png", "tif", "tiff", "dng", "webp", "mpo"]
+IMG_FORMATS = ["bmp", "jpg", "jpeg", "png", "tif", "tiff", "dng", "webp", "mpo", "JPG"]
 # Get orientation exif tag
 for k, v in ExifTags.TAGS.items():
     if v == "Orientation":
@@ -23,7 +23,7 @@ def rotate_image(origin_path, target_path, overwrite=False):
         for file in os.listdir(target_path):
             os.remove(os.path.join(target_path, file))
         print(f'remove {target_path}')
-    img_files = [os.path.join(origin_path, f) for f in os.listdir(origin_path) if f.endswith('.jpg')]
+    img_files = [os.path.join(origin_path, f) for f in os.listdir(origin_path) if f.split(".")[-1].lower() in IMG_FORMATS]
     for img_file in tqdm.tqdm(img_files, desc=target_path):
         with open(img_file, "rb") as f:
             targ = os.path.join(target_path, img_file.split("/")[-1])

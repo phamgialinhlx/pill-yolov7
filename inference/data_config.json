@@ -4,5 +4,5 @@
     "pill_infer_image_dir": "/home/pill/competition/RELEASE_private_test/pill/image",
     "pill_train_label_dir": "/home/pill/competition/dataset/public_train/pill/labels",
     "pill_train_image_dir": "/home/pill/competition/dataset/public_train/pill/images",
-    "pill_pres_map":  "/home/pill/competition/RELEASE_private_test/pill_pres_map.jsonZ"
+    "pill_pres_map":  "/home/pill/competition/RELEASE_private_test/pill_pres_map.json"
 }
