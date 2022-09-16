@@ -14,7 +14,7 @@
     "base_json_file": "./runs/test/base/best_predictions.json",
     "adv_json_file": "./runs/test/adv/best_predictions.json",
     "adv_name": "adv",
-    "base_weights": "./runs/train/yolov7_45_deg_40_gen/weights/best.pt ./runs/train/yolov74/weights/best.pt ./runs/train/yolov73/weights/best.pt ./runs/train/yolov7-tiny_115_deg_40_gen/weights/best.pt",
+    "base_weights": "./runs/train/yolov7_45_deg_40_gen/weights/best.pt ./runs/train/yolov74_2/weights/best.pt ./runs/train/yolov73/weights/best.pt ./runs/train/yolov7-tiny_115_deg_40_gen/weights/best.pt",
     "adv_weights": "./runs/train/yolov7_50_deg_40_gen_singlecls_400epochs/weights/best.pt",
     "overwrite_preprocess": false
 }

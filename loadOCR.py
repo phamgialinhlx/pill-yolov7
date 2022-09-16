@@ -70,7 +70,7 @@ def load_OCR(path_to_OCR_res = './runs/ocr/ocr_test_res.csv'):
     OCR_res = OCR_res.groupby('filename').agg({
         'id':'sum',
     }).reset_index()
-    OCR_res['image_id'] = OCR_res['filename'].apply(lambda x: x[:-4].split('_')[-1])
+    OCR_res['prescription'] = OCR_res['filename'].apply(lambda x: x.split('.')[0])
     return OCR_res
 
 def main():
