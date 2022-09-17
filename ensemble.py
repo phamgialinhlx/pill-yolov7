@@ -3,7 +3,41 @@ import argparse
 import os
 from pathlib import Path
 from utils.general import increment_path
+def iou(box, gtbox):
+    '''
+    IOU between two boxes
+    '''
+    if isinstance(box, list):
+        area_box = (box[5] - box[3] + 1) * (box[6] - box[4] + 1)
+        area_gtbox = (gtbox[5] - gtbox[3] + 1) * (gtbox[6] - gtbox[4] + 1)
+        x1 = max(box[3], gtbox[3])
+        y1 = max(box[4], gtbox[4])
+        x2 = min(box[5], gtbox[5])
+        y2 = min(box[6], gtbox[6])
+        w = max(0, x2 - x1 + 1)
+        h = max(0, y2 - y1 + 1)
+        if area_box + area_gtbox - w * h == 0.0:
+            return None
+        inter = (w * h) / (area_box + area_gtbox - w * h)
+        return inter
+    else:
+        area_box = (box['x_max'] - box['x_min'] + 1) * (box['y_max'] - box['y_min'] + 1)
+        area_gtbox = (gtbox['x_max'] - gtbox['x_min'] + 1) * (gtbox['y_max'] - gtbox['y_min'] + 1)
+        x1 = max(box['x_min'], gtbox['x_min'])
+        y1 = max(box['y_min'], gtbox['y_min'])
+        x2 = min(box['x_max'], gtbox['x_max'])
+        y2 = min(box['y_max'], gtbox['y_max'])
+        w = max(0, x2 - x1 + 1)
+        h = max(0, y2 - y1 + 1)
+        if area_box + area_gtbox - w * h == 0.0:
+            return None
+        inter = (w * h) / (area_box + area_gtbox - w * h)
+        return inter
+
 def is_overlap(box, gtboxes, iou_thres, conf_thres):
+    '''
+    Exits if the box is overlapped with any gtbox with iou >= iou_thres
+    '''
     area_box = (box[5] - box[3] + 1) * (box[6] - box[4] + 1)
     for gtbox in gtboxes:
         if gtbox[2] < conf_thres:

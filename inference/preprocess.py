@@ -19,6 +19,20 @@ def main(config = './inference/config.json', data_config = './inference/data_con
         targ_folder = targ_train.rsplit('/', 1)[0]
     
 
+    # Add gen data
+    gen_img_path = os.path.join(targ_folder, 'gen', 'images')
+    gen_label_path = os.path.join(targ_folder, 'gen', 'labels')
+    if not os.path.exists(gen_img_path):
+        os.makedirs(gen_img_path)
+    
+    if os.listdir(gen_img_path) == []:
+        if not os.path.exists(os.path.join(targ_folder, 'gen.zip')):
+            id = '1DsVhn_PGXx_973Fq7WkOpPtoHR2dpgU9'
+            subprocess.run(f"gdown {id} --output {os.path.join(targ_folder, 'gen.zip')}", shell=True)
+        subprocess.run(['unzip', os.path.join(targ_folder, 'gen.zip'), '-d', os.path.join(targ_folder, 'gen')])
+    process_gen_label = f"python tools/csv2json.py --target_path {gen_label_path} --img_path_file {os.path.join(targ_folder, 'train.txt')}"
+    subprocess.run(process_gen_label, shell=True)
+    
     # Preprocess the images with metadata
     preprocess_infer = f"python preprocessing.py --origin_path {data_cfg['pill_infer_image_dir']} --target_path {targ_folder}"
     preprocess_train = f"python preprocessing.py --origin_path {data_cfg['pill_train_image_dir']} --target_path {targ_folder} --task train"
@@ -44,19 +58,7 @@ def main(config = './inference/config.json', data_config = './inference/data_con
     preprocess_labels = f"python preprocessing.py --origin_path {data_cfg['pill_train_label_dir']} --overwrite --convert_labels --task train"
     subprocess.run(preprocess_labels, shell=True)
     
-    # Add gen data
-    gen_img_path = os.path.join(targ_folder, 'gen', 'images')
-    gen_label_path = os.path.join(targ_folder, 'gen', 'labels')
-    if not os.path.exists(gen_img_path):
-        os.makedirs(gen_img_path)
     
-    if os.listdir(gen_img_path) == []:
-        if not os.path.exists(os.path.join(targ_folder, 'gen.zip')):
-            id = '1DsVhn_PGXx_973Fq7WkOpPtoHR2dpgU9'
-            subprocess.run(f"gdown {id} --output {os.path.join(targ_folder, 'gen.zip')}", shell=True)
-        subprocess.run(['unzip', os.path.join(targ_folder, 'gen.zip'), '-d', os.path.join(targ_folder, 'gen')])
-    process_gen_label = f"python tools/csv2json.py --target_path {gen_label_path} --img_path_file {os.path.join(targ_folder, 'train.txt')}"
-    subprocess.run(process_gen_label, shell=True)
     
     #Merge directories
     if not os.path.exists(os.path.join(targ_folder, 'train_gen')):

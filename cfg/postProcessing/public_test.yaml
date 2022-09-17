@@ -1,0 +1,29 @@
+main_sub: './runs/test/base/submission.csv'
+label: False
+
+adv:
+  is_ens: False
+  main: './runs/test/adv/submission.csv'
+  support: ''
+  iou_threshold: 0.65
+
+ens_main_support_class:
+  mi_scale: 0.0
+  mx_scale: 0.001
+  support_107: False
+  reverse: False
+
+ocr:
+  ocr_res: '/home/pill/competition/yolov7/runs/ocr/ocr_test_res.csv'
+  drugname_dict: '/home/pill/competition/yolov7/runs/ocr/drug_name_dict.csv'
+  prefix: 'VAIPE_P_TEST_'
+
+ens_main_adv:
+  conf_adv: False # normal is number
+  iou_thres: 0.65
+  conf_main: 0.01
+
+nms:
+  is_nms: False
+  iou_thres: 0.45
+  min_bbox: False

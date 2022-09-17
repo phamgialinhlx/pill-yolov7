@@ -24,6 +24,7 @@ RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 10
 COPY . .
 RUN mkdir /.EasyOCR && chmod -R 777 /.EasyOCR
 RUN mkdir /.config && chmod -R 777 /.config
+RUN mkdir /.cache && chmod -R 777 /.cache
 
 RUN wandb login ${WANDB_TOKEN}
 ENTRYPOINT ["python3"]
