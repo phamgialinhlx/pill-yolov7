@@ -103,6 +103,7 @@ def get_new_bbox(image, kernel, origin_box):
             h = image.shape[0]
             new_box = [0, 0, w, h]
         new_boxes.append(new_box)
+        
     final_box = mergeBBox(new_boxes)
     final_box[0] = final_box[0] + origin_box[0]
     final_box[1] = final_box[1] + origin_box[1]

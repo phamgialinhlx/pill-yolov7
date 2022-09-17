@@ -12,12 +12,14 @@
     "conf_thres": 0.001,
     "iou_thres": 0.65,
     "adv_name": "adv",
-    "base_weights": "./runs/train/yolov7_45_deg_40_gen/weights/best.pt ./runs/train/yolov74_2/weights/best.pt ./runs/train/yolov73/weights/best.pt ./runs/train/yolov7-tiny_115_deg_40_gen/weights/best.pt",
+    "base_weights": "./runs/train/yolov7_45_deg_40_gen/weights/best.pt ./runs/train/yolov7_45_with_newgen/weights/best.pt ./runs/train/yolov7_50_deg_40_gen_400epochs4/weights/best.pt ./runs/train/yolov741/weights/best.pt ./runs/train/yolov7-tiny_115_deg_40_gen/weights/best.pt",
     "adv_weights": "./runs/train/yolov7_50_deg_40_gen_singlecls_400epochs/weights/best.pt ./runs/train/yolov7_45_deg_40_gen_singlecls4/weights/best.pt",
     "overwrite_preprocess": false,
     "label": false,
+    "normal_scale_min": 0.8,
+    "normal_scale_max": 1.0,
     "ens_adv": {
-        "is_ens": false,
+        "is_ens": true,
         "iou_threshold": 0.65
     },
     "ens_main_similar_class": {

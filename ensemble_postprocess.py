@@ -254,6 +254,8 @@ def ens_main_similar_class(main, similar_class_dict, dict_OCR, mi=0.5, mx=1.0, s
 
 ###### NMS
 def nms(main, iou_thres=0.45, min_bbox=False, is_nms=True):
+  if not is_nms:
+    return main
   print("nms...")
   files = main['image_name'].unique().tolist()
   col = main.columns
@@ -347,8 +349,8 @@ def mAP(main, gt):
   return x
 
 def ens_concat_nms(base_name, base_weights, iou_thres, min_bbox):
-  print("ensemble base with base...")
   n_base = len(base_weights.split(' '))
+  print(f"ensemble {n_base} base...")
   base = None
   for i in range(n_base):
     base_path = f"./runs/test/{base_name}_{i}/submission_OCR.csv"
@@ -392,16 +394,41 @@ def str2list(str):
     for i in str:
       res.append(int(i))
     return res
+
+def process_ocr(main, dict_OCR):
+  print("process ocr...")
+  col = main.columns
+  main = main.values.tolist()
+  for x in main:
+    id_potential = dict_OCR[x[0]] # x[0] is image_name
+    if x[1] not in id_potential:
+      x[1] = 107
+  main = pd.DataFrame(main, columns = col)
+  return main
+
+def scale(main, mi=0.5, mx=1.0):
+  print("scale...")
+  col = main.columns
+  main = main.values.tolist()
+  for x in main:
+    assert mx >= mi, 'need max > min'
+    x[2] = x[2] * (mx - mi) + mi # x[2] is conf 
+  main = pd.DataFrame(main, columns = col)
+  return main
+  
   
 
 def pipeline(cfg):
     cfg = json.load(open(cfg))
+    print(cfg)
     base = ens_concat_nms(cfg["base_name"], cfg['base_weights'],
                           iou_thres=cfg["nms"]["iou_thres_start"],
                           min_bbox=cfg["nms"]["min_bbox"])
     adv = ens_inter(cfg["adv_name"], 
                     is_ens = cfg["ens_adv"]["is_ens"], 
                     iou_threshold = cfg["ens_adv"]["iou_threshold"])
+    base = scale(base, mi = cfg["normal_scale_min"], mx = cfg["normal_scale_max"])
+    adv = scale(adv, mi = cfg["normal_scale_min"], mx = cfg["normal_scale_max"])
     dict_OCR = dict_ocr(base, adv_name=cfg["adv_name"])
     base = ens_main_similar_class(base, SIMILAR_DICT, dict_OCR=dict_OCR,
                                                       mi=cfg["ens_main_similar_class"]["mi_scale"],
@@ -411,55 +438,11 @@ def pipeline(cfg):
     res = ens_main_adv(base, adv, conf_adv = cfg["ens_main_adv"]["conf_adv"],
                         iou_thres=cfg["ens_main_adv"]["iou_thres"],
                         conf_main=cfg["ens_main_adv"]["conf_main"])
+    res = process_ocr(res, dict_OCR)
     res = nms(res, is_nms=cfg["nms"]["is_nms"],
                 iou_thres=cfg["nms"]["iou_thres_end"],
                 min_bbox=cfg["nms"]["min_bbox"])
-    # ocr_test_res_csv = cfg['ocr']['ocr_res']
-    # drug_name_dict_csv = cfg['ocr']['drugname_dict']
-    # label = None
-    # if cfg['label'] is not False:
-    #     label = pd.read_csv(cfg['label'])
-    # pred_preOCR = pd.read_csv(cfg['main_sub'])
-    # spt_adv = pd.read_csv(cfg['adv']['support'])
-    # main_adv = pd.read_csv(cfg['adv']['main'])
 
-    # print("Load OCR...")
-    # OCR_res = load_OCR_res(ocr_test_res_csv, drug_name_dict_csv)
-    # print("Ensemble main with support class...")
-    # import IPython; IPython.embed()
-    # res = ens_main_support_class(pred_preOCR, support_class_dict, OCR_res, 
-    #                             mi=cfg['ens_main_support_class']['mi_scale'], 
-    #                             mx=cfg['ens_main_support_class']['mx_scale'],
-    #                             support_107=cfg['ens_main_support_class']['support_107'],
-    #                             reverse=cfg['ens_main_support_class']['reverse'],
-    #                             prefix = cfg['ocr']['prefix'])
-
-    # adv_val_ens_inter = main_adv
-    # if cfg['adv']['is_ens']:
-    #     print("Ensemble adv...")
-    #     adv_val_ens_inter = ens_inter(main_adv, spt_adv, 
-    #                                 iou_threshold=cfg['adv']['iou_threshold'], is_adv=True)
-
-    # print("Processing OCR...")
-    # res = process_ocr(res, OCR_res, prefix = cfg['ocr']['prefix'])
-
-    # print("Ensemble main with adv...")
-    # res = ens_main_adv(res, adv_val_ens_inter,
-    #                     conf_adv= cfg['ens_main_adv']['conf_adv'],
-    #                     iou_thres= cfg['ens_main_adv']['iou_thres'],
-    #                     conf_main= cfg['ens_main_adv']['conf_main'])
-
-    # print('Run NMS...')
-    # if cfg['nms']['is_nms']:
-    #     res = nms(res, iou_thres=cfg['nms']['iou_thres'], min_bbox=cfg['nms']['min_bbox'])
-
-    # if label is not None:
-    #     print(f'number of pred is {len(res)}. calculate mAP...')
-    #     map = mAP(res, label)
-    #     print('map', float(map['map']))
-    #     print('map50', float(map['map_50']))
-    #     print('map75', float(map['map_75']))
-    
     return res
 
 
@@ -469,7 +452,7 @@ if __name__ == '__main__':
     parser.add_argument('--save', type=str, default='cfg/postProcessing/results.csv', help='path to save')
     args = parser.parse_args()
     res = pipeline(args.cfg)
-    res.to_csv(args.save)
+    res.to_csv(args.save, index = False)
 
 
 

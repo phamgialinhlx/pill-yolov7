@@ -96,3 +96,4 @@ wandb==0.12.21
 wcwidth==0.2.5
 Werkzeug==2.2.0
 wheel==0.37.1
+torchmetrics==0.9.3

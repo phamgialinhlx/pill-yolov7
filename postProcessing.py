@@ -173,7 +173,6 @@ def post_processing(path_to_detect_output,path_to_ocr_res, output_path = None, d
 
     backup = df[['image_name','class_id','confidence_score','x_min','y_min','x_max','y_max','id']]
     df = df[['image_name','class_id','confidence_score','x_min','y_min','x_max','y_max','id']]
-    df['id'].astype(list)
     result_path = None
     if output_path is not None:
         result_path = os.path.join( output_path,'submission_OCR.csv')
@@ -182,7 +181,7 @@ def post_processing(path_to_detect_output,path_to_ocr_res, output_path = None, d
     return backup, result_path
 def main(json_file,output_path, path_to_ocr_res, pill_pres_map):
     df,submission_path= convert(json_file, output_path, pres_pill_map(pill_pres_map))
-    # df2, _ =post_processing(submission_path,output_path, path_to_ocr_res, df)
+    df2, _ =post_processing(path_to_detect_output= submission_path, path_to_ocr_res= path_to_ocr_res, output_path= output_path,df =df)
     
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
