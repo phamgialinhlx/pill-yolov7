@@ -56,7 +56,7 @@ There are several configs for trainning. The models trained on these configs are
             bash scripts/train.sh
             ```
     - Inference
-        - Download model weight in [release](https://github.com/phamgialinhlx/pill-yolov7/releases/tag/v1.0.0) and place in [runs/train](runs/train/) folder
+        - Download private test model weight in [release](https://github.com/phamgialinhlx/pill-yolov7/releases/tag/v1.0.0) and place in [runs/train](runs/train/) folder
         ```bash
         runs
         └──train
