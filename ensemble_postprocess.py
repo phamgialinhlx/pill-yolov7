@@ -453,6 +453,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     res = pipeline(args.cfg)
     res.to_csv(args.save, index = False)
+    print(f"Output saved to {args.save}")
 
 
 

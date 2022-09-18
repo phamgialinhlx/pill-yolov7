@@ -23,6 +23,8 @@ There are several configs for trainning. The models trained on these configs are
         python inference/train_vaipe.py
         ```
     - Inference:  run [infer.py](inference/infer.py) 
+        - Download model weight in [release](https://github.com/phamgialinhlx/pill-yolov7/releases/tag/v1.0.0) and place in [runs/train](runs/train/) folder
+        - Run
         ```
         python inference/infer.py
         ```
@@ -54,19 +56,21 @@ There are several configs for trainning. The models trained on these configs are
             bash scripts/train.sh
             ```
     - Inference
-        - Download model weight in [release](https://github.com/phamgialinhlx/pill-yolov7/releases/tag/model_weight) and place in [runs/train](runs/train/) folder
+        - Download model weight in [release](https://github.com/phamgialinhlx/pill-yolov7/releases/tag/v1.0.0) and place in [runs/train](runs/train/) folder
         ```bash
         runs
-        ├── yolo73
-        │   └── weights
-        │       └── best.pt
-        ├── yolov7_50_deg_40_gen_singlecls_400epochs
-        │   └── weights
-        │       └── best.pt
-        ├── yolo74
-        ├── yolov7-tiny_115_deg_40_gen
-        └── yolov7_50_deg_40_gen_singlecls_400epochs
-
+        └──train
+            ├── yolov7_45_deg_40_gen 
+            │   └── weights
+            │       └── best.pt
+            ├── yolov7_45_with_newgen
+            │   └── weights
+            │       └── best.pt
+            ├── yolov7_50_deg_40_gen_400epochs4 
+            ├── yolov7-tiny_115_deg_40_gen 
+            ├──yolov741
+            ├──yolov7_50_deg_40_gen_singlecls_400epochs 
+            └── yolov7_45_deg_40_gen_singlecls4
         
         ```
         - Then run
