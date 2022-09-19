@@ -73,6 +73,7 @@ There are several configs for trainning. The models trained on these configs are
             └── yolov7_45_deg_40_gen_singlecls4
         
         ```
+        - Change content of [config.json](inference/config.json) as given in [ensemble_config.json](cfg/docker/ensemble_config.json)
         - Then run
         ```
         bash scripts/infer.sh
