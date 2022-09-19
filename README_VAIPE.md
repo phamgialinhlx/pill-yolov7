@@ -80,5 +80,5 @@ There are several configs for trainning. The models trained on these configs are
         ```
 ## Results
 - Model weight stored in [runs/train](runs/train)
-- File [results.csv](runs/ensemble/results.csv) is the inference (test) results.
+- File [runs/ensemble/results.csv](runs/ensemble/results.csv) is the inference (test) results.
 
